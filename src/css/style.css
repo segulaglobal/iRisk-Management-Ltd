@@ -1,0 +1,172 @@
+::selection {
+    background-color: #32A2D1;
+    color: #ffffff;
+}
+
+
+
+body {
+    --clr-blue-light: #32A2D1;
+    --clr-red: #FC486B;
+    --clr-gray: #686666;
+    --clr-gray-dark: #222222;
+    --clr-gray-light: #D9D9D9;
+    --clr-white: #fff;
+    --clr-black: #131313;
+
+    background-color: var(--clr-white);
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== Container ============= */
+.container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 2580px;
+    height: 100%;
+}
+ /* wrapper */
+.wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+/* ==================== CSS Buttons =================== */
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+    overflow: hidden;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+
+
+/* BTN BIG */
+.btn-big {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+}
+.btn-big:hover,
+.btn-big:focus {
+    color: var(--clr-blue-light);
+}
+.btn-big::after {
+    content: "";
+    width: 80%;
+    height: 3px;
+    background-color: var(--clr-blue-light);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: .4s;
+}
+.btn-big:hover::after,
+.btn-big:focus::after {
+    transform: translateX(25%);
+}
+
+
+
+/* BTN Primary */
+.btn-primary {
+    background-color: var(--clr-blue-light);
+}
+.btn-primary:hover {
+    background-color: #fff;
+}
+
+
+
+
+/* BTN Neutral */
+.btn-neutral {
+    border: 2px solid var(--clr-gray-light);
+}
+.btn-neutral:hover,
+.btn-neutral:focus {
+    background-color: var(--clr-gray-light);
+    color: var(--clr-gray);
+}
+
+
+
+/* BTN red */
+.btn-red {
+    border: 2px solid var(--clr-white);
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+}
+.btn-red:hover {
+    color: var(--clr-red);
+    border: 2px solid var(--clr-red);
+    background-color: var(--clr-white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== Section general Styling =================== */
+.section {
+    min-height: calc(100vh - 14rem);
+}
+
+
+
+
+
+
+
+
+
+/* ============================== Text Styling ======================= */
+.heading-secondary {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================== */
+      /* media queries */
+/* =============================== */
+@media (min-width: 768px) {
+    .wrapper {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+}
