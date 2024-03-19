@@ -16,14 +16,14 @@ import MainLayout from "../layouts/MainLayout.astro"
                 <h2 class="heading-tertiary mb-8">Send us a message</h2>
                 
                 <!-- Contact forms -->
-                <form class="md:pr-16 mx-auto" name="contact" method="POST" data-netlify="true">
+                <form class="md:pr-16 mx-auto" name="Contact" method="POST" data-netlify="true">
                     <!-- I'd like to talk about -->
                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
-                    <select id="countries" class="mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select name="Purpose" id="countries" class="mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option>I'd like to talk about</option>
-                        <option>Canada</option>
-                        <option>France</option>
-                        <option>Germany</option>
+                        <option value="Canada">Canada</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
                     </select>
 
                     <!-- Contact -->
