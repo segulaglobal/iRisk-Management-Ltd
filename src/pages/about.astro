@@ -3,16 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 import { Image } from 'astro:assets'
 import Carousel1 from "../assets/carousel-1.png"
 
-import Sheila from "../assets/sheila.png"
-import Kamal from "../assets/kamal.png"
-import Ama from "../assets/ama.png"
-import Duah from "../assets/duah.png"
-import Araba from "../assets/araba.png"
-import Esther from "../assets/esther.png"
-import Sarkodie from "../assets/sarkodie.png"
-import Abass from "../assets/abass.png"
-import Richmond from "../assets/richmond.png"
-import Sedi from "../assets/sedi.png"
+
 ---
 
 
@@ -23,11 +14,11 @@ import Sedi from "../assets/sedi.png"
     <section class="about-hero bg-white dark:bg-gray-900 py-40 text-center pt-60">
         <div class="container wrapper">
             
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white">We invest in the world’s potential</h1>
-            <p class="mb-8 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+            <p class="mb-4 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Our Vision</p>
+            <h1 class="mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white">We exist to safeguard your future and everything you love.</h1>
             <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#" class="btn btn-neutral">Learn more</a>
-                <a href="#" class="btn btn-white">Watch video</a>  
+                <!-- <a href="#" class="btn btn-neutral">Learn more</a> -->
+                <!-- <a href="#" class="btn btn-white">Watch video</a>   -->
             </div>
             
         </div>
@@ -36,14 +27,14 @@ import Sedi from "../assets/sedi.png"
     <!-- We are on a mission -->
     <section class="section-mission py-40">
         <div class="container wrapper">
-            <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div>
                     <Image src={Carousel1} alt="We are on a mission" />
                 </div>
                 <div>
-                    <h2 class="heading-tertiary">We are on a mission</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, aliquid est. Doloribus unde voluptatem dignissimos! Ipsum tempora quidem at in, sunt voluptatem possimus neque minima deserunt totam, vel illum libero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores praesentium maiores rem alias ex deserunt.</p>
+                    <h2 class="heading-tertiary mb-4">Our mission</h2>
+                    <p class="mb-4">To establish successful and lasting partnerships with our clients, staff and the insurance industry, respecting the interests and goals of each stakeholder</p>
+                    <p>We are dedicated to providing insurance and risk management solutions that combine maximum protection with value addition</p>
                 </div>
             </div>
         </div>
@@ -67,16 +58,16 @@ import Sedi from "../assets/sedi.png"
     <!-- Section Journey -->
     <section class="section-journey py-40 border border-solid border-slate-200">
         <div class="container wrapper">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center" >
+            <div class="grid grid-cols-1 gap-8 items-center" >
                 <div>
-                    <h2 class="heading-secondary mb-8">Our Journey to the top</h2>
-                    <p class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda temporibus, ipsum cum quia tempore fuga doloremque, facilis natus possimus quasi eum totam? Reiciendis soluta omnis corrupti vero minus ipsam nam.</p>
-                    <p class="mb-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis vel libero id ullam incidunt earum maxime architecto accusantium praesentium. Quisquam, non ab. Unde quae reiciendis laboriosam nesciunt, ad totam tenetur architecto numquam excepturi libero, temporibus harum velit sed exercitationem ex magnam autem adipisci?</p>
-                    <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magni sequi suscipit? Ea saepe beatae eligendi aliquid nobis quo blanditiis eius nemo veritatis quis quae voluptatem, vitae, obcaecati sunt quidem similique accusantium velit laborum. Quibusdam deleniti, consectetur quisquam dignissimos aliquid numquam ad quae cumque eius modi at? Temporibus, quo culpa?</p>
+                    <h2 class="heading-secondary mb-8">About Us</h2>
+                    <p class="mb-8 text-xl">iRisk Management Limited, is one of Ghana's leading insurnace brokerage firms proudly ranking abmong the top 5 in the market. Our unwavering commitment to exceptional customer service, sterling reputation, and proven track record have solidified our position as the trusted choice for individuals and businesses seeking insurance solutions.</p>
+                    <p class="mb-4 text-lg">iRisk Limited has been in the top 5 insurance brokers in on three consecutive years from 2021 to 2023 with over 120 broker in the country. We are also one of the largest claims facilitators within the industry, administering claims in excess of GHS 3,200,000.00 in 2023 alone. We recently bagged the Insurance Professional of the year with just ended Chatered Insurance Ghana awards 2023.</p>
+                    
                 </div>
-                <div>
+                <!-- <div>
                     <Image src={Carousel1} alt="We are on a mission" />
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -84,298 +75,53 @@ import Sedi from "../assets/sedi.png"
 
 
 
-
-    <!-- Our Team -->
-    <section class="section-team py-40 text-center">
-        <div class="container wrapper">
-            <h2 class="heading-secondary py-8">Our Team</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ut, nihil voluptatum voluptatem harum aliquid ullam accusantium tempore velit debitis.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <!-- Sheila Wristberg -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Sheila} alt="Sheila Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Sheila Wristberg</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+<!-- How Do we assist you -->
+<section class="section-assist">
+    <div class="container wrapper">
+        <h2 class="heading-secondary mb-12 text-center">How Do We Assist You</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Pre-Insurance -->
+            <div class="">
+                <h1 class="ml-4">Pre-Insurance</h1>
+                <div class="assist">
+                    <ul>
+                        <li>Business Evaluation and risk analysis</li>
+                        <li>Valuation of assets</li>
+                        <li>Existing Portfolio Review</li>
+                        <li>Gap Analysis</li>
+                        <li>Developing a customised Insurance Program</li>
+                    </ul>
                 </div>
-                <!-- Kamal -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Kamal} alt="Kamal" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Kamal Deen Sulemana</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <!-- Insurance -->
+            <div class="">
+                <h1 class="ml-4">Insurance</h1>
+                <div class="assist">
+                    <ul>
+                        <li>Analysing Market Products</li>
+                        <li>identifying risk and add on Covers</li>
+                        <li>Selecting the right insurer</li>
+                        <li>Getting the best premiums</li>
+                        <li>Ensuring correct policy terms and conditions</li>
+                    </ul>
                 </div>
-                <!-- Ama Koomson -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Ama} alt="Ama Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Ama Wristberg</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Duah Mr. -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Duah} alt="Duah Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Duah lorem</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Araba Bonzie -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Araba} alt="Araba Bonzie" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Sheila Wristberg</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Esther Timinca -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Esther} alt="Esther Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Esther Lorem Ipsum</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Sarkodie Daniel -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Sarkodie} alt="Sarkodie Daniel" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Sarkodie Lorem Ipsum</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Abass Wristberg -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Abass} alt="Abass Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Abass Lorem Ipsum</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Richmond Wristberg -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Richmond} alt="Richmond Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Richmond Wristberg</h2>
-                        <h3>CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Sedi Wristberg -->
-                <div class="team-card grid grid-cols-3">
-                    <div>
-                        <Image src={Sedi} alt="Sedi Wristberg" />
-                    </div>
-                    <div class="col-span-2 pl-8">
-                        <h2 class="name">Sedi Lorem Ipsum</h2>
-                        <h3 class="title">CEO</h3>
-                        <div class="line"></div>
-                        <ul class="team-list">
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="team-item">
-                                <a href="#" class="team-link">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+            <!-- Post-Insurance -->
+            <div class="">
+                <h1 class="ml-4">Post-Insurance</h1>
+                <div class="assist">
+                    <ul>
+                        <li>hassle free claims settlement</li>
+                        <li>Assisting in endorsements, renewals and declarations</li>
+                        <li>Sharing Market developments and insight with clients</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End of section-team -->
+    </div>
+</section>
+<!-- End of how do we assist you -->
+
 
 </MainLayout>
 
@@ -438,94 +184,35 @@ import Sedi from "../assets/sedi.png"
 
 
 
+// ======================= Section Assist ==========================
+.section-assist {
+    width: 100%;
+    padding: 10rem 0;
+    background-image: linear-gradient(to bottom, #fff, #32A2D1);
 
-// ============================= Section Team ============================
-.section-team {
-
-    .team-card {
+    .assist {
+        background-color: var(--clr-white);
         padding: 2rem 1rem;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
         border-radius: 1rem;
-        text-align: left;
-        transition: .4s;
-        border: 2px solid transparent;
+        margin-top: 1rem;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+        // height: 18rem;
+        min-height: 18rem;
 
-        &:hover {
-            transform: translateY(-4px);
-            border: 2px solid var(--clr-blue-light);
-        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: .3rem;
-        }
-        h3 {
-            color: var(--clr-blue-light);
-        }
+            li {
 
-
-        .line {
-            height: 1px;
-            background-color: var(--clr-blue-light);
-            width: 5rem;
-            border-radius: 2px;
-            margin: 2rem 0;
-        }
-    }
-
-    .team-list {
-        width: 100%;
-        display: flex;
-        list-style: none;
-        align-items: center;
-
-        .team-item {
-            &:not(:last-child) {
-                margin-right: 1rem;
-            }
-        }
-        .team-link {
-            display: flex;
-            width: 3rem;
-            height: 3rem;
-            border: 2px solid var(--clr-gray-light);
-            border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            transition: .3s;
-            overflow: hidden;
-
-            &:hover {
-                color: var(--clr-white);
-            }
-
-            &:hover::after {
-                transform: scale(1);
-                transform-origin: center;
-                opacity: 1;
-            }
-
-            &::after {
-                content: "";
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-color: var(--clr-gray-dark);
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transform: scale(0);
-                transform-origin: center;
-                transition: .3s ease-in-out;
-                opacity: 0;
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
 }
-// End of section team
+
 
 </style>

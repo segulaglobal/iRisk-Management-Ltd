@@ -22,7 +22,7 @@ body {
 
 /* ========== Container ============= */
 .container {
-    display: block;
+    /* display: block; */
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -119,7 +119,7 @@ section {
 }
 .btn-white:hover {
     background-color: transparent;
-    /* color: var(--clr-white); */
+    color: var(--clr-white);
 }
 
 /* BTN Neutral */
@@ -214,7 +214,6 @@ section {
 
 
 
-
 /* ============================== Text Styling ======================= */
 .heading-secondary {
     font-weight: bold;
@@ -223,7 +222,11 @@ section {
     font-family: "Dela Gothic One", sans-serif;
 }
 
-
+.heading-tertiary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr-blue-light);
+}
 
 
 
@@ -254,4 +257,105 @@ section {
         padding-left: 200px;
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slick-slider {
+    /* background-color: red; */
+}
+ul.slick-dots {
+    /* background-color: green; */
+    list-style: none;
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+}
+ul.slick-dots  li {
+    position: relative;
+    z-index: 1;
+    width: .7rem;
+    height: .7rem;
+    background-color: var(--clr-gray-light);
+    border-radius: 50%;
+}
+ul.slick-dots  li:not(:last-child) {
+    margin-right: .5rem;
+}
+ul.slick-dots  li.slick-active {
+    transform: scale(1.4);
+    background-color: var(--clr-blue-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+ul.slick-dots  li button {
+    font-size: 0;
+    color: transparent;
+}
+
+
+
+
+
+
+
+
+/* =================== Index Carousel ==================== */
+.index-hero .slick-dots{
+    bottom: 5rem;
+}
+
+
+
+
+
+
+
+
+
+/* =======================vService carousel ================= */
+#service-carousel .slick-prev,
+#service-carousel .slick-next {
+    background-color: rgb(21 94 117 / 0.3);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: -0%;
+    transform: translate(0, 0);
+    font-size: 1.2rem;
+    color: var(--clr-white);
+    cursor: pointer;
+    transition: .4s;
+    border: 3px solid transparent;
+}
+#service-carousel .slick-prev:hover,
+#service-carousel .slick-next:hover {
+    background-color: rgb(34 211 238 / 0.5);
+    border: 3px solid var(--clr-blue-light);
+} 
+
+#service-carousel .slick-next {
+    left: 3.5rem;
+}
+#service-carousel .slick-prev {
+    left: 0;
 }
