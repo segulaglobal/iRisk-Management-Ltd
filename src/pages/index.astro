@@ -2,7 +2,9 @@
 // import Layout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 
+// images for the homepage
 import { Image } from "astro:assets";
 import ComingSoon from "../assets/coming-soon.jpg";
 import MotorInsurance from "../assets/motor-service.png"
@@ -14,6 +16,17 @@ import Safetylms from "../assets/safetylms.png"
 import TestimonialImage from "../assets/testimonial-img.png"
 import Carousel1 from "../assets/carousel-1.png"
 import Home360 from "../assets/home-360.jpg"
+
+import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content"
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
+const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
+
 ---
 
 <MainLayout title="iRisk Management Ltd">
@@ -72,7 +85,7 @@ import Home360 from "../assets/home-360.jpg"
                                         <!-- <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"> -->
                                 </div>                
                         </div>
-                        <video class="bg-video" src="/public/assets/home-360.mp4" autoplay loop poster="/public/assets/home-360.jpg"></video>
+                        <video class="bg-video" src="/assets/home-360.mp4" autoplay loop poster="/assets/home-360.jpg"></video>
                         <div class="overlay"></div>
                 </div>
 
@@ -345,7 +358,19 @@ import Home360 from "../assets/home-360.jpg"
 
 
 <!-- ==================== Section News and Blog ============================= -->
-
+<section class="section-news py-40">
+        <div class="container wrapper">
+                <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {otherArticles.slice(0, HOMEPAGE_ARTICLES_LIMIT).map(
+                                article => (
+                                        <ArticleCard article={article} />
+                                )
+                        )}
+                </div>
+                <a href="/articles" class="btn btn-blue mt-12">More News</a>
+        </div>
+</section>
 <!-- end of news and blog -->
 
 
