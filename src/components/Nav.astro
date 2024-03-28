@@ -38,7 +38,7 @@ import Logo from '../assets/logo.png'
                     <a href="/about" class="nav-link">About Us</a>
                 </li> 
                 <li class="nav-item">
-                    <a href="/team" class="nav-link">Our Team</a>
+                    <a href="/services" class="nav-link">Our Services</a>
                 </li>
                 <li class="nav-item">
                     <a href="/reinsurance" class="nav-link">iRisk Reinsurance</a>
@@ -46,13 +46,12 @@ import Logo from '../assets/logo.png'
                 <!-- Drop down example -->
                 <!-- <li class="nav-item">
                     <div class="dropdown" data-dropdown>
-                        <button class="nav-link yellow-text" data-dropdown-button >Our Services</button>
+                        <button class="nav-link yellow-text" data-dropdown-button>Our Services</button>
                         <div class="dropdown-menu">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div>
                                     <h2 class="mb-20 green-text">Lorem Ipsum is simply
-                                        dummy text of the 
-                                       printing and typesetting industry</h2>
+                                        dummy text of the printing and typesetting industry</h2>
                                     <a href="/project/" class="btn btn-blue">Our Services</a>
                                 </div>
                                 <div>
@@ -252,9 +251,16 @@ import Logo from '../assets/logo.png'
 
         .nav-item {
             list-style: none;
+            position: relative;
+            z-index: 1;
 
             &:not(:last-child) {
                 margin-bottom: .5rem;
+            }
+
+            // on hover, display subnav
+            &:hover > .sub-nav {
+                display: block;
             }
         }
         .nav-link {
@@ -344,6 +350,19 @@ import Logo from '../assets/logo.png'
                 }
             }
         }
+
+        // =========== Sub nav ==========
+        .sub-nav {
+            padding: 1rem 4rem;
+            // display: none;
+            transition: .3s;
+
+            &:hover {
+                color: var(--clr-blue-light);
+                
+            }
+        }
+
     }
 
     .logo {
@@ -395,6 +414,13 @@ import Logo from '../assets/logo.png'
             align-items: center;
         
             .nav-item {
+
+                // Show nav-item on hover
+                &:hover > .sub-nav {
+                    opacity: 1;
+                    top: calc(100% + 1rem);
+                    // pointer-events: auto;
+                }
                 
                 &:last-child {
                     // margin-left: 2rem;
@@ -500,6 +526,7 @@ import Logo from '../assets/logo.png'
                     }
                 }
             }
+
         }
     }    
 }

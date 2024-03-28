@@ -1,21 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProductHero from "../components/ProductHero.astro";
 ---
 
 
 
 <MainLayout title="Risk Analysis">
 <!-- Product Hero -->
-<section class="product-hero text-center py-40 pt-60">
-    <div class="container wrapper">
-        <h2 class="heading-secondary">Portfolio Management Services</h2>
-
-        
-
-       
-        <!-- Bread crumbs -->
-        <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
-            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+<ProductHero>
+    <!-- Bread crumbs -->
+    <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
                 <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -40,12 +35,11 @@ import MainLayout from "../layouts/MainLayout.astro";
                 <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Portfolio Analysis</span>
                 </div>
             </li>
-            </ol>
-        </nav>
-  
-  
-    </div>
-</section>
+        </ol>
+    </nav>
+    <!-- End of Bread crumbs -->
+</ProductHero>
+<!-- End of Product hero -->
 
 
 <!-- Product -->

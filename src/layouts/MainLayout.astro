@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro"
 import Nav from "../components/Nav.astro"
 import "../css/style.css"
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants.ts';
+import { ViewTransitions } from "astro:transitions";
 interface Props {
 	title?: string;
 	description?: string;
@@ -25,6 +26,9 @@ image="/images/band.jpg" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}>
 		<title>{title}</title>
+
+		<!-- View Transition -->
+		<ViewTransitions />
 
 		<!-- Favicons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
@@ -57,7 +61,7 @@ image="/images/band.jpg" } = Astro.props;
 
 
 		<!-- ===================== Main Section ====================== -->
-		<slot />
+		<slot class=""/>
 	
 		<!-- Footer -->
 		<Footer />
