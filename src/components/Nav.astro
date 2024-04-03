@@ -86,41 +86,65 @@ import Logo from "../assets/logo.png";
             <ul class="nav-list">
                 <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">ABOUT US</a></li>
+                
+                <!-- Data Dropdown Product -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Products
-                        <i class="fa-solid fa-chevron-down pl-1.5 leading-8 text-xs"></i>
-                    </a>
-                    <ul class="products-sub-menu sub-menu">
-                        <li><a href="/life-insurance">Life Insurance</a></li>
-                        <li><a href="/group-insurance">Group Insurance</a></li>
-                        <li class="more relative">
-                            <span class="flex items-center">
-                                <a href="/general-insurance">General Insurance </a>
-                                <i class="fa-solid fa-chevron-right pl-2 text-xs pt-1.5"></i>
-                            </span>
-                            <ul class="more-sub-menu sub-menu pt-8">
-                                <li><a href="/motor-insurance">Motor Insurance</a></li>
-                                <li><a href="/marine-insurance">Marine Insurance</a></li>
-                                <li><a href="/engineer-insurance">Engineer Insurance</a></li>
-                                <li><a href="/liability-insurance">Liability Insurance</a></li>
-                                <li><a href="/bond-insurance">Bond Insurance</a></li>
+                    <div class="dropdown" data-dropdown>
+                        <button class="nav-link yellow-text" data-dropdown-button >
+                            Products
+                            <i class="fa-solid fa-chevron-down pl-1.5 leading-8 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <a href="/life-insurance">Life Insurance</a>
+                                </li>
+                                <li>
+                                    <a href="/group-insurance">Group Insurance</a>
+                                </li>
+                                <li class="more relative">
+                                    <span class="flex items-center">
+                                        <a href="/general-insurance">General Insurance </a>
+                                        <i class="fa-solid fa-chevron-right pl-2 text-xs pt-1.5"></i>
+                                    </span>
+                                    <ul class="more-sub-menu sub-menu pt-8">
+                                        <li><a href="/motor-insurance">Motor Insurance</a></li>
+                                        <li><a href="/marine-insurance">Marine Insurance</a></li>
+                                        <li><a href="/engineer-insurance">Engineer Insurance</a></li>
+                                        <li><a href="/liability-insurance">Liability Insurance</a></li>
+                                        <li><a href="/bond-insurance">Bond Insurance</a></li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </li>
+                <!-- End of Products -->
+
+                <!-- Services -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        Services
-                        <i class="fa-solid fa-chevron-down pl-1.5 leading-8"></i>
-                    </a>
-                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                    <ul class="services-sub-menu sub-menu">
-                        <li><a href="/claims-consultancy">Claims Consultancy</a></li>
-                        <li><a href="/portfolio-management">Portfolio Management</a></li>
-                    </ul>
+                    <div class="dropdown" data-dropdown>
+                        <button class="nav-link yellow-text" data-dropdown-button >
+                            Our  Services
+                            <i class="fa-solid fa-chevron-down pl-1.5 leading-8 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <a href="/claims-consultancy">Claims Consultancy</a>
+                                </li>
+                                <li>
+                                    <a href="/portfolio-management">Portfolio Management</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
+
+                <!-- iRisk Re-insurance -->
                 <li class="nav-item"><a href="/reinsurance" class="nav-link">iRisk Reinsurance</a></li>
+                
+                <!-- Contact -->
                 <li class="nav-item"><a href="/contact" class="nav-link">CONTACT US</a></li>
             </ul>
 
@@ -246,6 +270,10 @@ import Logo from "../assets/logo.png";
         height: 80px;
         position: relative;
 
+        .show1 {
+            display: block;
+        }
+
         .nav-list {
             position: absolute;
             top: 0;
@@ -260,8 +288,8 @@ import Logo from "../assets/logo.png";
             padding-bottom: 2rem;
             overflow-y: scroll;
             transition: all 0.4s ease-in-out;
-            transform: translate3d(-00%, -100%, 0);
-            opacity: 0;
+            // transform: translate3d(-00%, -100%, 0);
+            // opacity: 0;
 
           &.show {
             transform: translate3d(00%, 0, 0);
@@ -276,22 +304,27 @@ import Logo from "../assets/logo.png";
             display: none;
             }
 
-            li .sub-menu .more-sub-menu{
-                display: none;
-                position: relative;
-                left: 0;
-            }
+        li .sub-menu .more-sub-menu{
+            display: none;
+            position: relative;
+            left: 0;
+        }
+        li .sub-menu .more-sub-menu li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
     }
 
         .nav-item {
-          list-style: none;
-          position: relative;
-          z-index: 1;
+            list-style: none;
+            position: relative;
+            z-index: 1;
 
-          &:not(:last-child) {
+        &:not(:last-child) {
             margin-bottom: 0.5rem;
-          }
+        }
 
           // on hover, display subnav
           &:hover > .sub-nav {
@@ -300,7 +333,7 @@ import Logo from "../assets/logo.png";
         }
         .nav-link {
             display: inline-block;
-            padding: 1rem 3rem;
+            padding: .5rem 3rem;
             text-transform: uppercase;
             font-size: 1rem;
             outline: none;
@@ -347,6 +380,11 @@ import Logo from "../assets/logo.png";
       }
     }
 
+
+
+
+
+    // Desktop Navigation done
     @media screen and (min-width: 1020px) {
         .nav-bar {
             padding-block: 1rem;
@@ -359,167 +397,149 @@ import Logo from "../assets/logo.png";
 
             // Nav-menu
             .nav-list {
-            list-style: none;
-            display: flex;
-            height: 100%;
-            align-items: center;
+                list-style: none;
+                display: flex;
+                height: 100%;
+                align-items: center;
 
-            li a {
-                white-space: nowrap;
-            }
-
-            // ============  menu ===========
-            & .sub-menu{
-                position: absolute;
-                top: 60px;
-                left: 0;
-                line-height: 40px;
-                background: var(--clr-white);
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-                border-radius: 0 0 4px 4px;
-                display: none;
-                z-index: 2;
-                padding-top: 2rem;
-
-
-                // Sub sub menu
-                .more-sub-menu{
-                    position: absolute;
-                    top: 0;
-                    left: 100%;
-                    border-radius: 0 4px 4px 4px;
-                    z-index: 1;
-                    display: none;
-                    padding-top: 0rem;
+                li a {
+                    white-space: nowrap;
                 }
-                .more:hover .more-sub-menu{
+
+                // ============  menu ===========
+                & .sub-menu{
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    line-height: 40px;
+                    background: var(--clr-white);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                    border-radius: 0 0 4px 4px;
+                    display: none;
+                    z-index: 2;
+                    padding-top: 2rem;
+
+
+                    // Sub sub menu
+                    .more-sub-menu{
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        border-radius: 0 4px 4px 4px;
+                        z-index: 1;
+                        display: none;
+                        padding-top: 0rem;
+                    }
+                    .more:hover .more-sub-menu{
+                        display: block;
+                    }
+                }
+                li:hover .products-sub-menu,
+                li:hover .services-sub-menu{
                     display: block;
                 }
-            }
-            li:hover .products-sub-menu,
-            li:hover .services-sub-menu{
-                display: block;
-            }
-            
-            .nav-item .sub-menu li{
-                padding: 0 22px;
-                border-bottom: 1px solid rgba(5, 0, 47, 0.1);
+                
+                .nav-item .sub-menu li{
+                    padding: 0 22px;
+                    border-bottom: 1px solid rgba(5, 0, 47, 0.1);
 
-                &:hover {
-                    background-color: #e7f3fa;
-                }
-            }
-
-
-            .nav-item {
-                position: relative;
-
-                &:last-child {
-                // margin-left: 2rem;
-                }
-            }
-            
-            // Navigation Main Link
-            .nav-link {
-                display: flex;
-                padding: 1rem 0.7rem;
-                text-transform: uppercase;
-                font-size: 0.9rem;
-                outline: none;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                font-family: inherit;
-                box-sizing: inherit;
-                margin: 0;
-                line-height: 2;
-                font-family: inherit;
-                font-weight: bold;
-                transition: 0.3s ease-in-out;
-                white-space: nowrap;
-
-                svg {
-                transition: 0.4s;
-                }
-
-                &:hover svg {
-                transform: translateY(4px);
-                }
-
-                &:hover {
-                transform: scale(1.03) translateY(2px);
-                color: var(--clr-blue-light);
-                }
-            }
-
-            // =============== Drop down ===========
-            .dropdown {
-                // position: relative;
-                // width: 100%;
-
-                &.active > .dropdown-menu {
-                opacity: 1;
-                // transform: translateY(0);
-                pointer-events: auto;
-                }
-
-                &-menu {
-                width: 100%;
-                position: absolute;
-                background-color: var(--clr-white);
-                top: 00%;
-                left: 0;
-                z-index: -1;
-                padding: 5rem;
-                padding-top: 10rem;
-                border-radius: 3rem;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.149);
-                opacity: 0;
-                // transform: translateY(-100px);
-                transition: 0.4s ease-in-out;
-                pointer-events: none;
-
-                h2 {
-                    line-height: 1.5;
-                }
-                .dropdown-list {
-                    list-style: none;
-
-                    li {
-                    &:not(:last-child) {
-                        margin-bottom: 1rem;
+                    &:hover {
+                        background-color: #e7f3fa;
                     }
+                }
+
+
+                .nav-item {
+                    position: relative;
+
+                    .dropdown li{
+                        padding: 0 22px;
+                        border-bottom: 1px solid rgba(5, 0, 47, 0.1);
+
+                        &:hover {
+                            background-color: #e7f3fa;
+                        }
                     }
-                    a {
+
+                }
+                
+                // Navigation Main Link
+                .nav-link {
                     display: flex;
-                    align-items: center;
-                    color: var(--clr-black);
+                    padding: 1rem 0.7rem;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    outline: none;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    font-family: inherit;
+                    box-sizing: inherit;
+                    margin: 0;
+                    line-height: 2;
+                    font-family: inherit;
+                    font-weight: bold;
+                    transition: 0.3s ease-in-out;
+                    white-space: nowrap;
 
-                    i {
-                        font-size: 1rem;
-                        display: flex;
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        border-radius: 50%;
-                        border: 2px solid var(--clr-yellow);
-                        align-items: center;
-                        justify-content: center;
-                        color: var(--clr-yellow);
-                        margin-left: 2rem;
-                        transition: 0.4s;
+
+                    &:hover svg {
+                    transform: translateY(4px);
                     }
 
-                    &:hover i {
-                        transform: translateX(10px);
-                    }
+                    &:hover {
+                    transform: scale(1.03) translateY(2px);
+                    color: var(--clr-blue-light);
                     }
                 }
 
-                .col-2 {
-                    gap: 10rem;
+
+
+
+                // =============== Drop down ===========
+                .dropdown {
+                    // position: relative;
+                    // width: 100%;
+
+                    &.active > .dropdown-menu {
+                    opacity: 1;
+                    // transform: translateY(0);
+                    pointer-events: auto;
+                    }
+
+                    &-menu {
+                        position: absolute;
+                        background-color: var(--clr-white);
+                        left: 0;
+                        opacity: 0;
+                        transition: 0.2s ease-in-out;
+                        pointer-events: none;
+                        top: 60px;
+                        line-height: 40px;
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                        border-radius: 0 0 4px 4px;
+                        // display: none;
+                        z-index: 2;
+                        padding-top: 2rem;
+
+                        .more-sub-menu{
+                            position: absolute;
+                            top: 0;
+                            left: 100%;
+                            border-radius: 0 4px 4px 4px;
+                            z-index: 1;
+                            display: none;
+                            padding-top: 0rem;
+                        }
+                        .more:hover .more-sub-menu{
+                            display: block;
+                        }
+                    
+                    }
+
                 }
-                }
-            }
+
+
             }
         }
     }
