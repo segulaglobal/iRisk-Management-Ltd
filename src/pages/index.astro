@@ -2,7 +2,7 @@
 // import Layout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import ArticleCard from "../components/ArticleCard.astro";
+import BlogCard from "../components/BlogCard.astro";
 
 // images for the homepage
 import { Image } from "astro:assets";
@@ -22,10 +22,10 @@ import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content"
 
-const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a:CollectionEntry<'posts'>, b:CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const mostRecentArticle: CollectionEntry<'blog'> = allBlogArticles[0];
-const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
+const mostRecentArticle: CollectionEntry<'posts'> = posts[0];
+const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 ---
 
@@ -364,11 +364,11 @@ const otherArticles: CollectionEntry<'blog'>[] = allBlogArticles.slice(1);
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {otherArticles.slice(0, HOMEPAGE_ARTICLES_LIMIT).map(
                                 article => (
-                                        <ArticleCard article={article} />
+                                        <BlogCard post={article} />
                                 )
                         )}
                 </div>
-                <a href="/articles" class="btn btn-blue mt-12">More News</a>
+                <a href="/blog" class="btn btn-blue mt-12">More News</a>
         </div>
 </section>
 <!-- end of news and blog -->
