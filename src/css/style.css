@@ -3,6 +3,9 @@
     color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 body {
@@ -19,6 +22,18 @@ body {
     position: relative;
     z-index: 1;
 }
+
+
+:target::before { 
+    content: ''; 
+    display: block; 
+    height: 12rem; 
+    margin: -50px 0 0 0; 
+}
+
+
+
+
 
 /* ========== Container ============= */
 .container {
