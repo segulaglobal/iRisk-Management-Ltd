@@ -243,7 +243,10 @@ section {
     color: var(--clr-blue-light);
 }
 
-
+/* Blue text */
+.blue-text {
+    color: var(--clr-blue-light);
+}
 
 
 
