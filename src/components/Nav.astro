@@ -85,7 +85,24 @@ import Logo from "../assets/logo.png";
 
             <ul class="nav-list">
                 <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">ABOUT US</a></li>
+                <li class="nav-item" data-dropdown>
+                    <div class="dropdown" data-dropdown>
+                        <button class="nav-link yellow-text" data-dropdown-button >
+                            About Us
+                            <i class="fa-solid fa-chevron-down pl-1.5 leading-8 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li>
+                                    <a href="/about">Our Journey</a>
+                                </li>
+                                <li>
+                                    <a href="/team">Our Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
                 
                 <!-- Data Dropdown Product -->
                 <li class="nav-item" data-dropdown>
