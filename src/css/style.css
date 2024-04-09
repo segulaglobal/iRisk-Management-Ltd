@@ -248,6 +248,11 @@ section {
     color: var(--clr-blue-light);
 }
 
+.candal-regular {
+    font-family: "Candal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 
 
 
