@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import { Image } from 'astro:assets'
-import Carousel1 from "../assets/carousel-1.png"
+import Aboutphoto from "../assets/about.png"
 
 
 ---
@@ -29,7 +29,7 @@ import Carousel1 from "../assets/carousel-1.png"
         <div class="container wrapper">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div>
-                    <Image src={Carousel1} alt="We are on a mission" />
+                    <Image src={Aboutphoto} alt="We are on a mission" />
                 </div>
                 <div>
                     <h2 class="heading-tertiary mb-4">Our mission</h2>
@@ -137,14 +137,16 @@ import Carousel1 from "../assets/carousel-1.png"
 .about-hero {
     background-image: linear-gradient(
         to bottom,
-        rgba(51, 162, 209, 0.95),
+        rgba(51, 162, 209, 0.85),
         rgba(3, 42, 65, 0.95)
     ),
-    url(/assets/coming-soon.jpg);
+    url(/assets/about-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     color: var(--clr-white);
+    background-position: center;
+    background-attachment: fixed;
 }
 // End of about hero
 
