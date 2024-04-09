@@ -1,0 +1,92 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import { Image } from 'astro:assets'
+import SheilaFull from '../assets/sheila-full.png'
+---
+
+
+
+<MainLayout title="Risk Analysis">
+<!-- Product Hero -->
+<section class="product-hero text-center py-40 pt-60">
+    <div class="container wrapper">
+        <h2 class="heading-secondary">Claims Consultancy.</h2>
+
+        
+
+       
+        <!-- Bread crumbs -->
+        <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                Home
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Claims consultations</span>
+                </div>
+            </li>
+            </ol>
+        </nav>
+  
+  
+    </div>
+</section>
+
+
+<!-- Product -->
+<section class="section-product py-20 w-full">
+    <div class="container wrapper">
+        <div class="product-container w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="text col-span-1">
+                <h2 class="heading-tertiary">Claims Consultancy</h2>
+                <p class="mb-8 leading-loose">Besides completely hand holding our clients in case of a loss iRisk also undertakes Claim Consultancy assignments on a standalone basis as indicated in our make a claim button.</p>
+
+                <p class="mb-8">
+                    Our claim consultancy practice is guided by the philosophy that the client must get the appropriate reimbursement, in the fastest possible time and without any hassle. Right from the beginning of our relationship, we ensure that timely steps are taken to safeguard the clients interest, should a claim occur.
+                </p>
+                <p class="mb-8">This includes ensuring proper policy documents with right terms and conditions, provision for benefits in premium for lower claim ratio, agreed panel of surveyors, provision for adhoc payment etc.</p>
+
+                <p>
+                    Our half a decade old relationships, knowledge and regular follow up or coordination help us in our performance on the claim settlement. We measure our success on the level of satisfaction a client has on its experience of claim handling by iRisk.
+                </p>
+            </div>
+            <div class="image hidden">
+                <Image src={SheilaFull} alt="Sheila Wristberg" />
+            </div>
+        </div>
+    </div>
+</section>
+
+</MainLayout>
+
+
+<style lang="scss">
+    .product-hero {
+        width: 100%;
+        background-image: linear-gradient(to bottom, #fff, #32A2D1);
+    }
+
+    
+
+    @media screen and (min-width: 768px) {
+        .product-container {
+
+            .image {
+                display: block;
+            }
+            .text {
+                grid-column: 1 /span 2;
+            }
+        }
+    }
+</style>

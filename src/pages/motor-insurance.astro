@@ -1,0 +1,963 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ProductHero from "../components/ProductHero.astro";
+
+// images
+import { Image } from 'astro:assets';
+import Motor from "../assets/motor-service.png";
+---
+
+
+
+
+<MainLayout title="iRisk | Motor Insurance">
+    <!-- Motor Insurance Hero -->
+    <ProductHero>
+        <h2 class="heading-secondary">Motor Insurance</h2>
+    
+           
+             <!-- Bread crumbs -->
+            <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                        </svg>
+                        Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <a href="/general-insurance" class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">General Insurance</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Motor Insurance</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+            <!-- End of Bread crumbs -->
+
+    </ProductHero>
+    <!-- End of Motor Insurance Hero -->
+
+
+    <!-- Section Product information -->
+    <section class="py-20">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="heading-tertiary mb-4">Motor Insurance</h2>
+                    <p class="mb-8">According to the  Insurance act in Ghana, it is mandatory for all vehicles plying on Indian roads to have them insured under a Motor Third Party Liability insurance policy. It covers the vehicle owners against financial and legal liabilities arising out of accidents to third parties only.</p>
+                    <p>A Comprehensive Motor insurance policy on the other hand provides additional coverage to your own vehicle against financial losses arising out of accident, theft, damage, riots, fire and natural calamities. The policy also covers death and bodily injuries to the owner driver of the vehicle.</p>
+                </div>
+                <div>
+                    <Image src={Motor} alt="Motor Insurance" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of section product information -->
+
+
+
+
+
+
+
+
+    <!-- Section Tabs & information -->
+    <section class="section-tabs py-40 bg-slate-100">
+        <div class="container wrapper">
+
+            <!-- Tabs -->
+            <div class="product-tabs border-b border-gray-200 dark:border-gray-700 bg-white lg:pl-56">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Private Car Insurance</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Two Wheeler Insurance</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Commercial Vehicle Insurance</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Various Pages -->
+            <div id="default-styled-tab-content">
+
+                <!-- =========== Private Car Insurance Tab=========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- Private Car Section -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#features">Features and Benefits</a></li>
+                                        <li><a href="#add-on">Add-On Covers</a></li>
+                                        <li><a href="#premium">Premium</a></li>
+                                        <li><a href="#exclusions">Exclusions</a></li>
+                                        <li><a href="#claims">Claims Process</a></li>
+                                        <li><a href="#faqs">FAQs</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Private Car Insurance</h2>
+                                        <p>A private car insurance policy covers your car against financial losses that you may face in case of accident or theft of car. You pay a certain amount as a premium to the insurance company to buy this cover, and they in return agree to pay for accidental damages and theft losses if they arise. As per IRDA (Insurance Regulatory and Development Authority), it is compulsory for any vehicle running on Indian roads to be covered under an active car insurance policy.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Features and Benefits -->
+                                    <div id="features" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Features and Benefits</h2>
+                                        <p class="blue-text font-medium">Legal Requirement
+                                        </p>
+                                        <p class="mb-8">As per the Indian Motors Vehicle Act, third party insurance is mandatory on all the vehicles. Along with that, buying comprehensive car insurance helps you to remain in compliance of regulations and set your mind free too.</p>
+
+                                        <p class="blue-text font-medium">Accidental Coverage
+                                        </p>
+                                        <p>If your car meets with an accident, you can simply claim insurance and bear the expenses without shedding loads of money from your own pocket.</p>
+
+                                        <p class="blue-tex">Safety Against Natural Disasters</p>
+                                        <p class="mb-8">If your car is damaged due to flood, fire or earthquake, your car insurance policy will come in handy to claim for the damages.</p>
+
+                                        <p class="blue-text font-medium">Cover Against Theft and Vandalism</p>
+                                        <p class="mb-8">Comprehensive car insurance provides you cover against theft and vandalism. You can get your hard-earned money back if your car gets stolen</p>
+
+                                        <p class="blue-text font-medium">No Claim Bonus</p>
+                                        <p>In case no loss arises, you get rewarded a No Claim Bonus (NCB) for not filing any car insurance claim that year. This makes your car insurance renewal premium cheaper</p>
+
+                                    </div>
+                                    
+                                    
+                                    <hr>
+
+                                    <!-- #Add-On and Covers -->
+                                    <div id="add-on" class="py-12">
+                                        <h2 class="heading-tertiary">Add-On Covers</h2>
+                                        <p class="mb-4">Add-on is an additional benefit added to your car policy which covers the car against unforeseen expenses. Add-ons, also known as riders, can be included in your insurance policy by paying extra premium.
+                                        <br> <br>
+                                            There are various types of add-ons offered by insurance companies listed as follows, but you should select the one according to your specific requirements.</p>
+
+                                            <ul class="list-disc leading-loose ml-12">
+                                                <li>Zero Depreciation Claim</li>
+                                                <li>No Claim Bonus Protection</li>
+                                                <li>Return to Invoice</li>
+                                                <li>Cost of consumables</li>
+                                                <li>Repair of Glass, Fiber, Plastic and Rubber Parts</li>
+                                                <li>Roadside Assistance cover</li>
+                                                <li>Daily Allowance</li>
+                                                <li>Engine & Gearbox</li>
+                                                <li>Loss of Personal Belongings</li>
+                                            </ul>
+                                    </div>
+                                    <!-- end of Ad-on Cover -->
+                                    
+                                    <hr>
+                                
+                                    <!-- #Premiums -->
+                                    <div class="py-12" id="premium">
+                                        <h2 class="heading-tertiary">Factors Determining Premium</h2>
+                                        <p  class="mb-2">Following are key factors that determine the premium of a car insurance policy</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Car Model and Variant</li>
+                                            <li>Year of Manufacture/ IDV (Insured Declared Value)</li>
+                                            <li>Fuel type (Petrol / Diesel / CNG / LPG)</li>
+                                            <li>CC (Cubic Capacity of Engine)</li>
+                                            <li>Registration Zone (Zone A- Delhi, Kolkata, Mumbai, Chennai, Ahmadabad, Pune, Bangalore, Hyderabad Zone B- Rest of India)</li>
+                                            <li>NCB (No Claim Bonus)</li>
+                                            <li>Additional Covers like Zero Depreciation, Key Loss etc</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- End of Premiums -->
+
+
+                                    <hr>
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="exclusions">
+                                        <h2 class="heading-tertiary">Exclusions: What is Not Covered
+                                        </h2>
+                                        <p class="mb-2">Your car insurance policy covers you against financial losses that may occur during an accident or theft. However, there are certain events, which your policy may not cover:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Occurrence of loss or damage when the insurance policy has expired or not active.</li>
+                                            <li>Regular wear and tear of the car and its parts</li>
+                                            <li>Usual depreciation of the car</li>
+                                            <li>If the person driving the car does not possess a valid driving license</li>
+                                            <li>Electrical or mechanical breakdown</li>
+                                            <li>If the person driving is found to be under the influence of liquor/alcohol/drugs</li>
+                                            <li>Loss or damage as a result of war /mutiny /nuclear risks</li>
+                                            <li>Damage to engine due to oil leakage</li>
+                                            <li>If the car faces a mishap while being driven outside India</li>
+                                            <li>If the car is used for any other purpose other than its intended use such as speed testing, racing etc</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+
+                                    <hr>
+
+                                    <!-- Claim Process -->
+                                    <div class="py-12" id="claims">
+                                        <h2 class="heading-tertiary">Claims Process</h2>
+                                        <p class="mb-2">In the event of a loss, following are key points on how to claim your car insurance:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Keep the copies of your insurance paperwork up to date and intact. They are critical documents that can get you your claim.</li>
+                                            <li>Assess and record the damage done to the car</li>
+                                            <li>File an FIR incase of an accident or theft. It is mandatory in a third party liability claim to file an FIR</li>
+                                            <li>Intimate the insurance company at the earliest</li>
+                                            <li>Extend full cooperation to the insurer and the surveyor appointed for completion of the survey work and for proper assessment of the loss.</li>
+                                            <li>Provide "proof of damage" form as well as records relating to your claim (such as medical bills, car repair bills and a copy of the FIR).
+                                            Present accurate and validated information to the representative which is the right thing to do for claiming the insurance</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Claim Process -->
+
+                                    <hr>
+
+                                    <!-- Frequently Asked Questions -->
+                                    <div class="py-12" id="faqs">
+                                        <h3 class="heading-tertiary mb-4">Frequently Asked Questions</h3>
+                                        <!-- Accordion -->
+                                        <div id="accordion-collapse" data-accordion="collapse">
+                                            <!-- HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT? -->
+                                            <h2 id="accordion-collapse-heading-1">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                                    <span>HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">While generally it is three times, it could vary from company to company.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- IS AN EXPIRED POLICY TREATED AS A FRESH CASE? -->
+                                            <h2 id="accordion-collapse-heading-2">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                                    <span>IS AN EXPIRED POLICY TREATED AS A FRESH CASE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, but inspection of the vehicle is required. However, No Claim Bonus (NCB) can be protected till the expiry of 90 days from the date of expiry.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY? -->
+                                            <h2 id="accordion-collapse-heading-3">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                                    <span>WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                    <li>Expiring Policy</li>
+                                                    <li>Information on claims if any during last year</li>
+                                                    <li>RC copy</li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                            
+                                            
+                                            <!-- UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED? -->
+                                            <h2 id="accordion-collapse-heading-4">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                                    <span>UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                        <li>If there is a gap in renewal</li>
+                                                        <li>Switching from third party cover to a comprehensive cover</li>
+                                                        <li>There is a requirement to cover additional equipment or accessories fitted in car like anti theft device, CNG kit etc. which are not in the expiring policy</li>
+                                                        <li>Opting for certain specified add on covers</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Legally anyone driving a car, must hold a valid driving license. In this scenario, it is the owner's responsibility to ensure that his vehicle is being driven by someone with a valid driving license and that the driver is not under the influence of alcohol or drugs.</p>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS MULTI-YEAR CAR INSURANCE? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS MULTI-YEAR CAR INSURANCE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">According to the Supreme Court order, IRDA has mandated all general insurance companies to offer multi-year third party insurance to all motor vehicles sold after 1st September, 2018. Therefore, instead of single third party liability plans, insurance companies will offer 3 year third party liability plans to cars and 5 year third party liability plans to two wheelers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End of Frequently Asked Questions -->
+                                    
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Private Cars -->
+                </div>
+
+
+                <!-- =========== Two Wheeler Car Insurance========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- Two Wheeler Car Insurance -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#features">Features and Benefits</a></li>
+                                        <li><a href="#add-on">Add-On Covers</a></li>
+                                        <li><a href="#premium">Factors Determining Premium</a></li>
+                                        <li><a href="#exclusions">Exclusions</a></li>
+                                        <li><a href="#claims">Claims Process</a></li>
+                                        <li><a href="#faqs">FAQs</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Two Wheeler Insurance</h2>
+                                        <p>A two wheeler insurance policy helps cover financial expenses against any unforeseen circumstances including accidents, thefts or natural disasters, to a two wheeler/bike. It is not optional, but mandatory under the Motor Vehicles Act to have your two wheeler covered under an insurance policy.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Features and Benefits -->
+                                    <div id="features" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Features and Benefits</h2>
+                                        <p class="blue-text font-medium">Accidental Coverage</p>
+                                        <p class="mb-8">If your bike meets with an accident, you can simply claim insurance against the repair expenses without bearing the load on your own pocket.</p>
+
+                                        <p class="blue-text font-medium">Third Party Liability</p>
+                                        <p>In case of an accident, the insurance policy will provide cover to reimburse damages to the third party’s vehicle or property. Additionally, medical expenses incurred for treatment or hospitalisation expenses are also taken care of.</p>
+
+                                        <p class="blue-tex">Safety Against Natural Disasters</p>
+                                        <p class="mb-8">If your bike is damaged due to flood, fire or earthquake, your comprehensive bike insurance policy will cover for the damages.</p>
+
+                                        <p class="blue-text font-medium">Cover Against Theft and Vandalism</p>
+                                        <p class="mb-8">Comprehensive bike insurance provides you cover against theft and vandalism. You can get your hard-earned money back if your car gets stolen.</p>
+
+                                        <p class="blue-text font-medium">No Claim Bonus</p>
+                                        <p>In case no loss arises, you get rewarded a No Claim Bonus (NCB) for not filing any bike insurance claim that year. This makes your insurance renewal premium cheaper.</p>
+
+                                    </div>
+                                    
+                                    
+                                    <hr>
+
+                                    <!-- #Add-On and Covers -->
+                                    <div id="add-on" class="py-12">
+                                        <h2 class="heading-tertiary">Add-On Covers</h2>
+                                        <p class="mb-4">Add-on is an additional benefit added to your car policy which covers the car against unforeseen expenses. Add-ons, also known as riders, can be included in your insurance policy by paying extra premium.</p>
+                                        
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Zero Depreciation Claim</li>
+                                            <li>Road Assistance Cover</li>
+                                            <li>Accessories Coverage</li>
+                                            <li>Accident Cover for Passenger</li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of Ad-on Cover -->
+                                    
+                                    <hr>
+                                
+                                    <!-- #Premiums -->
+                                    <div class="py-12" id="premium">
+                                        <h2 class="heading-tertiary">Factors Determining Premium</h2>
+                                        <p  class="mb-2">Following are key factors that determine the premium of a two wheelter insurance policy</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Bike Model and Variant</li>
+                                            <li>Year of Manufacture/ IDV (Insured Declared Value)</li>
+                                            <li>Fuel type (Petrol / Diesel / CNG / LPG)</li>
+                                            <li>CC (Cubic Capacity of Engine)</li>
+                                            <li>Registration Zone</li>
+                                            <li>NCB (No Claim Bonus)</li>
+                                            <li>Additional Covers like Zero Depreciation, Key Loss etc</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Premiums -->
+
+
+                                    <hr>
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="exclusions">
+                                        <h2 class="heading-tertiary">Exclusions: What is Not Covered
+                                        </h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Normal wear and tear of the vehicle.</li>
+                                            <li>Not having a valid driving license during an accident</li>
+                                            <li>Driving under the influence of intoxicating liquor/ drugs</li>
+                                            <li>Accident taking place beyond geographical limits</li>
+                                            <li>Electrical or mechanical breakdown</li>
+                                            <li>If the vehicle is being used for unlawful purposes</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+
+                                    <hr>
+
+                                    <!-- Claim Process -->
+                                    <div class="py-12" id="claims">
+                                        <h2 class="heading-tertiary">Claims Process</h2>
+                                        <p class="mb-2">In the event of a loss, following are key points on how to claim your car insurance:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Keep the copies of your insurance paperwork up to date and intact. They are critical documents that can get you your claim.</li>
+                                            <li>Assess and record the damage done to the car</li>
+                                            <li>File an FIR incase of an accident or theft. It is mandatory in a third party liability claim to file an FIR</li>
+                                            <li>Intimate the insurance company at the earliest</li>
+                                            <li>Extend full cooperation to the insurer and the surveyor appointed for completion of the survey work and for proper assessment of the loss.</li>
+                                            <li>Provide "proof of damage" form as well as records relating to your claim (such as medical bills, car repair bills and a copy of the FIR).
+                                            Present accurate and validated information to the representative which is the right thing to do for claiming the insurance</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Claim Process -->
+
+                                    <hr>
+
+                                    <!-- Frequently Asked Questions -->
+                                    <div class="py-12" id="faqs">
+                                        <h3 class="heading-tertiary mb-4">Frequently Asked Questions</h3>
+                                        <!-- Accordion -->
+                                        <div id="accordion-collapse" data-accordion="collapse">
+                                            <!-- HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT? -->
+                                            <h2 id="accordion-collapse-heading-1">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                                    <span>HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">While generally it is three times, it could vary from company to company.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- IS AN EXPIRED POLICY TREATED AS A FRESH CASE? -->
+                                            <h2 id="accordion-collapse-heading-2">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                                    <span>IS AN EXPIRED POLICY TREATED AS A FRESH CASE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, but inspection of the vehicle is required. However, No Claim Bonus (NCB) can be protected till the expiry of 90 days from the date of expiry.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY? -->
+                                            <h2 id="accordion-collapse-heading-3">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                                    <span>WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                    <li>Expiring Policy</li>
+                                                    <li>Information on claims if any during last year</li>
+                                                    <li>RC copy</li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                            
+                                            
+                                            <!-- UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED? -->
+                                            <h2 id="accordion-collapse-heading-4">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                                    <span>UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                        <li>If there is a gap in renewal</li>
+                                                        <li>Switching from third party cover to a comprehensive cover</li>
+                                                        <li>There is a requirement to cover additional equipment or accessories fitted in car like anti theft device, CNG kit etc. which are not in the expiring policy</li>
+                                                        <li>Opting for certain specified add on covers</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Legally anyone driving a car, must hold a valid driving license. In this scenario, it is the owner's responsibility to ensure that his vehicle is being driven by someone with a valid driving license and that the driver is not under the influence of alcohol or drugs.</p>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS MULTI-YEAR CAR INSURANCE? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS MULTI-YEAR CAR INSURANCE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">According to the Supreme Court order, IRDA has mandated all general insurance companies to offer multi-year third party insurance to all motor vehicles sold after 1st September, 2018. Therefore, instead of single third party liability plans, insurance companies will offer 3 year third party liability plans to cars and 5 year third party liability plans to two wheelers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End of Frequently Asked Questions -->
+                                    
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Two Wheelter Insurance -->
+                </div>
+
+
+                
+                <!-- =========== Commercial Vehicle Insurance======== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section3-about">About</a></li>
+                                        <li><a href="#section3-buying">Buying Factors</a></li>
+                                        <li><a href="#section3-type">Types of Vehicles</a></li>
+                                        <li><a href="#section3-feature">Features and Benefits</a></li>
+                                        <li><a href="#section3-add-on">Add-On Covers</a></li>
+                                        <li><a href="#section3-premium">Premium</a></li>
+                                        <li><a href="#section3-exclusions">Exclusions</a></li>
+                                        <li><a href="#section3-claims">Claims Process</a></li>
+                                        <li><a href="#section3-faqs">FAQs</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section3-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Commercial Vehicle Insurance</h2>
+                                        <p>Commercial Vehicles Insurance is a policy that covers the commercial vehicles of a business against external damages, and personal and third party liability. It can be taken for any passenger or goods carrying vehicle, taxis and other miscellaneous vehicles like tractor, crane and. trailers. Third Party Insurance is a statutory requirement under the Motor Vehicles Act, 1988.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Buying Factors -->
+                                    <div id="section3-buying" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Buying Factors</h2>
+                                        <p class="blue-text font-medium">Following factors help determine if you need a Personal Auto Insurance or Commercial Vehicle Insurance</p>
+                                        
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Owner and driver of the vehicle</strong> If the vehicle is owned by any kind of business, then it is likely to be covered under a commercial auto insurance policy.</li>
+                                            <li><strong>Usage of vehicle:</strong> When the insured uses the vehicle for business purposes, then he needs a commercial vehicle policy.</li>
+                                            <li><strong>Type and Weight of the Vehicle:</strong>  If the vehicle is heavier than a normal size pickup or SUV such as a dump truck, tow truck, semi-truck or commercial trailer, then one definitely needs a commercial auto insurance policy.</li>
+                                            <li><strong>Required Business Liability Limits:</strong>  For higher business liability limits, you need a commercial auto insurance policy.</li>
+                                        </ul>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <div class="py-12" id="section3-type">
+                                        <h2 class="heading-tertiary">Type of Vehicle</h2>
+                                        <p class="mb-4">The following types of vehicles are covered under commercial vehicle insurance:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Goods Carrying Commercial Vehicle: </strong> Vehicles which help transport goods from one place to another for example tempos, trailers, etc are considered to fall under goods carrying commercial vehicles.</li>
+                                            <li><strong>Passengers Carrying Commercial Vehicle:</strong> Vehicles that are used to transport passengers from one place to the other with the intention of earning a livelihood, for eg, a bus, auto-rickshaws, taxi, cabs, etc. fall under the category of passenger carrying vehicle.</li>
+                                            <li><strong>Heavy Commercial Vehicle:</strong>  Vehicles used for construction, mining, loading of heavy goods for example truck; crane, etc fall under the category of heavy vehicles. They have higher liabilities than other commercial vehicles.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <hr>
+
+                                    <div class="py-12" id="section3-feature">
+                                        <h2 class="heading-tertiary">Features and Benefits</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>In the case of a fleet of vehicles under a single ownership, fleet insurance policy for commercial vehicle insurance will eliminate the stress of managing individual insurance policies for each and every vehicle.</li>
+                                            <li>In the case of a fleet of vehicles under a single ownership, fleet insurance policy for commercial vehicle insurance will eliminate the stress of managing individual insurance policies for each and every vehicle.</li>
+                                            <li>Commercial vehicle insurance provides for any damage that may incur while you disabled vehicle is being towed mechanically</li>
+                                            <li>Facilitate quick repairs without losing on time</li>
+                                        </ul>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- #Add-On and Covers -->
+                                    <div id="section3-add-on" class="py-12">
+                                        <h2 class="heading-tertiary">Add-On Covers</h2>
+                                        <p class="mb-4">The policy can be extended to cover the following risks on payment of additional premium:</p>
+                                        
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Loss or damage to accessories fitted in the vehicle such as Electrical / Non-Electrical items, stereos, fans, air-conditioners etc.</li>
+                                            <li>Personal accident covers under Commercial vehicle policies for Passengers & Driver</li>
+                                            <li>Legal liability to employees of the insured</li>
+                                            <li>Legal liability to non-fare paying passengers</li>
+                                            <li>Cover for lamps, tyre/tubes, mudguards, bonnet /side parts, bumpers, headlights and paintwork of a damaged portion only</li>
+                                        </ul>
+                                    </div>
+                                    <!-- end of Ad-on Cover -->
+                                    
+                                    <hr>
+
+                                    <hr>
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="section3-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions: What is Not Covered
+                                        </h2>
+                                        <p class="mb-2">IThe Insurers shall not be liable under this policy in respect of</p>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Normal wear and tear of the vehicle
+                                            </li>
+                                            <li>Not having a valid driving license during an accident</li>
+                                            <li>Driving under the influence of intoxicating liquor/ drugs</li>
+                                            <li>Accident taking place beyond geographical limits</li>
+                                            <li>Electrical or mechanical breakdown</li>
+                                            <li>If the vehicle is being used for unlawful purposes</li>
+                                            <li>Loss under war or similar hostile scenarios.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+
+                                    <hr>
+
+                                    <!-- Claim Process -->
+                                    <div class="py-12" id="section3-claims">
+                                        <h2 class="heading-tertiary">Claims Process</h2>
+                                        <p class="mb-2">In the event of a loss, following are key points on how to claim your car insurance:</p>
+
+                                        <ol class="list-disc leading-loose ml-12">
+                                            <li>Keep the copies of your insurance paperwork up to date and intact. They are critical documents that can get you your claim.</li>
+                                            <li>Assess and record the damage done to the car</li>
+                                            <li>File an FIR incase of an accident or theft. It is mandatory in a third party liability claim to file an FIR</li>
+                                            <li>Intimate the insurance company at the earliest</li>
+                                            <li>Extend full cooperation to the insurer and the surveyor appointed for completion of the survey work and for proper assessment of the loss.</li>
+                                            <li>Provide "proof of damage" form as well as records relating to your claim (such as medical bills, car repair bills and a copy of the FIR).
+                                            Present accurate and validated information to the representative which is the right thing to do for claiming the insurance</li>
+                                            <li>Present accurate and validated information to the representative which is the right thing to do for claiming the insurance</li>
+                                        </ol>
+                                    </div>
+                                    <!-- End of Claim Process -->
+
+                                    <hr>
+
+                                    <!-- Frequently Asked Questions -->
+                                    <div class="py-12" id="section3-faqs">
+                                        <h3 class="heading-tertiary mb-4">Frequently Asked Questions</h3>
+                                        <!-- Accordion -->
+                                        <div id="accordion-collapse" data-accordion="collapse">
+                                            <!-- HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT? -->
+                                            <h2 id="accordion-collapse-heading-1">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                                    <span>HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">While generally it is three times, it could vary from company to company.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- IS AN EXPIRED POLICY TREATED AS A FRESH CASE? -->
+                                            <h2 id="accordion-collapse-heading-2">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                                    <span>IS AN EXPIRED POLICY TREATED AS A FRESH CASE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Yes, but inspection of the vehicle is required. However, No Claim Bonus (NCB) can be protected till the expiry of 90 days from the date of expiry.</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY? -->
+                                            <h2 id="accordion-collapse-heading-3">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                                    <span>WHAT DOCUMENTS ARE REQUIRED TO RENEW A CAR INSURANCE POLICY?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                    <li>Expiring Policy</li>
+                                                    <li>Information on claims if any during last year</li>
+                                                    <li>RC copy</li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                            
+                                            
+                                            <!-- UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED? -->
+                                            <h2 id="accordion-collapse-heading-4">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                                    <span>UNDER WHAT CIRCUMSTANCES INSPECTION OF THE VEHICLE IS REQUIRED?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                        <li>If there is a gap in renewal</li>
+                                                        <li>Switching from third party cover to a comprehensive cover</li>
+                                                        <li>There is a requirement to cover additional equipment or accessories fitted in car like anti theft device, CNG kit etc. which are not in the expiring policy</li>
+                                                        <li>Opting for certain specified add on covers</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS THE OWNER’S RESPONSIBILITY IF SOMEONE ELSE IS DRIVING THE VEHICLE AT THE TIME OF ACCIDENT?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Legally anyone driving a car, must hold a valid driving license. In this scenario, it is the owner's responsibility to ensure that his vehicle is being driven by someone with a valid driving license and that the driver is not under the influence of alcohol or drugs.</p>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- WHAT IS MULTI-YEAR CAR INSURANCE? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>WHAT IS MULTI-YEAR CAR INSURANCE?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">According to the Supreme Court order, IRDA has mandated all general insurance companies to offer multi-year third party insurance to all motor vehicles sold after 1st September, 2018. Therefore, instead of single third party liability plans, insurance companies will offer 3 year third party liability plans to cars and 5 year third party liability plans to two wheelers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End of Frequently Asked Questions -->
+                                    
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+            
+
+
+
+
+
+        </div>
+    </section>
+
+</MainLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+:target::before { 
+    content: ''; 
+    display: block; 
+    height: 10rem; 
+    margin: -50px 0 0 0; 
+}
+
+
+
+// ================ Product Tabs =================
+.product-tabs {
+    position: sticky;
+    top: 9rem;
+    z-index: 10;
+    border-radius: 3px 3px 0 0;
+}
+
+
+
+
+
+
+/* Sticky Side Navigation */ 
+#sidenav {
+    width: 100%;
+    
+
+    ul {
+        border: 1px solid lightgray;
+        position: sticky;
+        position: -webkit-sticky; /* Safari */
+        top: 13rem;
+    }
+
+    li {
+        width: 100%;
+        display: inline-block;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid lightgray;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: .5rem 0;
+            padding-left: 1rem;
+            transition: .3s;
+
+            &:hover,
+            &:focus {
+                background-color: rgb(199, 199, 199);
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+</style>

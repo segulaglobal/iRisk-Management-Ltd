@@ -1,0 +1,88 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ProductHero from "../components/ProductHero.astro";
+---
+
+
+
+<MainLayout title="Risk Analysis">
+<!-- Product Hero -->
+<ProductHero>
+    <!-- Bread crumbs -->
+    <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                Home
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Portfolio Analysis</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <!-- End of Bread crumbs -->
+</ProductHero>
+<!-- End of Product hero -->
+
+
+<!-- Product -->
+<section class="section-product py-20">
+    <div class="container wrapper">
+        <h2 class="heading-tertiary">Portfolio Management Services</h2>
+        <p class="mb-16 leading-loose">iRisk Portfolio Management Services provide end to end solutions for insurance requirements of every sizable client. PMS is much more comprehensive than merely assisting you in placement of the business. It offers the client an opportunity to completely outsource its insurance function while  retaining key decision making. Our step by step focused approach that enables us hand holding our clients right through include:</p>
+
+        <h3 class="heading-tertiary mb-4">Understanding your Business and Risk Analysis</h3>
+        <ul class="list-disc ml-8 mb-16">
+            <li class="mb-4">We begin with understanding your business and risk environment.</li>
+            <li class="mb-4">Identify &amp; analysis of all the risk that may pose on your business.</li>
+        </ul>
+
+        <!-- Reviewing your portfolio -->
+        <h3 class="heading-tertiary mb-4">Reviewing the Portfolio</h3>
+        <ul class="list-disc ml-8">
+            <li class="mb-4">We scrutinize & analyse existing insurance coverage in detail and will suggest you possible improvement, avoid overlapping of coverage's.</li>
+            <li class="mb-4">Arrangement need based risk inspection and valuation.</li>
+            <li class="mb-4">Mapping your existing coverage on the risk that need to be covered</li>
+            <li class="mb-4">Identification of any uncovered risk and gap in the insurance cover</li>
+            <li class="mb-4">Submitting a Risk Review Report.</li>
+            <li class="mb-4">Developing Comprehensive Insurance Program covering all risk to be transferred with target of optimizing insurance cost.</li>
+        </ul>
+
+        <!-- Underwriting and Premium Placement -->
+        <h3 class="heading-tertiary mb-4">Underwriting and Premium Placement.</h3>
+        <ul class="list-disc ml-8">
+            <li class="mb-4">Finalizing insurance covers to be secured.</li>
+            <li class="mb-4">Discussion on su insured, perils to be covered, deductible/excess, excluded perils, add on covers and taking a final view on each of these issues.</li>
+            <li class="mb-4">Draft request for Offer, obtain & evaluate ("technically and commercially") offers recieved from various insurers for finding the best solutions.</li>
+            <li class="mb-4">Negotiate with the shortlisted insurer(s) to customize the policy cover and to obtain best rates.</li>
+            <li class="mb-4">Placement of insurance business and ensuring that the policy are worded as agreed upon.</li>
+        </ul>
+
+        <!-- Claims Management and Assistance -->
+        <h3 class="heading-tertiary mb-4">Claims Management and Assistance</h3>
+        <ul class="list-disc ml-8">
+            <li class="mb-4">Develop Standard Operating Procedure / Manuals to deal with the claims.</li>
+            <li class="mb-4">Educating selecting officials on risk covered, benefits available and also "Do and Donot" when a claim occurs, by holding presentation and seminar.</li>
+            <li class="mb-4">Complete hand holding with end-to-end services starting from notification of claim to insurer, survey to negotiations till the final settlement.</li>
+        </ul>
+    </div>
+</section>
+
+</MainLayout>
+
+
+<style lang="scss">
+    .product-hero {
+        width: 100%;
+        background-image: linear-gradient(to bottom, #fff, #32A2D1);
+    }
+</style>

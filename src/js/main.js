@@ -41,15 +41,14 @@ function openMenu () {
 
 // ============== DropDown functionality =============
 document.addEventListener("click", e => {
-    const isDropdownButton = e.target.matches("[data-dropdown-button]");
+    const isDropdownButton = e.target.matches("[data-dropdown-button]")
     if(!isDropdownButton && e.target.closest("[data-dropdown]") != null)
     return
 
     let currentDropdown
     if(isDropdownButton) {
-        currentDropdown = e.target.closest('[data-dropdown]');
-        currentDropdown.classList.toggle('active');
-        // navBar.classList.toggle('no-shadow');
+        currentDropdown = e.target.closest('[data-dropdown]')
+        currentDropdown.classList.toggle('active')
     }
 
     document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
@@ -60,8 +59,3 @@ document.addEventListener("click", e => {
 
 
 
-// =============== Remove shadow on Navbar when a link is clicked ===============
-const navBar = document.querySelector("nav-bar");
-navItem.forEach(item =>{
-    // item.addEventListener('click', console.log('you clicked'));
-})
