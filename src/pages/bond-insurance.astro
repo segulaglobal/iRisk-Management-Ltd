@@ -52,20 +52,111 @@ import Bond from '../assets/bond-insurance.png'
 
 
 
-    <section class="py-20">
+    <section >
         <div class="container wrapper">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
+            
+                
                     <h2 class="heading-tertiary mb-4">Bond Insurance</h2>
                     <p class="mb-8">A bond acts as a financial guarantee in a three-way agreement. The surety, often an insurance company, promises to take responsibility if the contractor fails to uphold their end of the contract. This protects the employer, who receives compensation for the contractor's breach from the surety if necessary</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, placeat suscipit ipsum tempore temporibus quasi accusamus molestiae dolorem pariatur consequuntur culpa doloremque nobis vel repellendus. Perspiciatis sunt numquam officia amet!</p>
-                </div>
-                <div>
-                    <Image src={Bond} alt="Motor Insurance" />
-                </div>
-            </div>
+                    <h2 class="heading-tertiary mb-4">Types of Bonds</h2>
+                    <h3>There are mainly surety bonds and custom bonds </h3>
+                    
+                    <h2 class="heading-tertiary mb-4">Surety Bonds:</h2>
+                    <p>A surety bond constitutes a contractual arrangement involving a minimum of three entities:</p>
+                
+                <ol>
+                  <li>
+                    <strong>The Obligee:</strong> This entity necessitates the bond, often comprising governmental bodies aiming to regulate sectors and mitigate financial risks.
+                  </li>
+                  <li>
+                    <strong>The Principal:</strong> This party is responsible for executing the contractual obligation or task.
+                  </li>
+                  <li>
+                    <strong>The Surety:</strong> An insurance company backing the bond, it offers a line of credit in the event that the principal fails to fulfill their obligations.
+                  </li>
+                </ol>
+                    <ul>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('bid')">
+                                Bid Bonds:
+                                <span id="dropdown-bid" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="bid" class="hidden">Bid bonds are guarantees from a surety company for contractors. They assure project owners that winning contractors will honor their bids and secure a performance bond. If the contractor backs out, the surety company pays the difference between the winning and next best bid. This protects the project owner from wasted time and potentially higher costs. </p>
+                        </li>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('performance')">
+                                Performance Bonds:
+                                <span id="dropdown-performance" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="performance" class="hidden">A performance bond is essentially a financial guarantee issued by a surety company, like an insurance company, to protect the client (also called the obligee) in case the contractor fails to complete the project according to the contract. If the contractor falls short, the surety company will pay the client up to a certain amount to cover the costs of completing the project or fixing any defects. Performance bonds are typically required for large projects, especially in construction, and they often replace bid bonds once a contract is awarded.</p>
+                        </li>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('advance')">
+                                Advance Payment Mobilisation Bonds:
+                                <span id="dropdown-advance" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="advance" class="hidden">Advance payment bonds act like financial insurance for construction projects. They guarantee the project owner gets their money back if the contractor receiving an advance payment fails to meet the contract. This protects the owner's investment and fosters trust in the project. While there's a cost to the bond, it can improve cash flow for contractors and promote a secure project environment. </p>
+                        </li>
+                    </ul>
+                <h2 class="heading-tertiary mb-4">Custom Bonds</h2>
+                <p>In Ghana, when you import or export goods, you typically owe customs duties immediately. However, the Ghana Revenue Authority allows you to delay this payment if you have a customs bond from a reputable insurance company. This bond acts as a guarantee that, if your company fails to meet its obligations regarding import/export duties, the insurance company will cover any lost revenue for the government.  </p>
+                    <ul>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('temp')">
+                                Temporary Importation :
+                                <span id="dropdown-temp" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="temp" class="hidden">Importers sometimes require temporary importation of goods into Ghana before re-exporting them to their ultimate destination. Given that all imported goods are subject to taxation, importers utilize bonds to ensure payment of taxes, even if the goods are not ultimately re-exported.</p>
+                        </li>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('agent')">
+                                Customs Agent House Bonds:
+                                <span id="dropdown-agent" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="agente" class="hidden">This bond is provided to Clearing Agents to assure Customs that in the event of their wrongdoing leading to revenue loss for the state, the guarantor will compensate Customs for an amount equivalent to the bond's value.</p>
+                        </li>
+                        <li class="cool">
+                            <strong onclick="toggleVisibility('transit')">
+                                Transit Bonds:
+                                <span id="dropdown-transit" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="transit" class="hidden">This guarantee is provided to transporters of imported goods bound for a neighboring country who have not settled their customs duties. It offers coverage in the event that the goods fail to reach their designated destination, potentially resulting in revenue loss for the state.</p>
+                        </li>
+                         <li class="cool">
+                            <strong onclick="toggleVisibility('warehouse')">
+                                Custom Warehouse Bonds:
+                                <span id="dropdown-warehouse" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="transit" class="hidden">This bond is provided to importers whose merchandise is stored in approved bonded warehouses until the import duties are settled. In the event of default or failure by the importer to pay the required customs duties and taxes for the goods stored in the bonded warehouse, the guarantor assumes responsibility for reimbursing Customs for the unpaid duties.</p>
+                        </li>
+                         <li class="cool">
+                            <strong onclick="toggleVisibility('removal')">
+                                Custom Removal Bonds:
+                                <span id="dropdown-removal" class="dropdown-symbol"></span>
+                            </strong>
+                            <p id="removal" class="hidden">These terms assure Customs that in the event goods taken from specified warehouses fail to reach their intended destination, resulting in a loss of duty revenue to the State, the guarantor will cover this amount to Customs..</p>
+                        </li>
+                    </ul>
+                
+                
+                
+           
         </div>
+        
     </section>
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            var symbol = document.getElementById('dropdown-' + id);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                symbol.classList.add('dropdown-open');
+            } else {
+                element.classList.add('hidden');
+                symbol.classList.remove('dropdown-open');
+            }
+        }
+    </script>
 
 
 
