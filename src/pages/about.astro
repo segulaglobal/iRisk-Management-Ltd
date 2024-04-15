@@ -15,7 +15,7 @@ import Aboutphoto from "../assets/about.jpg"
         <div class="container wrapper">
             
             <p class="mb-4 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Our Vision</p>
-            <h1 class="mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white">We exist to safeguard your future and everything you love.</h1>
+            <h1 class="mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-white hero-text">We exist to safeguard your future and everything you love.</h1>
             <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                 <!-- <a href="#" class="btn btn-neutral">Learn more</a> -->
                 <!-- <a href="#" class="btn btn-white">Watch video</a>   -->
@@ -29,9 +29,9 @@ import Aboutphoto from "../assets/about.jpg"
         <div class="container wrapper">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div>
-                    <Image src={Aboutphoto} alt="We are on a mission" />
+                    <Image src={Aboutphoto} alt="We are on a mission" class="scale-in"/>
                 </div>
-                <div>
+                <div class="fade-in">
                     <h2 class="heading-tertiary mb-4">Our mission</h2>
                     <p class="mb-4">To establish successful and lasting partnerships with our clients, staff and the insurance industry, respecting the interests and goals of each stakeholder</p>
                     <p>We are dedicated to providing insurance and risk management solutions that combine maximum protection with value addition</p>
@@ -60,8 +60,8 @@ import Aboutphoto from "../assets/about.jpg"
         <div class="container wrapper">
             <div class="grid grid-cols-1 gap-8 items-center" >
                 <div>
-                    <h2 class="heading-secondary mb-8">About Us</h2>
-                    <p class="mb-8 text-xl">iRisk Management Limited, is one of Ghana's leading insurnace brokerage firms proudly ranking abmong the top 5 in the market. Our unwavering commitment to exceptional customer service, sterling reputation, and proven track record have solidified our position as the trusted choice for individuals and businesses seeking insurance solutions.</p>
+                    <h2 class="heading-secondary mb-8 fade-in">About Us</h2>
+                    <p class="mb-8 text-xl fade-in">iRisk Management Limited, is one of Ghana's leading insurnace brokerage firms proudly ranking abmong the top 5 in the market. Our unwavering commitment to exceptional customer service, sterling reputation, and proven track record have solidified our position as the trusted choice for individuals and businesses seeking insurance solutions.</p>
                     <p class="mb-4 text-lg">iRisk Limited has been in the top 5 insurance brokers in on three consecutive years from 2021 to 2023 with over 120 broker in the country. We are also one of the largest claims facilitators within the industry, administering claims in excess of GHS 3,200,000.00 in 2023 alone. We recently bagged the Insurance Professional of the year with just ended Chatered Insurance Ghana awards 2023.</p>
                     
                 </div>
@@ -81,7 +81,7 @@ import Aboutphoto from "../assets/about.jpg"
         <h2 class="heading-secondary mb-12 text-center">How Do We Assist You</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Pre-Insurance -->
-            <div class="">
+            <div class="scale-in">
                 <h1 class="ml-4">Pre-Insurance</h1>
                 <div class="assist">
                     <ul>
@@ -94,7 +94,7 @@ import Aboutphoto from "../assets/about.jpg"
                 </div>
             </div>
             <!-- Insurance -->
-            <div class="">
+            <div class="scale-in">
                 <h1 class="ml-4">Insurance</h1>
                 <div class="assist">
                     <ul>
@@ -107,7 +107,7 @@ import Aboutphoto from "../assets/about.jpg"
                 </div>
             </div>
             <!-- Post-Insurance -->
-            <div class="">
+            <div class="scale-in">
                 <h1 class="ml-4">Post-Insurance</h1>
                 <div class="assist">
                     <ul>
@@ -124,6 +124,16 @@ import Aboutphoto from "../assets/about.jpg"
 
 
 </MainLayout>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,7 +159,6 @@ import Aboutphoto from "../assets/about.jpg"
     background-attachment: fixed;
 }
 // End of about hero
-
 
 
 
@@ -184,8 +193,6 @@ import Aboutphoto from "../assets/about.jpg"
 
 
 
-
-
 // ======================= Section Assist ==========================
 .section-assist {
     width: 100%;
@@ -215,6 +222,22 @@ import Aboutphoto from "../assets/about.jpg"
         }
     }
 }
+
+
+@keyframes heroTextAnimation {
+    0% {
+
+    }
+    100% {
+        
+    }
+} 
+
+
+
+
+
+
 
 
 </style>

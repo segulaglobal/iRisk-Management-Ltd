@@ -46,11 +46,11 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                  <div class="hero-item welcome">
                         <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
                                 <div class="welcome-container mr-auto place-self-center lg:col-span-7">
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Lorem Ipsum is simply dummy text </p>
-                                        <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular">Welcome to iRisk Management</h1>
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Protecting Your Future Starts Here. Click "Contact" to Get Started.</p>
-                                        <a href="/contact" class="btn btn-neutral md:mr-4">Get a Quote</a> 
-                                        <a href="#" class="btn btn-blue">Get started</a>
+                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Lorem Ipsum is simply dummy text </p>
+                                        <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular hero-text">Welcome to iRisk Management</h1>
+                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Protecting Your Future Starts Here. Click "Contact" to Get Started.</p>
+                                        <a href="/contact" class="btn btn-neutral md:mr-4 hero-text">Get a Quote</a> 
+                                        <a href="#" class="btn btn-blue hero-text">Get started</a>
                                 </div>
                                 <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
                                 </div>                
@@ -115,21 +115,21 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
     <div class="container wrapper">
       <div class="info-container grid grid-cols-1 lg:grid-cols-3 gap-10">
         <div class="info">
-          <ul>
+          <ul class="scale-in">
                 <li>Professionalism</li>
                 <li>Customer Focus</li>
                 <li>Constant Improvement</li>
           </ul>
         </div>
         <div class="info">
-          <ul>
+          <ul class="scale-in">
                 <li>Speed</li>
                 <li>Unique Culture</li>
                 <li>Value People</li>
           </ul>
         </div>
         <div class="info">
-          <ul>
+          <ul class="scale-in">
                 <li>Trust</li>
                 <li>Passion for winning</li>
                 <li>Integrity</li>
@@ -150,13 +150,13 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- ======================= Section Services ========================= -->
 <section class="section-services">
         <div class="container wrapper">
-                <h2 class="heading-secondary md:mb-12 mb-8 text-center">Our Expert Services.</h2>
+                <h2 class="heading-secondary md:mb-12 mb-8 text-center fade-in">Our Expert Services.</h2>
                 
                 <div id="service-carousel" class="w-full pb-20 service-carousel"> 
                         <!-- First service Motor Insurance -->
                         <div class="service grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                                <div class="service-info__text">
-                                        <h2>Motor Insurance</h2>
+                                <div class="service-info__text scale-in">
+                                        <h2 class="">Motor Insurance</h2>
                                         <p class="mb-8">Don’t waste time worrying about your coverage. Our policies ensure peace of m  waste time worrying about your coverage</p>
                                         <a href="/motor-insurance" class="btn btn-white">Learn more</a>
                                 </div>
@@ -213,7 +213,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                         <div class="banner-img">
                                 <Image src={HomeBanner} alt="Home banner" />
                         </div>
-                        <div class="banner-text col-span self-center text-white">
+                        <div class="banner-text col-span self-center text-white fade-in">
                                 <p class="mb-4">Don't face a loss alone. We at iRisk handle the complexities of claims so you can recover. As your insurance broker, we're in your corner.</p>
                                 <p class="mb-8">We'll navigate the paperwork, advocate for a swift settlement, and ensure you receive everything you're entitled to under your policy. Focus on healing, we'll focus on results. Relax, we've got this.</p>
                                 <h3 class="text-3xl font-bold mb-2">Kamal Deen</h3>
@@ -235,10 +235,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                 <div class="grid grid-cols-1 md:grid-cols-3 items-center">
                         <h2 class="heading-secondary">Our Insurance Partners</h2>
                         <div class="partners-container pt-16 md:pt-4 col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
-                                <Image src={Aio} alt="aio" class=" "/>
-                                <Image src={Safetylms} alt="SafetyLms" class=" "/>
-                                <Image src={Ges} alt="Ges" />
-                                <Image src={CompTia} alt="CompTia" class=" "/>
+                                <Image src={Aio} alt="aio" class="scale-in"/>
+                                <Image src={Safetylms} alt="SafetyLms" class="scale-in"/>
+                                <Image src={Ges} alt="Ges" class="scale-in"/>
+                                <Image src={CompTia} alt="CompTia" class="scale-in"/>
                         </div>
                 </div>
         </div>

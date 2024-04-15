@@ -256,6 +256,107 @@ section {
 
 
 
+/* ======================== Animations ============================== */
+/* Images to animate in */
+.scale-in {
+  scale: .8; 
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: scale-in linear forwards;
+  animation-timeline: view() !important;
+  animation-range: 100px 300px !important;
+}
+@keyframes scale-in {
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+
+/* Images to animate in */
+.image-fade {
+  scale: 1; 
+  opacity: 0;
+  transform: translateY(20px);
+  animation: scale-in linear forwards;
+  animation-timeline: view() !important;
+  animation-range: 100px 300px !important;
+}
+@keyframes scale-in {
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+
+
+/* Fade In From Bottom */
+.fade-in {
+    scale: 1; 
+    opacity: 0;
+    transform: translateY(40px);
+    animation: scale-in linear forwards;
+    animation-timeline: view() !important;
+    animation-range: 100px 300px !important;
+  }
+  @keyframes scale-in {
+    to {
+      scale: 1;
+      opacity: 1;
+      transform: rotate(0deg) translateX(0px);
+    }
+  }
+
+
+
+
+/* =================================================================================== */
+                        /* Hero Text Animations */
+/* =================================================================================== */
+
+.hero-text {
+  animation: opacity 1s forwards;
+  opacity:0;
+  animation-delay: .5s;
+  line-height: 1.5;
+}
+
+
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
