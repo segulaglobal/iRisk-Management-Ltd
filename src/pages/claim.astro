@@ -8,7 +8,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 <MainLayout title="Contact iRisk Management">
 <section class="section-contact pb-40 pt-60">
     <div class="container wrapper">
-        <h2 class="heading-secondary mb-16 text-center">Make a claim</h2>                
+                     
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
             <!-- This has the form -->
@@ -41,20 +41,66 @@ import MainLayout from "../layouts/MainLayout.astro"
                         <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
                     </div>
 
+                      <!-- date of loss -->
+                    <div class="relative z-0 w-full mb-8 group">
+                        <input type="date" name="date_of_loss" id="date_of_loss" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
+                        <label for="date_of_loss" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Date of Loss</label>
+                    </div>
+
+                     <!-- Policy name-->
+                     <div class="relative z-0 w-full mb-8 group">
+                        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                            <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name on Insurance Policy</label>  </div>
+                    
+                       <!-- Policy number-->
+                     <div class="relative z-0 w-full mb-8 group">
+                        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                            <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Insurance Policy Number</label>  </div>
+                     
+
                     <!-- Select your Insurance Company -->
                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your Insurance Company</label>
                     <select name="Insurance Company" id="Insurance-company" class="mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option>Select Insurance Company</option>
-                        <option value="Canada">Comapny 1</option>
-                        <option value="France">Company 2</option>
-                        <option value="Germany">Company 3</option>
+                        <option value="enterprise">Enterprise Insurance</option>
+                        <option value="sic">SIC Insurance</option>
+                        <option value="hollard">Hollard Insurance Ghana</option>
+                        <option value="glico">Glico General Insurance</option>
+                        <option value="star">Star Assurance</option>
+                        <option value="vanguard">Vanguard Assurance</option>
+                        <option value="ghanaunion">Ghana Union Assurance</option>
+                        <option value="activa">Activa International Insurance</option>
+                        <option value="phoenix">Phoenix Insurance</option>
+                        <option value="sanlam">Sanlam Insurance Ghana</option>
+                        <option value="prime">Prime Insurance</option>
+                        <option value="quality">Quality Insurance</option>
+                        <option value="sunu">Sunu Assurance</option>
+                        <option value="provident">Provident Insurance</option>
+                        <option value="allianz">Allianz Insurance</option>
+                        <option value="donewell">Donewell Insurance</option>
+                        <option value="serene">Serene Insurance</option>
+                        <option value="priority">Priority Insurance</option>
+                        <option value="imperial">Imperial General Assurance</option>
+                        <option value="millennium">Millennium Insurance</option>
+                        <option value="coronation">Coronation Insurance Ghana</option>
+                        <option value="unique">Unique Insurance</option>
+                        <option value="loyalty">Loyalty Insurance</option>
+                        <option value="nsia">NSIA Ghana Insurance</option>
+                        <option value="bedrock">Bedrock Insurance</option>
+                        <option value="best">Best Assurance</option>
                     </select>
 
 
-                    <!-- Message text box -->
+                    <!-- Description of Loss -->
                     <div class="relative z-0 w-full mb-8 group">
                         <textarea name="Message" id="contact-message" rows="4" cols="50" class="resize-none block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label for="contact-message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
+                        <label for="contact-message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description of Loss</label>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="relative flex items-center mb-8">
+                        <input type="checkbox" name="terms_and_conditions" id="terms_and_conditions" class="peer" required />
+                        <label for="terms_and_conditions" class="ml-2 text-sm text-gray-700 dark:text-gray-400">I agree to the <a href="/terms_and_conditions" target="_blank" class="text-blue-500 hover:underline">Terms and Conditions</a> and appoint iRisk as my insurance broker</label>
                     </div>
                     
                     <button type="submit" class="btn btn-blue dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
@@ -89,11 +135,13 @@ import MainLayout from "../layouts/MainLayout.astro"
                         <a target="_blank" href="https://www.google.com/maps/dir//Ghana+Post+:+GA-411-5290,+D17+Boundary+Rd,+Accra,+Ghana/@5.642269,-0.2281684,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xfdf9b732837b0cb:0xdfe75b22a949a4b3!2m2!1d-0.1457664!2d5.6422748?entry=ttu" class="contact-link">
                             <i class="fa-solid fa-map-marker"></i>
                         </a>
-                        <div>
-                            <h3>Locate Us</h3>
-                            <a target="_blank" href="https://www.google.com/maps?sca_esv=63cd6aa67e0fab88&rlz=1C1CHZO_enGH1059GH1059&sxsrf=ACQVn09HNVfYBqHnT-FI5Z6OZxmq-6PYkA:1710779364817&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmlyaXNrIG1hbmFnZW1lbnQgZ2hhbmEyBRAhGKABMgUQIRigAUiDDVCgBlj5C3ACeAGQAQCYAewBoAHrBqoBAzItNLgBA8gBAPgBAZgCBqACggfCAgoQABhHGNYEGLADwgIGEAAYFhgewgIEECEYFZgDAIgGAZAGCJIHBTIuMC40oAfVEQ&um=1&ie=UTF-8&fb=1&gl=de&sa=X&geocode=KcuwNyhzm98PMbOkSakiW-ff&daddr=Ghana+Post+:+GA-411-5290,+D17+Boundary+Rd,+Accra,+Ghana">D17 Boundary Rd, Accra, Ghana</a>
-                        </div>
-                    </li>
+                    
+                       
+                            <a target="_blank" > Locate us</a></li>
+                            
+                             <div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.4881655553922!2d-0.14834132501420616!3d5.6422747943389435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9b732837b0cb%3A0xdfe75b22a949a4b3!2siRisk%20Management%20Limited!5e0!3m2!1sen!2sgh!4v1708531626063!5m2!1sen!2sgh" width="400" height="350" style="border:0; border-radius: 10px"; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe></div>
+                        
+                    
                 </ul>
             </div>
         </div>
