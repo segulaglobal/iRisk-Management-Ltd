@@ -506,3 +506,29 @@ ul.slick-dots  li button {
     color: #0ba9f2;
     cursor: pointer;
   }
+
+
+  /* Breathing ANimation for bond picture */
+  .breathing-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    
+  }
+  
+  .breathing-image {
+    animation: breathe 2s infinite alternate; /* Adjust duration as needed */
+    border-radius: 10px;
+    transition: ease-in-out;
+  }
+  
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
