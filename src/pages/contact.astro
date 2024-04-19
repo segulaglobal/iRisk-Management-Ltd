@@ -6,36 +6,41 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 
 <MainLayout title="Contact iRisk Management">
-<section class="contactcontainer py-40">
-    
-        <div class=" container wrapper">
-            <form>
-              <h1>Contact Us Form</h1>
-              <input type="text" id="firstName" placeholder="First Name" required />
-              <input type="text" id="lastName" placeholder="Last Name" required />
-              <input type="email" id="email" placeholder="Email" required />
-              <input type="text" id="mobile" placeholder="Mobile" required />
-              <h4>Type Your Message Here...</h4>
-              <textarea required></textarea>
-              <input type="submit" value="Send" id="button" />
-            </form>
-        </div>
-          
-     
-</section>
+  <section class="contactcontainer py-40">
+          <div class="container wrapper">
+              <form>
+                <h1>Contact Us Form</h1>
+                <input type="text" id="firstName" placeholder="First Name" required />
+                <input type="text" id="lastName" placeholder="Last Name" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="text" id="mobile" placeholder="Mobile" required />
+                <!-- <h4>Type Your Message Here...</h4> -->
+                <textarea required placeholder="Type your message here" name="message" id="message" cols="30" rows="30"></textarea>
+                <input type="submit" value="Send" id="button" />
+              </form>
+          </div>
+  </section>
 </MainLayout>
+
+
+
+
+
+
+
+
 
 <style>
     
 
     
     /* CONtact Form */
-    * {
+    /* * {
   margin: 0%;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  }
+  } */
 
   .contactcontainer {
     min-height: 100vh;
@@ -50,7 +55,8 @@ import MainLayout from "../layouts/MainLayout.astro"
   }
   
   .contactcontainer form {
-    width: 670px;
+    width: 100%;
+    max-width: 670px;
     height: 600px;
     display: flex;
     justify-content: center;
@@ -58,6 +64,8 @@ import MainLayout from "../layouts/MainLayout.astro"
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
     flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
   }
   .contactcontainer form h1 {
     color: #fff;
@@ -67,8 +75,10 @@ import MainLayout from "../layouts/MainLayout.astro"
     width: 500px;
     text-align: center;
   }
-  .contactcontainer form input {
-    width: 300px;
+  .contactcontainer form input,
+  .contactcontainer form textarea {
+    width: 100%;
+    /* max-width: 300px; */
     height: 50px;
     padding-left: 10px;
     outline: none;
@@ -77,14 +87,17 @@ import MainLayout from "../layouts/MainLayout.astro"
     margin-bottom: 10px;
     background: none;
     border-bottom: 2px solid #fff;
-    color: #fff;
+    color: #fff;    
+    font-size: .9rem;
+    resize: none;
+    font-family: inherit;
   }
   .contactcontainer form input::placeholder {
     color: #fff;
   }
   .contactcontainer form #lastName,
   .contactcontainer form #mobile {
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .contactcontainer form h4 {
     color: #fff;
