@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 // images
 import { Image } from 'astro:assets';
@@ -76,11 +77,11 @@ import Motor from "../assets/motor-service.png";
 
 
     <!-- Section Tabs & information -->
-    <section class="section-tabs py-40 bg-slate-100 leading-loose">
+    <section class="section-tabs py-20 bg-slate-100 leading-loose">
         <div class="container wrapper">
 
             <!-- Tabs -->
-            <div class="product-tabs border-b border-gray-200 dark:border-gray-700 bg-white lg:pl-56">
+            <ProductTabs>
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
                     <li class="me-2" role="presentation">
                         <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Private Car Insurance</button>
@@ -92,7 +93,7 @@ import Motor from "../assets/motor-service.png";
                         <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Commercial Vehicle Insurance</button>
                     </li>
                 </ul>
-            </div>
+            </ProductTabs>
             <!-- Various Pages -->
             <div id="default-styled-tab-content">
 
@@ -900,16 +901,6 @@ import Motor from "../assets/motor-service.png";
     display: block; 
     height: 10rem; 
     margin: -50px 0 0 0; 
-}
-
-
-
-// ================ Product Tabs =================
-.product-tabs {
-    position: sticky;
-    top: 9rem;
-    z-index: 10;
-    border-radius: 3px 3px 0 0;
 }
 
 

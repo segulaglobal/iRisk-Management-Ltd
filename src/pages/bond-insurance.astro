@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 
 // images
@@ -16,8 +17,7 @@ import bond from '../assets/bond.jpg'
     <ProductHero>
         <h2 class="heading-secondary">Bond Insurance</h2>
     
-           
-             <!-- Bread crumbs -->
+            <!-- Bread crumbs -->
             <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
@@ -68,11 +68,11 @@ import bond from '../assets/bond.jpg'
 
 
     <!-- Section Tabs & information -->
-    <section class="section-tabs py-40 bg-slate-100 leading-loose">
+    <section class="section-tabs py-20 bg-slate-100 leading-loose">
         <div class="container wrapper">
 
             <!-- Tabs -->
-            <div class="product-tabs border-b border-gray-200 dark:border-gray-700 bg-white lg:pl-56">
+            <ProductTabs>
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
                     <li class="me-2" role="presentation">
                         <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Surety Bonds</button>
@@ -82,7 +82,7 @@ import bond from '../assets/bond.jpg'
                     </li>
                     
                 </ul>
-            </div>
+            </ProductTabs>
 
           <!-- Various Pages -->
           <div id="default-styled-tab-content">
@@ -670,17 +670,6 @@ display: block;
 height: 10rem; 
 margin: -50px 0 0 0; 
 }
-
-
-
-// ================ Product Tabs =================
-.product-tabs {
-position: sticky;
-top: 9rem;
-z-index: 10;
-border-radius: 3px 3px 0 0;
-}
-
 
 
 
