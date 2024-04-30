@@ -23,7 +23,6 @@ body {
     z-index: 1;
 }
 
-
 :target::before { 
     content: ''; 
     display: block; 
@@ -31,6 +30,12 @@ body {
     margin: -50px 0 0 0; 
 }
 
+
+/* Remove Scrolling */
+.remove-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
 
 
 
@@ -380,6 +385,16 @@ section {
         padding-right: 200px;
         padding-left: 200px;
     }
+
+}
+@media (min-width: 1500px) {
+    
+/* Remove Scrolling */
+.remove-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
+
 
 }
 
