@@ -21,7 +21,7 @@ import Logo from "../assets/logo.png";
       <a href="/">
         <Image
           src={Logo}
-          alt="Northern Girl Initiative"
+          alt="irisk"
           title="back to home page"
           id="navImage"
           class="logo"
@@ -131,7 +131,13 @@ import Logo from "../assets/logo.png";
     // logo
     .logo {
       width: 80px;
+      transition: 0.5s ease-in-out;
     } //End of Logo
+
+    .logo:hover {
+        transform: scale(1.2); /* decrease size on hover  */
+  transition: 0.5s ease-in-out;
+    }
 
     // nav button
     .nav-btn {
