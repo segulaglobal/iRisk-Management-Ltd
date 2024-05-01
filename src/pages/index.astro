@@ -113,7 +113,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
   <!-- ===================== Section Info ========================= -->
 <section class="section-info">
         <div class="container wrapper">
-                <h2 class="heading-secondary text-center md:text-left px-8 mb-8">Core Values</h2>
+                <h2 class="heading-secondary text-center md:text-center px-8 mb-8">Core Values</h2>
                 <div class="info-container grid grid-cols-1 lg:grid-cols-3">
                         <!-- Accountability -->
                         <div class="info-item">
@@ -194,12 +194,13 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
   <!-- ======================== Section Welcome Video ========================= -->
-  <section class="section-welcome py-40">
+  <section class="section-welcome">
         <div class="container wrapper">
                 <div class="welcome-container">
                         <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
         </div>
+        <div class="overlay"></div>
   </section>  
   <!-- End of Section Welcome Video -->
 
@@ -246,7 +247,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- I am hiding the testimonial section until we can gather enough testimonials to display -->
 <!-- =================== Section Testimonials ===================== -->
-<section class="section-testimonials py-40 relative">
+<section class="section-testimonials py-16 relative">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-8 text-center">What our clients say.</h2>                
 
@@ -362,7 +363,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 <!-- ==================== Section News and Blog ============================= -->
-<section class="section-news py-40">
+<section class="section-news py-20">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -606,7 +607,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
   // ================= Section Services ==============
 .section-services {
-        padding: 10rem 0;
+        padding: 5rem 0;
         // background-color: red;
 
         .service {
@@ -631,13 +632,24 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 // ==================== Section-Welcome Video =========================
 .section-welcome {
-        padding-bottom: 15rem;
+        padding: 8rem 0;
+        position: relative;
 
         .welcome-video {
                 width: 100%;
                 aspect-ratio: 16 / 9;
                 border-radius: 1rem;
                 box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+        }
+        .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                left: 0;
+                background-color: rgba(#32A2D1, .9);
         }
 }
 // Section-welcome video
