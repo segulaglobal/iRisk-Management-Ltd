@@ -111,10 +111,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- End of Coming soon -->
 
   <!-- ===================== Section Info ========================= -->
-<section class="section-info">
+<section class="section-info ">
         <div class="container wrapper">
-                <h2 class="heading-secondary text-center md:text-left px-8 mb-8">Core Values</h2>
-                <div class="info-container grid grid-cols-1 lg:grid-cols-3">
+                <h2 class="heading-secondary md:mb-12 mb-8 text-center fade-in">Core Values</h2>
+                <div class="info-container grid grid-cols-1 lg:grid-cols-3 fade-in">
                         <!-- Accountability -->
                         <div class="info-item">
                                 <i class="fa-solid fa-chart-line"></i>
@@ -147,8 +147,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- ======================= Section Services ========================= -->
 <section class="section-services">
-        <div class="container wrapper">
-                <h2 class="heading-secondary md:mb-12 mb-8 text-center fade-in">Our Expert Services.</h2>
+        <div class="container wrapper fade-in">
+                <h2 class="heading-secondary md:mb-12 mb-8 text-center ">Our Services.</h2>
                 
                 <div id="service-carousel" class="w-full pb-20 service-carousel"> 
                         <!-- First service Motor Insurance -->
@@ -194,7 +194,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
   <!-- ======================== Section Welcome Video ========================= -->
-  <section class="section-welcome py-40">
+  <section class="section-welcome fade-in">
         <div class="container wrapper">
                 <div class="welcome-container">
                         <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -205,7 +205,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 <!-- ================================ Section Home Banner ===================== -->
-<section class="section-banner">
+<section class="section-banner fade-in">
         <div class="container wrapper">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-16">
                         <div class="banner-img">
@@ -246,11 +246,11 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- I am hiding the testimonial section until we can gather enough testimonials to display -->
 <!-- =================== Section Testimonials ===================== -->
-<section class="section-testimonials py-40 relative">
+<section class="section-testimonials  fade-in">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-8 text-center">What our clients say.</h2>                
 
-                <div id="testimonial-carousel" class="relative w-full pb-20" data-carousel="slide">
+                <div id="testimonial-carousel" class="relative w-full " data-carousel="slide">
                         <!-- Carousel wrapper -->
                         <div class="relative h-80 overflow-hidden rounded-lg md:h-96"> 
                                 <!-- First Testimonial -->
@@ -526,8 +526,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
   // ================= Section Info ==============
   .section-info {
-    background-color: var(--clr-white);
-    padding: 5rem 0;
+    background-color: #37517e;
+    color: white;
+    padding: 3rem 0;
     position: relative;
     z-index: 6;
 //     margin-top: 0rem;
@@ -606,8 +607,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
   // ================= Section Services ==============
 .section-services {
-        padding: 10rem 0;
-        // background-color: red;
+        padding: 5rem 0;
+        background-color: #f3f5fa;
+
 
         .service {
                 width: 100%;
@@ -631,13 +633,15 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 // ==================== Section-Welcome Video =========================
 .section-welcome {
-        padding-bottom: 15rem;
+      
 
         .welcome-video {
                 width: 100%;
                 aspect-ratio: 16 / 9;
-                border-radius: 1rem;
+                //border-radius: 1rem;
                 box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+                background: red;
+                
         }
 }
 // Section-welcome video
@@ -676,6 +680,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 // ==================== Section-Testimonial. =========================
 .section-testimonials {
         background-color: #D7F3FF;
+        padding: 1.5rem;
 
         // Testimonial
         .testimonial {
@@ -685,7 +690,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         }
 
         #testimonial-carousel {
-                // background-color: red;
+                //background-color: red;
+                
         }
 
 
