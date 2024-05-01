@@ -237,13 +237,13 @@ section {
 /* ============================== Text Styling ======================= */
 .heading-secondary {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.2;
-    font-family: "Dela Gothic One", sans-serif;
+    font-family: "Avenir", sans-serif;
 }
 
 .heading-tertiary {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: var(--clr-blue-light);
 }
