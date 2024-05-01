@@ -234,7 +234,6 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- ========================= Section Partners ==================== -->
 
 <section  class="partners">
-                <h2 class="text-center font-weight-bold">Our Partners</h2>
                 <section class="customer-logos slider">
                     <div class="mover"><img src="/src/assets/clients/aio.png" alt="logo"></div>
                     <div class="mover"><img src="/src/assets/clients/ciig.png" alt="logo"></div>
@@ -669,24 +668,45 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 .section-banner {
         background-color: var(--clr-blue-dark);
 }
+.banner-img {
+        transition: 0.3s ease-in-out;
+        
+}
+
+.banner-img:hover {
+  transform: scale(0.95); /* decrease size on hover  */
+  transition: 0.5s ease-in-out;
+
+}
 // End of Home banner
 
 
 
 
-// .section patners
-.section-partners {
-        
-        .slick-slider {
-                background-color: green;
+// .section partners
 
-                ul {
-                        display: flex;
-                }
-        }
 
-        
+.slider {
+  display: flex; /* Arranges logos horizontally */
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enables snapping on scroll */
+  white-space: nowrap; /* Prevents line breaks */
+  padding: 2em;
+}
 
+.mover {
+  margin-right: 1rem; /* Add spacing between logos (optional) */
+  width: 10rem;
+  height: 5rem;
+  animation: slide-animation 10s  ease-in-out infinite alternate-reverse both; /* Adjust duration and timing as needed */
+  margin-top: 2rem;
+}
+
+
+
+@keyframes slide-animation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Adjust translation percentage for full slide */
 }
 // End of section partners
 
