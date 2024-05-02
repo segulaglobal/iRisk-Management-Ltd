@@ -19,6 +19,24 @@ import TestimonialImage from "../assets/testimonial-img.png"
 import Carousel1 from "../assets/carousel-1.png"
 import Home360 from "../assets/home-360.jpg"
 import Ghcompare from "../assets/ghcompare.png"
+// Partens
+import Donewell from "../assets/donewell.png";
+import Serene from "../assets/serene.png";
+import Prime from "../assets/prime.png";
+import Priority from "../assets/priority.png";
+import Ibag from "../assets/ibag.png";
+import Imperial from "../assets/imperial.png";
+import Loyalty from "../assets/loyalty.png";
+import Sic from "../assets/sic.png";
+import Vanguard from "../assets/vanguard.png";
+import Star from "../assets/star.png";
+import AIO from "../assets/aio.png";
+import Ciig from "../assets/ciig.png";
+import Enterprise from "../assets/enterprise.png";
+import Coronation from "../assets/coronation.png";
+import Glico from "../assets/glico.png";
+import Gua from "../assets/gua.png";
+import Hollard from "../assets/hollard.png";
 
 
 import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
@@ -46,16 +64,16 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
                 <!-- Welcome page -->
                  <div class="hero-item welcome">
-                        <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
-                                <div class="welcome-container mr-auto place-self-center lg:col-span-7">
+                        <div class="container wrapper flex items-center justify-center px-4 py-8 mx-auto  xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
+                                <div class="welcome-container place-self-center lg:col-span-7">
                                         <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">  </p>
                                         <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular hero-text">Welcome to iRisk Management</h1>
                                         <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Protecting Your Future Starts Here.</p>
                                         <a href="/contact" class="btn btn-neutral md:mr-4 hero-text">Get a Quote</a> 
                                         <a href="#" class="btn btn-blue hero-text">Get started</a>
                                 </div>
-                                <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                                </div>                
+                                <!-- <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                                </div>                 -->
                         </div>
                 </div> 
 
@@ -233,25 +251,59 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- ========================= Section Partners ==================== -->
 
-<section  class="partners">
-                <section class="customer-logos slider">
-                    <div class="mover"><img src="/src/assets/clients/aio.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/ciig.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/hollard.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/enterprise.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/loyalty.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/star.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/coronation.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/glico.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/donewell.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/gua.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/ibag.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/imperial.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/prime.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/priority.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/serene.png" alt="logo"></div>
-                    <div class="mover"><img src="/src/assets/clients/sic.png" alt="logo"></div>
-                </section>
+<section  class="section-partners">
+        <div class="container wrapper">
+                <div class="customer-logos">
+                        <!-- aio -->
+                        <div class="mover">
+                                <Image src={Aio} alt="AIO">
+                        </div>
+                        <div class="mover">
+                                <Image src={Ciig} alt="CIIG">
+                        </div>
+                        <div class="mover">
+                                <Image src={Hollard} alt="Hollard">
+                        </div>
+                        <div class="mover">
+                                <Image src={Enterprise} alt="Enterprise Insurance">
+                        </div>
+                        <div class="mover">
+                                <Image src={Loyalty} alt="Loyalty">
+                        </div>
+                        <div class="mover">
+                                <Image src={Star} alt="Star Assurnace">
+                        </div>
+                        <div class="mover">
+                                <Image src={Coronation} alt="Coronation">
+                        </div>
+                        <div class="mover">
+                                <Image src={Glico} alt="Glico">
+                        </div>
+                        <div class="mover">
+                                <Image src={Donewell} alt="DoneWell">
+                        </div>
+                        <div class="mover">
+                                <Image src={Gua} alt="Gua">
+                        </div>
+                        <div class="mover">
+                                <Image src={Ibag} alt="Ibag">
+                        </div>
+                        <div class="mover">
+                                <Image src={Imperial} alt="Imperial">
+                        </div>
+                        <div class="mover">
+                                <Image src={Prime} alt="Prime">
+                        </div>
+                        <div class="mover">
+                                <Image src={Priority} alt="Priority"></div>
+                        <div class="mover">
+                                <Image src={Serene} alt="Serene">
+                        </div>
+                        <div class="mover">
+                                <Image src={Sic} alt="Sic">
+                        </div>
+                </div>
+        </div>
 </section> 
 <!-- End of section Partners -->
 
@@ -694,23 +746,35 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 
-// .section partners
-
+//=====================  .section partners =================
+.section-partners {
+        // background-color: red;
+        padding: 2rem 0;
+}
 
 .slider {
-  display: flex; /* Arranges logos horizontally */
-  overflow-x: scroll; /* Enables horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Enables snapping on scroll */
-  white-space: nowrap; /* Prevents line breaks */
-  padding: 2em;
+//   display: flex; /* Arranges logos horizontally */
+//   overflow-x: scroll; /* Enables horizontal scrolling */
+//   scroll-snap-type: x mandatory; /* Enables snapping on scroll */
+//   white-space: nowrap; /* Prevents line breaks */
+//   padding: 2em;
 }
 
 .mover {
-  margin-right: 1rem; /* Add spacing between logos (optional) */
-  width: 10rem;
-  height: 5rem;
-  animation: slide-animation 10s  ease-in-out infinite alternate-reverse both; /* Adjust duration and timing as needed */
-  margin-top: 2rem;
+        width: 5rem;
+        height: 10rem;
+        // background-color: red;
+        margin-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+//   height: 5rem;
+//   animation: slide-animation 10s  ease-in-out infinite alternate-reverse both; /* Adjust duration and timing as needed */
+//   margin-top: 2rem;
+}
+.mover img {
+        
 }
 
 
