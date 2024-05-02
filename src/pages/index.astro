@@ -78,9 +78,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                 </div> 
 
                  <!-- GH Compare -->
-                 <div class="hero-item gh-compare">
+                 <div class="hero-item ghcompare">
                         <div class="container wrapper grid ">
-                                <div class="mr-auto place-self-center lg:col-span-7 "> 
+                                <div class="mr-auto place-self-center lg:col-span-7 gh-compare"> 
                                         
                                         <Image src={Ghcompare} alt="ghcompare" class=""/ style="width: 100%; padding-top:2rem; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                                         <div class="flex items-center"> 
@@ -510,7 +510,6 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         overflow: hidden;
         position: relative;
         z-index: 5;
-        background-color: red; // This is where the red background color is coming from
 
         .hero-item {
         width: 100%;
@@ -547,8 +546,15 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         //background-size: cover;
         //background-position: center;
         
-        animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+        
+        animation: changeColor 15s ease-in-out infinite alternate-reverse both; /* Change color every 20 seconds */
 }
+
+.ghcompare {
+                animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+                //background: linear-gradient(to bottom right, #ff9999, #99ff99, #9999ff);
+                width: 100%;
+                }
 .home-360 {
         position: relative;
         z-index: 1;
