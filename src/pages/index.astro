@@ -18,6 +18,8 @@ import Safetylms from "../assets/safetylms.png"
 import TestimonialImage from "../assets/testimonial-img.png"
 import Carousel1 from "../assets/carousel-1.png"
 import Home360 from "../assets/home-360.jpg"
+import Ghcompare from "../assets/ghcompare.png"
+
 
 import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
 
@@ -46,9 +48,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                  <div class="hero-item welcome">
                         <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
                                 <div class="welcome-container mr-auto place-self-center lg:col-span-7">
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Lorem Ipsum is simply dummy text </p>
+                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">  </p>
                                         <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular hero-text">Welcome to iRisk Management</h1>
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Protecting Your Future Starts Here. Click "Contact" to Get Started.</p>
+                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Protecting Your Future Starts Here.</p>
                                         <a href="/contact" class="btn btn-neutral md:mr-4 hero-text">Get a Quote</a> 
                                         <a href="#" class="btn btn-blue hero-text">Get started</a>
                                 </div>
@@ -59,11 +61,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
                  <!-- GH Compare -->
                  <div class="hero-item gh-compare">
-                        <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
-                                <div class="mr-auto place-self-center lg:col-span-7"> 
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Lorem Ipsum is simply dummy text </p>
-                                        <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular">GH Compare</h1>
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Lorem Ipsum is simplydummy text of the printing and typesetting industry</p>
+                        <div class="container wrapper grid ">
+                                <div class="mr-auto place-self-center lg:col-span-7 "> 
+                                        
+                                        <Image src={Ghcompare} alt="ghcompare" class=""/ style="width: 100%; padding-top:2rem; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                                         <div class="flex items-center"> 
                                                 <!-- Google Play button -->
                                                 <!-- <a href="https://play.google.com/"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" height="70" alt="Get it on Google Play" ></a>  -->
@@ -111,7 +112,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- End of Coming soon -->
 
   <!-- ===================== Section Info ========================= -->
-<section class="section-info">
+<section class="section-info ">
         <div class="container wrapper">
                 <h2 class="heading-secondary text-center md:text-center px-8 mb-8">Core Values</h2>
                 <div class="info-container grid grid-cols-1 lg:grid-cols-3">
@@ -147,8 +148,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- ======================= Section Services ========================= -->
 <section class="section-services">
-        <div class="container wrapper">
-                <h2 class="heading-secondary md:mb-12 mb-8 text-center fade-in">Our Expert Services.</h2>
+        <div class="container wrapper fade-in">
+                <h2 class="heading-secondary md:mb-12 mb-8 text-center ">Our Services.</h2>
                 
                 <div id="service-carousel" class="w-full pb-20 service-carousel"> 
                         <!-- First service Motor Insurance -->
@@ -198,7 +199,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         <div class="container wrapper">
                 <div class="welcome-container">
                         <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
                 </div>
+                
         </div>
         <div class="overlay"></div>
   </section>  
@@ -206,7 +209,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 <!-- ================================ Section Home Banner ===================== -->
-<section class="section-banner">
+<section class="section-banner fade-in">
         <div class="container wrapper">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-16">
                         <div class="banner-img">
@@ -229,18 +232,26 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 <!-- ========================= Section Partners ==================== -->
-<section class="section-partners py-40">
-        <div class="container wrapper">
-                <div class="grid grid-cols-1 md:grid-cols-3 items-center">
-                        <h2 class="heading-secondary">Our Insurance Partners</h2>
-                        <div class="partners-container pt-16 md:pt-4 col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
-                                <Image src={Aio} alt="aio" class="scale-in"/>
-                                <Image src={Safetylms} alt="SafetyLms" class="scale-in"/>
-                                <Image src={Ges} alt="Ges" class="scale-in"/>
-                                <Image src={CompTia} alt="CompTia" class="scale-in"/>
-                        </div>
-                </div>
-        </div>
+
+<section  class="partners">
+                <section class="customer-logos slider">
+                    <div class="mover"><img src="/src/assets/clients/aio.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/ciig.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/hollard.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/enterprise.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/loyalty.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/star.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/coronation.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/glico.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/donewell.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/gua.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/ibag.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/imperial.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/prime.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/priority.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/serene.png" alt="logo"></div>
+                    <div class="mover"><img src="/src/assets/clients/sic.png" alt="logo"></div>
+                </section>
 </section> 
 <!-- End of section Partners -->
 
@@ -251,7 +262,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-8 text-center">What our clients say.</h2>                
 
-                <div id="testimonial-carousel" class="relative w-full pb-20" data-carousel="slide">
+                <div id="testimonial-carousel" class="relative w-full " data-carousel="slide">
                         <!-- Carousel wrapper -->
                         <div class="relative h-80 overflow-hidden rounded-lg md:h-96"> 
                                 <!-- First Testimonial -->
@@ -447,7 +458,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         overflow: hidden;
         position: relative;
         z-index: 5;
-        background-color: red;
+        background-color: red; // This is where the red background color is coming from
 
         .hero-item {
         width: 100%;
@@ -473,16 +484,18 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 }
 // GH Compare
 .gh-compare {
-        background-image: 
+        //background-image: 
         // linear-gradient(
         // to bottom,
-        // rgba(51, 162, 209, 0.85),
+        // rgba(51, 162, 209, 0.85);
         // rgba(3, 42, 65, 0.85)
         // ),
-        url(/assets/coming-soon.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        //url(/assets/kamal.png);
+        //background-repeat: no-repeat;
+        //background-size: cover;
+        //background-position: center;
+        
+        animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
 }
 .home-360 {
         position: relative;
@@ -527,8 +540,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
   // ================= Section Info ==============
   .section-info {
-    background-color: var(--clr-white);
-    padding: 5rem 0;
+    background-color: #37517e;
+    color: white;
+    padding: 3rem 0;
     position: relative;
     z-index: 6;
 //     margin-top: 0rem;
@@ -608,7 +622,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
   // ================= Section Services ==============
 .section-services {
         padding: 5rem 0;
-        // background-color: red;
+        background-color: #f3f5fa;
+
 
         .service {
                 width: 100%;
@@ -632,14 +647,16 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 // ==================== Section-Welcome Video =========================
 .section-welcome {
-        padding: 8rem 0;
         position: relative;
+      
 
         .welcome-video {
                 width: 100%;
                 aspect-ratio: 16 / 9;
-                border-radius: 1rem;
+                //border-radius: 1rem;
                 box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+                background: red;
+                
         }
         .overlay {
                 width: 100%;
@@ -662,24 +679,45 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 .section-banner {
         background-color: var(--clr-blue-dark);
 }
+.banner-img {
+        transition: 0.3s ease-in-out;
+        
+}
+
+.banner-img:hover {
+  transform: scale(0.95); /* decrease size on hover  */
+  transition: 0.5s ease-in-out;
+
+}
 // End of Home banner
 
 
 
 
-// .section patners
-.section-partners {
-        
-        .slick-slider {
-                background-color: green;
+// .section partners
 
-                ul {
-                        display: flex;
-                }
-        }
 
-        
+.slider {
+  display: flex; /* Arranges logos horizontally */
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enables snapping on scroll */
+  white-space: nowrap; /* Prevents line breaks */
+  padding: 2em;
+}
 
+.mover {
+  margin-right: 1rem; /* Add spacing between logos (optional) */
+  width: 10rem;
+  height: 5rem;
+  animation: slide-animation 10s  ease-in-out infinite alternate-reverse both; /* Adjust duration and timing as needed */
+  margin-top: 2rem;
+}
+
+
+
+@keyframes slide-animation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Adjust translation percentage for full slide */
 }
 // End of section partners
 
@@ -688,6 +726,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 // ==================== Section-Testimonial. =========================
 .section-testimonials {
         background-color: #D7F3FF;
+        padding: 1.5rem;
 
         // Testimonial
         .testimonial {
@@ -697,7 +736,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         }
 
         #testimonial-carousel {
-                // background-color: red;
+                //background-color: red;
+                
         }
 
 

@@ -159,7 +159,20 @@ section {
     border: 2px solid var(--clr-white);
     background-color: var(--clr-red);
     color: var(--clr-white);
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
+/* ANIMATE MAKE A CLAIM BUTTON red */
+@keyframes up-down {
+    0% {
+      transform: translateY(5px);
+    }
+  
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
 .btn-red:hover {
     color: var(--clr-red);
     border: 2px solid var(--clr-red);
@@ -237,13 +250,13 @@ section {
 /* ============================== Text Styling ======================= */
 .heading-secondary {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.2;
-    font-family: "Dela Gothic One", sans-serif;
+    font-family: "Avenir", sans-serif;
 }
 
 .heading-tertiary {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: var(--clr-blue-light);
 }
@@ -307,6 +320,8 @@ section {
     animation: scale-in linear forwards;
     animation-timeline: view() !important;
     animation-range: 100px 300px !important;
+    
+    
   }
   @keyframes scale-in {
     to {
@@ -315,6 +330,8 @@ section {
       transform: rotate(0deg) translateX(0px);
     }
   }
+
+
 
 
 
