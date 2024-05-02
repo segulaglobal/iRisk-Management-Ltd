@@ -114,8 +114,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
   <!-- ===================== Section Info ========================= -->
 <section class="section-info ">
         <div class="container wrapper">
-                <h2 class="heading-secondary md:mb-12 mb-8 text-center fade-in">Core Values</h2>
-                <div class="info-container grid grid-cols-1 lg:grid-cols-3 fade-in">
+                <h2 class="heading-secondary text-center md:text-center px-8 mb-8">Core Values</h2>
+                <div class="info-container grid grid-cols-1 lg:grid-cols-3">
                         <!-- Accountability -->
                         <div class="info-item">
                                 <i class="fa-solid fa-chart-line"></i>
@@ -195,15 +195,15 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
   <!-- ======================== Section Welcome Video ========================= -->
-  <section class="section-welcome fade-in">
-        <div class="container wrapper">  
+  <section class="section-welcome">
+        <div class="container wrapper">
                 <div class="welcome-container">
                         <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         
                 </div>
                 
         </div>
-        
+        <div class="overlay"></div>
   </section>  
   <!-- End of Section Welcome Video -->
 
@@ -258,7 +258,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 <!-- I am hiding the testimonial section until we can gather enough testimonials to display -->
 <!-- =================== Section Testimonials ===================== -->
-<section class="section-testimonials  fade-in">
+<section class="section-testimonials py-16 relative">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-8 text-center">What our clients say.</h2>                
 
@@ -374,7 +374,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 <!-- ==================== Section News and Blog ============================= -->
-<section class="section-news py-40">
+<section class="section-news py-20">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -458,7 +458,11 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         overflow: hidden;
         position: relative;
         z-index: 5;
+<<<<<<< HEAD
         
+=======
+        background-color: red; // This is where the red background color is coming from
+>>>>>>> 6896e77c668265a31fe1ee59f34183d6f566c283
 
         .hero-item {
         width: 100%;
@@ -654,6 +658,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 // ==================== Section-Welcome Video =========================
 .section-welcome {
+        position: relative;
       
 
         .welcome-video {
@@ -663,6 +668,16 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                 box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
                 background: red;
                 
+        }
+        .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                left: 0;
+                background-color: rgba(#32A2D1, .9);
         }
 }
 // Section-welcome video
