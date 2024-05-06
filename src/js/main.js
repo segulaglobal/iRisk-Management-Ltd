@@ -84,3 +84,42 @@ document.addEventListener("click", e => {
 //   // Set the last scroll position to the current scroll position
 //   lastScrollPosition = currentScrollPosition;
 // })
+
+
+
+
+
+// Toggle Modal on Claims page
+// Get modal
+const claimsModal = document.querySelector("#claims-modal");
+
+// Get modal toggler
+const modalToggler = document.querySelector("#claims-modal-toggler");
+
+// Get Button that closes modal
+const closeModal = document.querySelectorAll(".modal-close");
+
+// Get Modal Overlay that closes modal on click
+const modalOverlay = document.querySelector("#modal-overlay");
+
+
+// When the user clicks on the button, open the modal
+modalToggler.onclick = function() {
+    claimsModal.style.display = "block";
+    document.body.classList.add("remove-scrolling"); 
+}
+
+// When the user clicks on <span> (x), close the modal
+closeModal.forEach(item => {
+    item.onclick = function() {
+        claimsModal.style.display = "none";
+        document.body.classList.remove("remove-scrolling"); 
+    }  
+})
+
+// When the user clicks on the overlay and not the modal (close the modal)
+modalOverlay.onclick = function() {
+    claimsModal.style.display = "none";
+    document.body.classList.remove("remove-scrolling"); 
+}  
+
