@@ -36,16 +36,34 @@ $(document).ready(function(){
 });
 
 
-// // Hero Carousels.
-// $(document).ready(function(){
-//     $('.slick-trial').slick({
-//         infinite: true,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 3000,
-//         dots: true,
-//         // prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
-//         // nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
-//     });
-// });
+
+
+
+// Partners Slick
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: false,
+        arrows: false,
+        // fade: true,
+        cssEase: 'ease-in-out',
+        // prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
+        // nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
+
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                // dots: true
+              }
+            }
+        ]
+    });
+});
