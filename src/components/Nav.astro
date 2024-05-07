@@ -136,7 +136,7 @@ import Logo from "../assets/logo.png";
 
     .logo:hover {
         transform: scale(1.2); /* decrease size on hover  */
-  transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
 
     // nav button
@@ -206,10 +206,11 @@ import Logo from "../assets/logo.png";
       z-index: 51;
       width: 100%;
       height: auto;
-      background-color: var(--clr-white);
-      box-shadow: 0px 2px 2px rgba(0, 8, 41, 0.1);
+      //background-color: var(--clr-white);
+      //box-shadow: 0px 2px 2px rgba(0, 8, 41, 0.1);
       transition: .4s;
-      animation: changeColor 20s ease-in-out infinite alternate-reverse both; /* Change color every 20 seconds */
+      //animation: changeColor 20s ease-in-out infinite alternate-reverse both; /* Change color every 20 seconds */
+      font-family: 'Roboto', sans-serif;
 
       &.hide {
         transform: translateY(-100%);
@@ -265,7 +266,7 @@ import Logo from "../assets/logo.png";
             width: 80vw;
             max-width: 600px;
             height: 100vh;
-            background-color: rgba(255, 255, 255, 1);
+            //background-color: rgba(255, 255, 255, 1);
             z-index: -1;
             padding-top: 150px;
             padding-inline: 3rem;
@@ -457,7 +458,7 @@ import Logo from "../assets/logo.png";
                     border-bottom: 1px solid rgba(5, 0, 47, 0.1);
 
                     &:hover {
-                        background-color: #e7f3fa;
+                        backdrop-filter: blur(70px);
                     }
                 }
 
@@ -470,7 +471,8 @@ import Logo from "../assets/logo.png";
                         border-bottom: 1px solid rgba(5, 0, 47, 0.1);
 
                         &:hover {
-                            background-color: #e7f3fa;
+                            color: #edce22;
+                            backdrop-filter: blur(70px);
                         }
                     }
 
@@ -479,7 +481,7 @@ import Logo from "../assets/logo.png";
                 // Navigation Main Link
                 .nav-link {
                     display: flex;
-                    padding: 1rem 0.7rem;
+                    padding: 0.9rem 0.7rem;
                     text-transform: uppercase;
                     font-size: 0.8rem;
                     outline: none;
@@ -488,15 +490,18 @@ import Logo from "../assets/logo.png";
                     cursor: pointer;
                     font-family: inherit;
                     box-sizing: inherit;
-                    margin: 0;
+                    margin-left: 0.5em;
                     line-height: 2;
                     font-family: inherit;
                     font-weight: bold;
                     transition: 0.3s ease-in-out;
                     white-space: nowrap;
+                    color: #e7f3fa;
+                    
 
                     .fa {
                         line-height: 1;
+                        
                     }
 
                     &:hover svg {
@@ -505,7 +510,7 @@ import Logo from "../assets/logo.png";
 
                     &:hover {
                     transform: scale(1.03) translateY(2px);
-                    color: var(--clr-blue-light);
+                    color: #f7df40;
                     }
                 }
 
@@ -514,7 +519,7 @@ import Logo from "../assets/logo.png";
                 li[data-dropdown]:hover .dropdown-menu {
                     display: block;
                     opacity: 1;
-                    pointer-events: auto;;
+                    pointer-events: auto;
                 }
 
                 // =============== Drop down ===========
@@ -530,7 +535,7 @@ import Logo from "../assets/logo.png";
 
                     &-menu {
                         position: absolute;
-                        background-color: var(--clr-white);
+                        color: #c0d9e8;
                         left: 0;
                         opacity: 0;
                         transition: 0.2s ease-in-out;
@@ -554,6 +559,8 @@ import Logo from "../assets/logo.png";
                         }
                         .more:hover .more-sub-menu{
                             display: block;
+                            background-color: #17140476;
+                            color: #e2e9ee;
                         }
                     
                     }
