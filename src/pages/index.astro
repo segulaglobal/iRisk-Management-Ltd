@@ -77,23 +77,23 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                         </div>
                 </div> 
 
-                 <!-- GH Compare -->
+                 <!-- GH Compare --
                  <div class="hero-item ghcompare">
                         <div class="container wrapper grid ">
                                 <div class="mr-auto place-self-center lg:col-span-7 gh-compare"> 
                                         
                                         <Image src={Ghcompare} alt="ghcompare" class=""/ style="width: 100%; padding-top:2rem; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                                         <div class="flex items-center"> 
-                                                <!-- Google Play button -->
-                                                <!-- <a href="https://play.google.com/"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" height="70" alt="Get it on Google Play" ></a>  -->
+                                                <!-- Google Play button --
+                                                <!-- <a href="https://play.google.com/"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" height="70" alt="Get it on Google Play" ></a>  --
                                                 <a href="/contact" class="btn btn-neutral">Buy Insurance</a> 
                                         </div>
                                 </div>
                         </div>
 
-                </div> 
+                </div> -->
 
-                <!--Home/Office 360 -->
+                <!--Home/Office 360 --
                 <div class="hero-item home-360">
                         <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
                                 <div class="mr-auto place-self-center lg:col-span-7"> 
@@ -106,7 +106,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                         </div>
                         <video class="bg-video" src="/assets/home-360.mp4" autoplay loop poster="/assets/home-360.jpg"></video>
                         <div class="overlay"></div>
-                </div>
+                </div>-->
 
         </div>
 </section> 
@@ -528,7 +528,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         background-size: cover;
         background-position: center;
         overflow: hidden;
-         animation: zoom 10s infinite alternate ease-in-out;
+        animation: zoom 10s infinite alternate ease-in-out;
+        height: 100vh;
+       
     }
 
     .welcome::before {
@@ -537,9 +539,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to make it darker */
         z-index: 1; /* Ensure it's behind the text */
+        
     }
 
     @keyframes zoom {
@@ -551,9 +554,11 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
     //HERO TEXT ANIMATION WITH DELAY
     .hero-text {
         opacity: 0; /* Hide the text initially */
-        transition: opacity 0.5s ease-in-out; /* Add transition effect */
+        transition: opacity 0.5s ease-in-out,  transform 0.5s ease-in-out; /* Add transition effect */
         position: relative;
         z-index: 2; /* Ensure it's above the background overlay */
+        transform: translateY(20px); /* Initial position below */
+
     }
 
 
@@ -580,6 +585,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
     .welcome:hover .hero-text {
         opacity: 1; /* Make the text visible on hover */
+        transform: translateY(0); /* Move the text up on hover */
     }
 
 
@@ -648,8 +654,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
   // ================= Section Info ==============
   .section-info {
-    background-color: #37517e;
-    color: white;
+    background-color: rgba(50, 161, 209, 0.173);
+    color: black;
     padding: 3rem 0;
     position: relative;
     z-index: 6;
