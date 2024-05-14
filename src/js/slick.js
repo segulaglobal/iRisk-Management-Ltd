@@ -19,21 +19,21 @@ $(document).ready(function(){
 
 
 // Hero Carousels.
-$(document).ready(function(){
-    $('.hero-slick').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        dots: true,
-        arrows: false,
-        fade: true,
-        cssEase: 'linear'
-        // prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
-        // nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
-    });
-});
+// $(document).ready(function(){
+//     $('.hero-slick').slick({
+//         infinite: true,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         autoplay: true,
+//         autoplaySpeed: 3000,
+//         dots: true,
+//         arrows: false,
+//         fade: true,
+//         cssEase: 'linear'
+//         // prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
+//         // nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
+//     });
+// });
 
 
 
