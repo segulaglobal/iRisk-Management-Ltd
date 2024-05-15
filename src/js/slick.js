@@ -48,7 +48,7 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 1000,
         dots: true,
-        arrows: false,
+        arrows: true,
         // fade: true,
         cssEase: 'ease-in-out',
         prevArrow: '<span class="slick-prev"> <i class="fa-solid fa-chevron-left"></i> </span>',
