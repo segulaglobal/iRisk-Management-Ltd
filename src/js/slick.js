@@ -47,12 +47,12 @@ $(document).ready(function(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1000,
-        dots: false,
-        arrows: false,
+        dots: true,
+        arrows: true,
         // fade: true,
         cssEase: 'ease-in-out',
-        // prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
-        // nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
+        prevArrow: '<span class="slick-prev"> <i class="fa-solid fa-chevron-left"></i> </span>',
+        nextArrow: '<span class="slick-next"> <i class="fa-solid fa-chevron-right"></i> </span>',
 
         responsive: [
             {
