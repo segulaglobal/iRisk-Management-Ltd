@@ -89,35 +89,34 @@ document.addEventListener("click", e => {
 
 // ================== INTERSECTION OBSERVER =====================
 // for large screens
-const NavLarge = window.matchMedia( '(min-width: 1020px)' )
+// const NavLarge = window.matchMedia( '(min-width: 1020px)' )
 
-const sectionHero = document.querySelector(".special");
-const navBar = document.querySelector('.nav');
-const navLink = document.querySelectorAll('.nav-link')
-const options = {
-    rootMargin: "-450px"
-};
+// const sectionHero = document.querySelector(".special");
+// const navBar = document.querySelector('.nav');
+// const navLink = document.querySelectorAll('.nav-link')
+// const options = {
+//     rootMargin: "-450px"
+// };
 
-const observer = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if(!entry.isIntersecting && NavLarge.matches) {
-        //    alert("is not intersecting")
-           navBar.style.backgroundColor = "var(--clr-white)";
-           navLink.forEach(link => {
-            link.style.color = "#042D44"
-        });
-        }else if(NavLarge.matches && entry.isIntersecting){
-            // alert("is intersecting")
-            navBar.style.backgroundColor = "transparent";
-            navLink.forEach(link => {
-                link.style.color = "#fff"
-            });
-            console.log("background should be transparent")
-        }
-    })
-}, options)
+// const observer = new IntersectionObserver(function(entries, observer) {
+//     entries.forEach(entry => {
+//         if(!entry.isIntersecting && NavLarge.matches) {
+//            navBar.style.backgroundColor = "var(--clr-white)";
+//            navLink.forEach(link => {
+//             link.style.color = "#042D44"
 
-observer.observe(sectionHero);
+//             return
+//         });
+//         }else if(NavLarge.matches && entry.isIntersecting){
+//             navBar.style.backgroundColor = "transparent";
+//             navLink.forEach(link => {
+//                 link.style.color = "#fff"
+//             });
+//         }
+//     })
+// }, options)
+
+// observer.observe(sectionHero);
 
 
 
