@@ -11,7 +11,7 @@ import Aboutphoto from "../assets/about.jpg"
 
 <MainLayout title="About iRisk Management">
 
-    <section class="about-hero bg-white dark:bg-gray-900 py-40 text-center pt-60">
+    <section class="about-hero bg-white dark:bg-gray-900 py-40 text-center pt-60 special">
         <div class="container wrapper">
             
             <p class="mb-4 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Our Vision</p>
@@ -82,7 +82,7 @@ import Aboutphoto from "../assets/about.jpg"
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Pre-Insurance -->
             <div class="scale-in">
-                <h1 class="ml-4">Pre-Insurance</h1>
+                <h1 class="ml-4 heading-tertiary">Pre-Insurance</h1>
                 <div class="assist">
                     <ul>
                         <li>Business Evaluation and risk analysis</li>
@@ -95,7 +95,7 @@ import Aboutphoto from "../assets/about.jpg"
             </div>
             <!-- Insurance -->
             <div class="scale-in">
-                <h1 class="ml-4">Insurance</h1>
+                <h1 class="ml-4 heading-tertiary">Insurance</h1>
                 <div class="assist">
                     <ul>
                         <li>Analysing Market Products</li>
@@ -108,7 +108,7 @@ import Aboutphoto from "../assets/about.jpg"
             </div>
             <!-- Post-Insurance -->
             <div class="scale-in">
-                <h1 class="ml-4">Post-Insurance</h1>
+                <h1 class="ml-4 heading-tertiary">Post-Insurance</h1>
                 <div class="assist">
                     <ul>
                         <li>Hassle free claims settlement</li>
@@ -207,6 +207,12 @@ import Aboutphoto from "../assets/about.jpg"
         box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
         // height: 18rem;
         min-height: 18rem;
+        transition: .4s;
+
+        &:hover, 
+        &:focus {
+            transform: translateY(-5px);
+        }
 
         ul {
             list-style-type: disc;
