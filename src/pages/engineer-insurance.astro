@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 
 // images
@@ -18,7 +19,7 @@ import Engineer from '../assets/engineer-insurance.png'
     
            
              <!-- Bread crumbs -->
-            <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+            <nav class="flex w-full justify-center mt-12" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
                         <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
@@ -59,7 +60,7 @@ import Engineer from '../assets/engineer-insurance.png'
                     <p>Since this industry is about creating and designing, construction and building, there are increased chances of related accidents and perils. Thus, Engineering Insurance policy caters to different forms of uncertainties that are associated with on-site construction including plant and machinery usage.</p>
                 </div>
                 <div>
-                    <Image src={Engineer} alt="Motor Insurance" />
+                    <Image src={Engineer} alt="Motor Insurance" class="breathing-image"/>
                 </div>
             </div>
         </div>
@@ -72,11 +73,11 @@ import Engineer from '../assets/engineer-insurance.png'
 
     
     <!-- Section Tabs & information -->
-    <section class="section-tabs py-40 bg-slate-100">
+    <section class="section-tabs py-20 bg-slate-100">
         <div class="container wrapper">
 
             <!-- Tabs -->
-            <div class="product-tabs border-b border-gray-200 dark:border-gray-700 bg-white lg:pl-56">
+            <ProductTabs>
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
                     <li class="me-2" role="presentation">
                         <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Contractor's All Risk (CAR)</button>
@@ -88,7 +89,7 @@ import Engineer from '../assets/engineer-insurance.png'
                         <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Contractor’s Plant and Machinery (CPM)</button>
                     </li>
                 </ul>
-            </div>
+            </ProductTabs>
 
 
 
@@ -228,10 +229,10 @@ import Engineer from '../assets/engineer-insurance.png'
                                             <li>Policy Document</li>
                                             <li>Claim Bill</li>
                                             <li>Commercial Invoice</li>
-                                            <li>KYC</li>
+                                            
                                             <li>Monetary Claim on Transporter</li>
                                             <li>Letter of Subrogation</li>
-                                            <li>LR/RR/GR</li>
+                                            
                                             <li>Damage Certificate</li>
                                         </ul>
                                     </div>
@@ -340,10 +341,10 @@ import Engineer from '../assets/engineer-insurance.png'
                                             <li>Policy Document</li>
                                             <li>Claim Bill</li>
                                             <li>Commercial Invoice</li>
-                                            <li>KYC</li>
+                                            
                                             <li>Monetary Claim on Transporter</li>
                                             <li>Letter of Subrogation</li>
-                                            <li>LR/RR/GR</li>
+                                            
                                             <li>Damage Certificate</li>
                                         </ul>
 

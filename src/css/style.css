@@ -23,7 +23,6 @@ body {
     z-index: 1;
 }
 
-
 :target::before { 
     content: ''; 
     display: block; 
@@ -31,6 +30,12 @@ body {
     margin: -50px 0 0 0; 
 }
 
+
+/* Remove Scrolling */
+.remove-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
 
 
 
@@ -154,7 +159,20 @@ section {
     border: 2px solid var(--clr-white);
     background-color: var(--clr-red);
     color: var(--clr-white);
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
+/* ANIMATE MAKE A CLAIM BUTTON red */
+@keyframes up-down {
+    0% {
+      transform: translateY(5px);
+    }
+  
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
 .btn-red:hover {
     color: var(--clr-red);
     border: 2px solid var(--clr-red);
@@ -232,13 +250,13 @@ section {
 /* ============================== Text Styling ======================= */
 .heading-secondary {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.2;
-    font-family: "Dela Gothic One", sans-serif;
+    font-family: "Avenir", sans-serif;
 }
 
 .heading-tertiary {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: var(--clr-blue-light);
 }
@@ -253,6 +271,88 @@ section {
     font-weight: 400;
     font-style: normal;
 }  
+
+
+
+/* ======================== Animations ============================== */
+/* Images to animate in */
+.scale-in {
+  scale: .8; 
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: scale-in linear forwards;
+  animation-timeline: view() !important;
+  animation-range: 100px 300px !important;
+}
+@keyframes scale-in {
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+
+/* Images to animate in */
+.image-fade {
+  scale: 1; 
+  opacity: 0;
+  transform: translateY(20px);
+  animation: scale-in linear forwards;
+  animation-timeline: view() !important;
+  animation-range: 100px 300px !important;
+}
+@keyframes scale-in {
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+
+
+/* Fade In From Bottom */
+.fade-in {
+    scale: 1; 
+    opacity: 0;
+    transform: translateY(40px);
+    animation: scale-in linear forwards;
+    animation-timeline: view() !important;
+    animation-range: 100px 300px !important;
+    
+    
+  }
+  @keyframes scale-in {
+    to {
+      scale: 1;
+      opacity: 1;
+      transform: rotate(0deg) translateX(0px);
+    }
+  }
+
+
+
+
+
+
+/* =================================================================================== */
+                        /* Hero Text Animations */
+/* =================================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -279,6 +379,16 @@ section {
         padding-right: 200px;
         padding-left: 200px;
     }
+
+}
+@media (min-width: 1500px) {
+    
+/* Remove Scrolling */
+.remove-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
+
 
 }
 
@@ -405,3 +515,29 @@ ul.slick-dots  li button {
     color: #0ba9f2;
     cursor: pointer;
   }
+
+
+  /* Breathing ANimation for bond picture */
+  .breathing-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; / Adjust as needed | has been adjusted */
+    
+  }
+  
+  .breathing-image {
+    animation: breathe 2s infinite alternate; /* Adjust duration as needed */
+    border-radius: 10px;
+    transition: ease-in-out;
+  }
+  
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  

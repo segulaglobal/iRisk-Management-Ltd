@@ -6,153 +6,125 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 
 <MainLayout title="Contact iRisk Management">
-<section class="section-contact pb-40 pt-60">
-    <div class="container wrapper">
-        <h2 class="heading-secondary mb-16 text-center">Contact Us.</h2>                
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <!-- This has the form -->
-            <div class="col-span-2">
-                <h2 class="heading-tertiary mb-8">Send us a message</h2>
-                
-                <!-- Contact forms -->
-                <form class="md:pr-16 mx-auto" name="Contact" method="POST" data-netlify="true">
-                    <!-- I'd like to talk about -->
-                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">I'd Like to Talk about</label>
-                    <select name="Purpose" id="countries" class="mb-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option>I'd like to talk about</option>
-                        <option value="Canada">Canada</option>
-                        <option value="France">France</option>
-                        <option value="Germany">Germany</option>
-                    </select>
-
-                    <!-- Contact -->
-                        <div class="relative z-0 w-full mb-8 group">
-                            <input type="tel" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
-                        </div>
-
-                    <!-- Full Name -->
-                    <div class="grid md:grid-cols-2 md:gap-6">
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
-                        </div>
-                        <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
-                        </div>
-                    </div>
-
-                    <!-- Email Address -->
-                    <div class="relative z-0 w-full mb-8 group">
-                        <input type="email" name="Email Address" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
-                    </div>
-
-                    <!-- Message text box -->
-                    <div class="relative z-0 w-full mb-8 group">
-                        <textarea name="Message" id="contact-message" rows="4" cols="50" class="resize-none block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                        <label for="contact-message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-blue dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                </form>
-  
-            </div>  
-
-            <!-- This has the contact detials -->
-            <div>
-                <h2 class="heading-tertiary mb-8">Contact Details</h2>
-                <!-- Contact list -->
-                <ul class="contact-list">
-                    <li class="contact-item">
-                        <a target="_blank" href="tel:0241105423" class="contact-link">
-                            <i class="fa-solid fa-phone"></i>
-                        </a>
-                        <div>
-                            <h3>Phone</h3>
-                            <a target="_blank" href="tel:+233241105423">+233 241 105 423</a>
-                        </div>
-                    </li>
-                    <li class="contact-item">
-                        <a target="_blank" href="mailto:info@iriskmanagement.net" class="contact-link">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <div>
-                            <h3>Phone</h3>
-                            <a target="_blank" href="mailto:info@iriskmanagement.net">info@iriskmanagement.net</a>
-                        </div>
-                    </li>
-                    <li class="contact-item">
-                        <a target="_blank" href="https://www.google.com/maps/dir//Ghana+Post+:+GA-411-5290,+D17+Boundary+Rd,+Accra,+Ghana/@5.642269,-0.2281684,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xfdf9b732837b0cb:0xdfe75b22a949a4b3!2m2!1d-0.1457664!2d5.6422748?entry=ttu" class="contact-link">
-                            <i class="fa-solid fa-map-marker"></i>
-                        </a>
-                        <div>
-                            <h3>Locate Us</h3>
-                            <a target="_blank" href="https://www.google.com/maps?sca_esv=63cd6aa67e0fab88&rlz=1C1CHZO_enGH1059GH1059&sxsrf=ACQVn09HNVfYBqHnT-FI5Z6OZxmq-6PYkA:1710779364817&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmlyaXNrIG1hbmFnZW1lbnQgZ2hhbmEyBRAhGKABMgUQIRigAUiDDVCgBlj5C3ACeAGQAQCYAewBoAHrBqoBAzItNLgBA8gBAPgBAZgCBqACggfCAgoQABhHGNYEGLADwgIGEAAYFhgewgIEECEYFZgDAIgGAZAGCJIHBTIuMC40oAfVEQ&um=1&ie=UTF-8&fb=1&gl=de&sa=X&geocode=KcuwNyhzm98PMbOkSakiW-ff&daddr=Ghana+Post+:+GA-411-5290,+D17+Boundary+Rd,+Accra,+Ghana">D17 Boundary Rd, Accra, Ghana</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+  <section class="contactcontainer py-40">
+          <div class="container wrapper">
+              <form>
+                <h1>Contact Us Form</h1>
+                <div class="grid md:grid-cols-2 w-full">
+                  <input type="text" id="firstName" placeholder="First Name" required />
+                  <input type="text" id="lastName" placeholder="Last Name" required class="md:ml-4"/>
+                </div>
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="text" id="mobile" placeholder="Mobile" required />
+                <!-- <h4>Type Your Message Here...</h4> -->
+                <textarea required placeholder="Type your message here" name="message" id="message" cols="30" rows="30" class="h-40"></textarea>
+                <input type="submit" value="Send" class="btn btn-white"/>
+              </form>
+          </div>
+  </section>
 </MainLayout>
 
 
 
 
 
-<style lang="scss">
 
-    .contact-list {
-        list-style: none;
 
-        .contact-item {
-            display: flex;
-            margin-bottom: 1.5rem;
-        }
 
-        .contact-link {
-            margin-right: 2rem;
-            display: flex;
-            width: 3rem;
-            height: 3rem;
-            border: 2px solid var(--clr-gray-light);
-            border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            transition: .3s;
-            overflow: hidden;
 
-            &:hover {
-                color: var(--clr-white);
-            }
+<style>
+    
 
-            &:hover::after {
-                transform: scale(1);
-                transform-origin: center;
-                opacity: 1;
-            }
+    
+    /* CONtact Form */
 
-            &::after {
-                content: "";
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-color: var(--clr-gray);
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transform: scale(0);
-                transform-origin: center;
-                transition: .3s ease-in-out;
-                opacity: 0;
-            }
-        }
-    }
+  .contactcontainer {
+    min-height: 100vh;
+    background: url("../assets/viewer.jpg") no-repeat center/cover;
+    width: 100%;
+    padding-top: 10rem;
+    background-size: cover;
+    
+  }
+  
+  .contactcontainer form {
+    width: 100%;
+    max-width: 670px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    /* flex-wrap: wrap; */
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  .contactcontainer form h1 {
+    color: #fff;
+    font-weight: 700;
+    line-height: 2;
+    margin-top: 20px;
+    /* width: 500px; */
+    text-align: center;
+  }
+  .contactcontainer form input[type="text"],
+  .contactcontainer form input[type="email"],
+  .contactcontainer form textarea {
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+    background: none;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.341);
+    color: #fff;    
+    font-size: .9rem;
+    resize: none;
+    font-family: inherit;
+    transition: .4s;
+  }
+  .contactcontainer form input[type="text"]::placeholder,
+  .contactcontainer form input[type="email"]::placeholder,
+  .contactcontainer form textarea::placeholder {
+    color: #fff;
+  }
+
+  .contactcontainer form input[type="text"]:focus,
+  .contactcontainer form input[type="email"]:focus,
+  .contactcontainer form textarea:focus {
+    border-bottom: 2px solid #fff;
+    outline: none;
+  }
+
+
+
+  .contactcontainer form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+  }
+  .contactcontainer form h4 {
+    font-size: 20px;
+  }
+  .contactcontainer form #button {
+    /* border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 30px;
+    transition: 0.3s; */
+  }
+  
+  .contactcontainer form #button:hover{
+      /* background: #000;
+      color: #fff;
+      transition: .5s ease-in-out; */
+  }
 </style>
+

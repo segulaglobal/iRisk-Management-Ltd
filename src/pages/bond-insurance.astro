@@ -1,11 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 
 // images
 import { Image } from 'astro:assets'
-import Bond from '../assets/bond-insurance.png'
+import bond from '../assets/bond.jpg'
 ---
 
 
@@ -16,9 +17,8 @@ import Bond from '../assets/bond-insurance.png'
     <ProductHero>
         <h2 class="heading-secondary">Bond Insurance</h2>
     
-           
-             <!-- Bread crumbs -->
-            <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+            <!-- Bread crumbs -->
+            <nav class="flex w-full justify-center mt-12" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
                         <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
@@ -49,115 +49,668 @@ import Bond from '../assets/bond-insurance.png'
             <!-- End of Bread crumbs -->
     </ProductHero>
 
-
-
-
-    <section >
+    <section class="py-20">
         <div class="container wrapper">
-            
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
                     <h2 class="heading-tertiary mb-4">Bond Insurance</h2>
-                    <p class="mb-8">A bond acts as a financial guarantee in a three-way agreement. The surety, often an insurance company, promises to take responsibility if the contractor fails to uphold their end of the contract. This protects the employer, who receives compensation for the contractor's breach from the surety if necessary</p>
-                    <h2 class="heading-tertiary mb-4">Types of Bonds</h2>
-                    <h3>There are mainly surety bonds and custom bonds </h3>
-                    
-                    <h2 class="heading-tertiary mb-4">Surety Bonds:</h2>
-                    <p>A surety bond constitutes a contractual arrangement involving a minimum of three entities:</p>
-                
-                <ol>
-                  <li>
-                    <strong>The Obligee:</strong> This entity necessitates the bond, often comprising governmental bodies aiming to regulate sectors and mitigate financial risks.
-                  </li>
-                  <li>
-                    <strong>The Principal:</strong> This party is responsible for executing the contractual obligation or task.
-                  </li>
-                  <li>
-                    <strong>The Surety:</strong> An insurance company backing the bond, it offers a line of credit in the event that the principal fails to fulfill their obligations.
-                  </li>
-                </ol>
-                    <ul>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('bid')">
-                                Bid Bonds:
-                                <span id="dropdown-bid" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="bid" class="hidden">Bid bonds are guarantees from a surety company for contractors. They assure project owners that winning contractors will honor their bids and secure a performance bond. If the contractor backs out, the surety company pays the difference between the winning and next best bid. This protects the project owner from wasted time and potentially higher costs. </p>
-                        </li>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('performance')">
-                                Performance Bonds:
-                                <span id="dropdown-performance" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="performance" class="hidden">A performance bond is essentially a financial guarantee issued by a surety company, like an insurance company, to protect the client (also called the obligee) in case the contractor fails to complete the project according to the contract. If the contractor falls short, the surety company will pay the client up to a certain amount to cover the costs of completing the project or fixing any defects. Performance bonds are typically required for large projects, especially in construction, and they often replace bid bonds once a contract is awarded.</p>
-                        </li>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('advance')">
-                                Advance Payment Mobilisation Bonds:
-                                <span id="dropdown-advance" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="advance" class="hidden">Advance payment bonds act like financial insurance for construction projects. They guarantee the project owner gets their money back if the contractor receiving an advance payment fails to meet the contract. This protects the owner's investment and fosters trust in the project. While there's a cost to the bond, it can improve cash flow for contractors and promote a secure project environment. </p>
-                        </li>
-                    </ul>
-                <h2 class="heading-tertiary mb-4">Custom Bonds</h2>
-                <p>In Ghana, when you import or export goods, you typically owe customs duties immediately. However, the Ghana Revenue Authority allows you to delay this payment if you have a customs bond from a reputable insurance company. This bond acts as a guarantee that, if your company fails to meet its obligations regarding import/export duties, the insurance company will cover any lost revenue for the government.  </p>
-                    <ul>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('temp')">
-                                Temporary Importation :
-                                <span id="dropdown-temp" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="temp" class="hidden">Importers sometimes require temporary importation of goods into Ghana before re-exporting them to their ultimate destination. Given that all imported goods are subject to taxation, importers utilize bonds to ensure payment of taxes, even if the goods are not ultimately re-exported.</p>
-                        </li>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('agent')">
-                                Customs Agent House Bonds:
-                                <span id="dropdown-agent" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="agente" class="hidden">This bond is provided to Clearing Agents to assure Customs that in the event of their wrongdoing leading to revenue loss for the state, the guarantor will compensate Customs for an amount equivalent to the bond's value.</p>
-                        </li>
-                        <li class="cool">
-                            <strong onclick="toggleVisibility('transit')">
-                                Transit Bonds:
-                                <span id="dropdown-transit" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="transit" class="hidden">This guarantee is provided to transporters of imported goods bound for a neighboring country who have not settled their customs duties. It offers coverage in the event that the goods fail to reach their designated destination, potentially resulting in revenue loss for the state.</p>
-                        </li>
-                         <li class="cool">
-                            <strong onclick="toggleVisibility('warehouse')">
-                                Custom Warehouse Bonds:
-                                <span id="dropdown-warehouse" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="transit" class="hidden">This bond is provided to importers whose merchandise is stored in approved bonded warehouses until the import duties are settled. In the event of default or failure by the importer to pay the required customs duties and taxes for the goods stored in the bonded warehouse, the guarantor assumes responsibility for reimbursing Customs for the unpaid duties.</p>
-                        </li>
-                         <li class="cool">
-                            <strong onclick="toggleVisibility('removal')">
-                                Custom Removal Bonds:
-                                <span id="dropdown-removal" class="dropdown-symbol"></span>
-                            </strong>
-                            <p id="removal" class="hidden">These terms assure Customs that in the event goods taken from specified warehouses fail to reach their intended destination, resulting in a loss of duty revenue to the State, the guarantor will cover this amount to Customs..</p>
-                        </li>
-                    </ul>
-                
-                
-                
-           
+                    <p class="mb-8 leading-loose">A bond acts as a financial guarantee in a three-way agreement. The surety, often an insurance company, promises to take responsibility if the contractor fails to uphold their end of the contract. This protects the employer, who receives compensation for the contractor's breach from the surety if necessary.</p>
+                     </div>
+                <div class="breathing-image-container">
+                    <Image src={bond} alt="bond" class="breathing-image"/>
+                </div>
+            </div>
         </div>
-        
     </section>
-    <!-- <script>
-        function toggleVisibility(id) {
-            var element = document.getElementById(id);
-            var symbol = document.getElementById('dropdown-' + id);
-            if (element.classList.contains('hidden')) {
-                element.classList.remove('hidden');
-                symbol.classList.add('dropdown-open');
-            } else {
-                element.classList.add('hidden');
-                symbol.classList.remove('dropdown-open');
-            }
-        }
-    </script> -->
 
 
+
+
+
+    <!-- Section Tabs & information -->
+    <section class="section-tabs py-20 bg-slate-100 leading-loose">
+        <div class="container wrapper">
+
+            <!-- Tabs -->
+            <ProductTabs>
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Surety Bonds</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Customs Bond</button>
+                    </li>
+                    
+                </ul>
+            </ProductTabs>
+
+          <!-- Various Pages -->
+          <div id="default-styled-tab-content">
+
+            <!-- =========== Section-1 Hull Insurance =========== -->
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                <!-- Private Car Section -->
+                <div class="relative" data-spy="scroll" data-target="#sidebar">
+                    <div class="container">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                            <!-- The Sticky Side Navbar -->
+                            <div id="sidenav" class="hidden lg:block">
+                                <ul class="sticky-nav bg-slate-200  w-full">
+                                    <li><a href="#section1-about">About</a></li>
+                                    <li><a href="#section1-features">Bid Bond</a></li>
+                                    <li><a href="#section1-coverage">Performance Bond</a></li>
+                                    <li><a href="#section1-eligibility">Advance Payment bonds</a></li>
+    
+                                    <li><a href="#claims">Claims Process</a></li>
+                                    <li><a href="#section1-faqs">FAQS</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- The sections -->
+                            <div class="col-span-4">
+
+                                <!-- #About -->
+                                <div id="section1-about" class="pb-12">
+                                    <h2 class="heading-tertiary mb-1">About</h2>
+                                    <ul>A surety bond constitutes a contractual arrangement involving a minimum of three entities:
+                                    <li> <strong>The Obligee:</strong>  This entity necessitates the bond, often comprising governmental bodies aiming to regulate sectors and mitigate financial risks.</li>
+                                    <li> <strong>The Principal:</strong>  This party is responsible for executing the contractual obligation or task</li>
+                                    <li> <strong>The Surety:</strong> An insurance company backing the bond, it offers a line of credit in the event that the principal fails to fulfill their obligations. </li>
+                                </ul>  </div>
+
+                                <hr>
+
+                                <!-- Features and Benefits -->
+                                <div id="features" class="py-12">
+                                    <h2 class="heading-tertiary mb-1">Bid Bonds</h2>
+                                    <ul class="list-disc leading-loose ml-12">
+                                    Bid bonds are guarantees from a surety company for contractors. They assure project owners that winning contractors will honor their bids and secure a performance bond. If the contractor backs out, the surety company pays the difference between the winning and next best bid. This protects the project owner from wasted time and potentially higher costs.
+                                    </ul>
+                                </div>
+                                
+                                
+                                <hr>
+
+                                <!-- Coverage -->
+                                <div id="section1-coverage" class="py-12">
+                                    <h2 class="heading-tertiary">Performance Bond</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            A performance bond is essentially a financial guarantee issued by a surety company, like an insurance company, to protect the client (also called the obligee) in case the contractor fails to complete the project according to the contract. If the contractor falls short, the surety company will pay the client up to a certain amount to cover the costs of completing the project or fixing any defects. Performance bonds are typically required for large projects, especially in construction, and they often replace bid bonds once a contract is awarded.
+                                        </ul>
+                                </div>
+                                <!-- end of coverage -->
+                                
+                                <hr>
+                            
+                                <!-- Advance payment bonds -->
+                                <div class="py-12" id="section1-eligibility">
+                                    <h2 class="heading-tertiary">Advance payment bonds</h2>
+                                    <p  class="mb-2">Advance payment bonds or Advance Mobilization bond act like financial insurance for construction projects. They guarantee the project owner gets their money back if the contractor receiving an advance payment fails to meet the contract. This protects the owner's investment and fosters trust in the project. While there's a cost to the bond, it can improve cash flow for contractors and promote a secure project environment.</p>
+
+                                    
+                                </div>
+                                <!-- Advance payment bonds -->
+
+                               
+
+                                <hr>
+
+                                <!-- Claim Process -->
+                                <div class="py-12" id="section1-claims">
+                                    <h2 class="heading-tertiary">Claims Process</h2>
+                                    <p class="mb-2">The claim process for advance payment, bid, or performance bond insurance will generally follow these steps:</p>
+                                
+                                    <ol class="list-decimal leading-loose ml-12">
+                                        <li><strong>Review the Bond Contract:</strong>
+                                            <p>First, familiarize yourself with the specific terms and conditions of your bond contract. This document will outline the events considered a breach of contract and the process for filing a claim. Look for details like:</p>
+                                            <ul>
+                                                <li>Notice Requirements: The timeframe for notifying the surety company about a potential claim.</li>
+                                                <li>Covered Events: The specific situations that trigger coverage under the bond (e.g., contractor abandonment, failure to meet performance benchmarks).</li>
+                                                <li>Documentation Requirements: The type of evidence required to support your claim (e.g., contracts, invoices, proof of default notices).</li>
+                                            </ul>
+                                        </li>
+                                
+                                        <li><strong>Gather Documentation:</strong> 
+                                            <p>Compile all relevant documents to support your claim. This might include:</p>
+                                            <ul>
+                                                <li>Executed contract between you and the contractor.</li>
+                                                <li>Proof of advance payment made.</li>
+                                                <li>Documentation of the contractor's default (e.g., missed deadlines, poor quality work).</li>
+                                                <li>Communication records with the contractor regarding the default.</li>
+                                            </ul>
+                                        </li>
+                                
+                                        <li><strong>File a Claim with the Insurance Company:</strong> 
+                                            <p>Contact your surety company and initiate the claim filing process. This may involve submitting a formal claim form along with the gathered documentation.</p>
+                                        </li>
+                                
+                                        <li><strong>Insurer Investigation:</strong> 
+                                            <p>The insurance company will investigate your claim to determine if it falls under the coverage of the bond. This may involve contacting the contractor for their response and verifying the details of your claim.</p>
+                                        </li>
+                                
+                                        <li><strong>Claim Settlement:</strong> 
+                                            <p>If the insurance company validates your claim, they will determine the payout amount according to the bond limits and negotiate a resolution with you. This might involve reimbursing you for the advance payment, completing the project themselves, or hiring another contractor to finish the job.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                                <!-- End of Claim Process -->
+                            
+                                    <!-- Frequently Asked Questions -->
+                                    <div class="py-12" id="section1-faqs">
+                                        <h3 class="heading-tertiary mb-4">Frequently Asked Questions</h3>
+                                        <!-- Accordion -->
+                                        <div id="accordion-collapse" data-accordion="collapse">
+                                            <!-- What is the difference between an advance payment bond and a performance bond? -->
+                                            <h2 id="accordion-collapse-heading-1">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                                    <span>What is the difference between an advance payment bond and a performance bond?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Both are financial guarantees, but they protect against different risks. An advance payment bond ensures the client gets their money back if the contractor fails to start or complete the project, while a performance bond guarantees the project itself is finished according to the contract.</p>
+                                                </div>
+                                            </div>
+    
+                                            <!-- Do I always need a bid bond to submit a bid? -->
+                                            <h2 id="accordion-collapse-heading-2">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                                    <span>Do I always need a bid bond to submit a bid?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Not always, but some projects, especially larger ones, require a bid bond. This protects the client from contractors who submit bids but then withdraw, wasting the client's time and resources.</p>
+                                                </div>
+                                            </div>
+    
+                                            <!-- How much does performance bond insurance cost? -->
+                                            <h2 id="accordion-collapse-heading-3">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                                    <span>How much does performance bond insurance cost?
+                                                        </span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                    The cost of a performance bond varies depending on the project size, contractor's experience, and financial strength. Typically, it's a percentage of the total contract value.
+                                                </ul>
+                                            </div>
+                                            </div>
+                                            
+                                            
+                                            <!-- Can I negotiate the need for a performance bond? -->
+                                            <h2 id="accordion-collapse-heading-4">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                                    <span>Can I negotiate the need for a performance bond?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                        In some cases, you may be able to negotiate with the client, especially if you have a strong track record and are willing to offer other guarantees.
+                                                    </ul>
+                                                </div>
+                                            </div>
+    
+    
+                                            <!-- What happens if I fail to meet the terms of the performance bond? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>What happens if I fail to meet the terms of the performance bond?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">If you breach the contract and the client makes a claim, the surety company that issued the bond will cover the costs to complete the project. However, you will be responsible for reimbursing the surety company for the payout.</p>
+                                                </div>
+                                            </div>
+    
+    
+                                            <!-- Where can I get help obtaining advance payment, bid, or performance bond insurance? -->
+                                            <h2 id="accordion-collapse-heading-5">
+                                                <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                    <span>Where can I get help obtaining advance payment, bid, or performance bond insurance?</span>
+                                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                    </svg>
+                                                </button>
+                                            </h2>
+                                            <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                    <p class="mb-2 text-gray-500 dark:text-gray-400">Surety companies specialize in issuing these types of bonds. You can contact a surety company directly or work with an insurance broker who can help you find the best option for your needs.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    <!-- End of Frequently Asked Questions -->
+                            </div>  
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <!-- =========== Customs bond Insurance========== -->
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <!-- Customs -->
+                <div class="relative" data-spy="scroll" data-target="#sidebar">
+                    <div class="container">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                            <!-- The Sticky Side Navbar -->
+                            <div id="sidenav" class="hidden lg:block">
+                                <ul class="sticky-nav bg-slate-200  w-full">
+                                    <li><a href="#section2-customsbond">About</a></li>
+                                    <li><a href="#section2-tempbond">Temporary Importation Bond</a></li>
+                                    <li><a href="#ection2-agentbond">Customs Agent House Bonds</a></li>
+                                    <li><a href="#section2-removalbond">Removal Bonds</a></li>
+                                    <li><a href="#section2-warehousebond">Warehouse/Security Bonds</a></li>
+                                    <li><a href="#section2-transitbond">Transit Bonds</a></li>
+                                    <li><a href="#section2-claims">Claims Process</a></li>
+                                    <li><a href="#section2-faqs">FAQs</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- The sections -->
+                            <div class="col-span-4">
+
+                                <!-- Customs Bond -->
+                                <div id="section2-customsbond" class="pb-12">
+                                    <h2 class="heading-tertiary mb-1">Customs Bond</h2>
+                                    <p>In Ghana, when you import or export goods, you typically owe customs duties immediately. However, the Ghana Revenue Authority allows you to delay this payment if you have a customs bond from a reputable insurance company. This bond acts as a guarantee that, if your company fails to meet its obligations regarding import/export duties, the insurance company will cover any lost revenue for the government.</p>
+                                </div>
+
+                                <hr>
+
+                                <!-- Temporary Importation Bond-->
+                                <div class="pb-12" id="section2-tempbond">
+                                    <h2 class="heading-tertiary mb-1">Temporary Importation Bond</h2>
+                                    <p>
+                                        Importers sometimes require temporary importation of goods into Ghana before re-exporting them to their ultimate destination. Given that all imported goods are subject to taxation, importers utilize bonds to ensure payment of taxes, even if the goods are not ultimately re-exported.
+                                    </p>
+
+                                    
+                                </div>
+
+                                <hr>
+
+                                <!-- Customs Agent House Bonds-->
+                                <div id="section2-agentbond" class="py-12">
+                                    <h2 class="heading-tertiary mb-1">Customs Agent House Bonds</h2>
+                                    
+                                <p>
+                                        This bond is provided to Clearing Agents to assure Customs that in the event of their wrongdoing leading to revenue loss for the state, the guarantor will compensate Customs for an amount equivalent to the bond's value. 
+                                    </p>
+                                </div>
+
+                                <hr>
+
+                                 <!-- Removal Bonds -->
+                                 <div id="section2-removalbond" class="py-12">
+                                    <h2 class="heading-tertiary mb-1">Removal Bonds</h2>
+            
+                                <p>
+                                    In the event that goods leave a warehouse and never arrive at their final destination, resulting in a loss of tax owed/duty to the government, the guarantor will be responsible to pay Customs that amount.</p>
+                                </div>
+
+                                <hr><!-- Warehousing/Security Bonds -->
+                                <div id="section2-warehousebond" class="py-12">
+                                   <h2 class="heading-tertiary mb-1">Warehousing/Security Bonds</h2>
+           
+                               <p>
+                                This acts like a financial guarantee for importers who store their goods in a special customs warehouse without paying import fees yet. If the importer doesn't pay the fees later, the guarantor (like a security deposit company) will cover those costs for customs. </div>
+
+                               <hr>
+
+                               <hr><!-- Transit Bonds -->
+                                <div id="section2-transitbond" class="py-12">
+                                   <h2 class="heading-tertiary mb-1">Transit Bonds</h2>
+           
+                               <p>
+                                This acts as a safety net for companies moving imported goods to a nearby country without paying customs fees upfront. If the shipment doesn't arrive at its intended location, this guarantee protects the government from losing potential tax revenue.
+                               <hr>
+
+                               
+
+
+
+                                <!-- Claim Process -->
+                                <div class="py-12" id="section2-claims">
+                                    <h2 class="heading-tertiary">Claims Process</h2>
+                                    <p class="mb-2">The claim process for advance payment, bid, or performance bond insurance will generally follow these steps:</p>
+                                
+                                    <ol class="list-decimal leading-loose ml-12">
+                                        <li><strong>Review the Bond Contract:</strong>
+                                            <p>First, familiarize yourself with the specific terms and conditions of your bond contract. This document will outline the events considered a breach of contract and the process for filing a claim. Look for details like:</p>
+                                            <ul>
+                                                <li>Notice Requirements: The timeframe for notifying the surety company about a potential claim.</li>
+                                                <li>Covered Events: The specific situations that trigger coverage under the bond (e.g., contractor abandonment, failure to meet performance benchmarks).</li>
+                                                <li>Documentation Requirements: The type of evidence required to support your claim (e.g., contracts, invoices, proof of default notices).</li>
+                                            </ul>
+                                        </li>
+                                
+                                        <li><strong>Gather Documentation:</strong> 
+                                            <p>Compile all relevant documents to support your claim. This might include:</p>
+                                            <ul>
+                                                <li>Executed contract between you and the contractor.</li>
+                                                <li>Proof of advance payment made.</li>
+                                                <li>Documentation of the contractor's default (e.g., missed deadlines, poor quality work).</li>
+                                                <li>Communication records with the contractor regarding the default.</li>
+                                            </ul>
+                                        </li>
+                                
+                                        <li><strong>File a Claim with the Insurance Company:</strong> 
+                                            <p>Contact your surety company and initiate the claim filing process. This may involve submitting a formal claim form along with the gathered documentation.</p>
+                                        </li>
+                                
+                                        <li><strong>Insurer Investigation:</strong> 
+                                            <p>The insurance company will investigate your claim to determine if it falls under the coverage of the bond. This may involve contacting the contractor for their response and verifying the details of your claim.</p>
+                                        </li>
+                                
+                                        <li><strong>Claim Settlement:</strong> 
+                                            <p>If the insurance company validates your claim, they will determine the payout amount according to the bond limits and negotiate a resolution with you. This might involve reimbursing you for the advance payment, completing the project themselves, or hiring another contractor to finish the job.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                                <!-- End of Claim Process -->
+                            
+
+                                <hr>
+
+                                <!-- Frequently Asked Questions -->
+                                <div class="py-12" id="section2-faqs">
+                                    <h3 class="heading-tertiary mb-4">Frequently Asked Questions</h3>
+                                    <!-- Accordion -->
+                                    <div id="accordion-collapse" data-accordion="collapse">
+                                        <!-- HOW MANY TIMES CAN A CLAIM BE MADE IN A YEAR UNDER ZERO DEPRECIATION BENEFIT? -->
+                                        <h2 id="accordion-collapse-heading-1">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                                <span>What happens if I can't fulfill my customs obligations?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                                <p class="mb-2 text-gray-500 dark:text-gray-400">If you can't pay duties or taxes, or fail to properly re-export goods when required, the surety company will cover the costs for customs. This will likely trigger a claim on your bond and could impact your ability to obtain future insurance.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- How much does customs bond insurance cost? -->
+                                        <h2 id="accordion-collapse-heading-2">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                                <span>How much does customs bond insurance cost?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                                <p class="mb-2 text-gray-500 dark:text-gray-400">The cost of the insurance will depend on various factors like the value of your imports, your business history, and the bond amount required by customs.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Do I actually need customs bond insurance? -->
+                                        <h2 id="accordion-collapse-heading-3">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                                <span>
+                                                    Do I actually need customs bond insurance?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                This is a common question, as not all businesses require it. You'll need to understand your specific importing needs and comply with customs regulations.
+                                            </ul>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        <!-- What are the different types of customs bond insurance? -->
+                                        <h2 id="accordion-collapse-heading-4">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                                <span>What are the different types of customs bond insurance?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                                                    There are various types of customs bonds, each serving a specific purpose.
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Can I get a customs bond without insurance? -->
+                                        <h2 id="accordion-collapse-heading-5">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                <span>Can I get a customs bond without insurance?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <p class="mb-2 text-gray-500 dark:text-gray-400">In most cases, no. Customs bonds are typically obtained through a surety company, which requires you to have insurance in place to mitigate their risk.</p>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- How long does it take to get customs bond insurance? -->
+                                        <h2 id="accordion-collapse-heading-5">
+                                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
+                                                <span>How long does it take to get customs bond insurance?</span>
+                                                <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
+                                            <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                                                <p class="mb-2 text-gray-500 dark:text-gray-400">The application process can be relatively quick, but it depends on the complexity of your needs and the insurance provider's procedures.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- End of Frequently Asked Questions -->
+                                
+
+                            
+                            </div>  
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Two Wheelter Insurance -->
+            </div>
+
+
+            
+            <!-- =========== Commercial Vehicle Insurance======== -->
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+                <div class="relative" data-spy="scroll" data-target="#sidebar">
+                    <div class="container">
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                            <!-- The Sticky Side Navbar -->
+                            <div id="sidenav" class="hidden lg:block">
+                                <ul class="sticky-nav bg-slate-200  w-full">
+                                    <li><a href="#section3-about">About</a></li>
+                                    <li><a href="#section3-coverage">Coverage</a></li>
+                                    <li><a href="#section3-claims">Claims Process</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- The sections -->
+                            <div class="col-span-4">
+
+                                <!-- #About -->
+                                <div id="section3-about" class="pb-12">
+                                    <h2 class="heading-tertiary mb-1">Marine Liability Insurance</h2>
+                                    <p>Also called Protection and Indemnity Insurance, Marine Liability Insurance offers protection for third-party liabilities that owners and corporations are exposed to during water-based operations. It covers injuries, illnesses, or even loss of life caused by vessel operation. Medical expenditures, damage to other vessels and cargo, collision incidents, and related expenses as a result of quarantine may also be covered</p>
+                                </div>
+
+                                <hr>
+
+                                <!-- Coverage -->
+                                <div id="section3-coverage" class="py-12">
+                                    <h2 class="heading-tertiary mb-1">Coverage</h2>
+                                    <p class="blue-text font-medium">The range of covers includes</p>
+
+                                    <ul class="list-disc leading-loose ml-12">
+                                        <li>Charterers’ Liability</li>
+                                        <li>Freight Forwarders Liability.</li>
+                                        <li>Marina Operators Liability.</li>
+                                        <li>Marina and/or Yacht Club Liability</li>
+                                        <li>Port and Terminal Operators Liability</li>
+                                        <li>Race Organizers’ Liability</li>
+                                        <li>Ship Repairers Liability</li>
+                                        <li>Stevedores Liability</li>
+                                    </ul>
+
+                                    <p class="blue-text font-medium">Traditional marine liability accounts that are typically covered, include:</p>
+                                    
+                                    <ul class="list-disc leading-loose ml-12">
+                                        <li><strong>Protection and Indemnity (P&I)</strong> Excess P&I coverage for a broad spectrum of vessels including fishing vessels, yachts and small commercial craft.</li>
+                                        <li><strong>Port authorities, terminal operators and stevedores</strong> - Pprimary and excess capacity for the marine and offshore industries.</li>
+                                        <li><strong>Specialist operations</strong>   - Including dredging, cable laying and seismic operations.</li>
+                                        <li>Liability cover for marine pilots, marine surveyors, ship repairers, boat race and regatta organisers, and seepage and pollution.</li>
+                                    </ul>
+                                </div>
+
+
+                                <hr>
+
+                                <div class="py-12" id="section3-claims">
+                                    <h2 class="heading-tertiary">Claims Process</h2>
+                                    <p class="mb-4">In case of loss or damage to the ship, you need to immediately inform the insurance provider and follow these steps for making a claim:</p>
+
+                                    <ul class="list-disc leading-loose ml-12">
+                                        <li>A surveyor will assess the damage or loss mentioned</li>
+                                        <li>All the proofs and witnesses need to be submitted along with the duly filled in claim form.</li>
+                                        <li>If the provider finds the case fit, it would approve the claim, else it would reject it</li>
+                                        <li>In case you are not satisfied with the case, you can approach the court of law</li>
+                                    </ul>
+
+                                    <p class="mb-4">Following documents are required to make a claim:</p>
+
+                                    <ul class="list-disc leading-loose ml-12">
+                                        <li>Policy Document</li>
+                                        <li>Claim Bill.</li>
+                                        <li>Commercial Invoice</li>
+                                        <li>KYC</li>
+                                        <li>Monetary Claim on Transporter</li>
+                                        <li>Letter of Subrogation</li>
+                                        <li>LR/RR/GR</li>
+                                        <li>Damage Certificate</li>
+                                    </ul>
+
+                                    <p class="mb-4">Keep the damaged property under the safe custody until advised by the surveyor / insurer regarding its disposal.</p>
+                                </div>
+                            
+                            </div>  
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </MainLayout>
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+
+:target::before { 
+content: ''; 
+display: block; 
+height: 10rem; 
+margin: -50px 0 0 0; 
+}
+
+
+
+
+
+/* Sticky Side Navigation */ 
+#sidenav {
+width: 100%;
+
+
+ul {
+    border: 1px solid lightgray;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 13rem;
+}
+
+li {
+    width: 100%;
+    display: inline-block;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid lightgray;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: .5rem 0;
+        padding-left: 1rem;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+            background-color: rgb(199, 199, 199);
+
+        }
+    }
+}
+}
+
+
+</style>

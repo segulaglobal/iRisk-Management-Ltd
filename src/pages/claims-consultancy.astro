@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProductHero from "../components/ProductHero.astro";
 
 import { Image } from 'astro:assets'
 import SheilaFull from '../assets/sheila-full.png'
@@ -9,15 +10,11 @@ import SheilaFull from '../assets/sheila-full.png'
 
 <MainLayout title="Risk Analysis">
 <!-- Product Hero -->
-<section class="product-hero text-center py-40 pt-60">
-    <div class="container wrapper">
-        <h2 class="heading-secondary">Claims Consultancy.</h2>
+<ProductHero>
+    <h2 class="heading-secondary">Claims Consultancy</h2>
 
-        
-
-       
         <!-- Bread crumbs -->
-        <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+        <nav class="flex w-full justify-center mt-12" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
                 <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
@@ -37,11 +34,8 @@ import SheilaFull from '../assets/sheila-full.png'
             </li>
             </ol>
         </nav>
-  
-  
-    </div>
-</section>
 
+</ProductHero>
 
 <!-- Product -->
 <section class="section-product py-20 w-full">
@@ -61,7 +55,7 @@ import SheilaFull from '../assets/sheila-full.png'
                 </p>
             </div>
             <div class="image hidden">
-                <Image src={SheilaFull} alt="Sheila Wristberg" />
+                <Image src={SheilaFull} alt="Sheila Wristberg"  class="breathing-image"/>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 // images
 import { Image } from 'astro:assets';
@@ -14,10 +15,9 @@ import LifeInsuranceImage from "../assets/life-insurance.jpg";
     <!-- Life Insurance Hero -->
     <ProductHero>
         <h2 class="heading-secondary">Life Insurance</h2>
-    
-           
-             <!-- Bread crumbs -->
-            <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+
+            <!-- Bread crumbs -->
+            <nav class="flex w-full justify-center mt-12" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
                         <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
@@ -51,10 +51,558 @@ import LifeInsuranceImage from "../assets/life-insurance.jpg";
                     <p class="mb-8 leading-loose">A life insurance policy is an agreement between an insurance company and a policyholder that offers financial coverage under which in the unfortunate event of the insured person's demise during the term of life insurance plans the insurance company guarantees to pay a certain amount to the nominated beneficiary. In exchange, the policyholder agrees to pay a predefined amount of money as premium either on a regular basis or as a single premium. Buying Life Insurance has many advantages including its usage as a loan collateral, smooth continuity of business and also tax benefits.</p>
                 </div>
                 <div>
-                    <Image src={LifeInsuranceImage} alt="Life Insurance" />
+                    <Image src={LifeInsuranceImage} alt="Life Insurance" class="breathing-image"/>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+
+    
+    <!-- Section Tabs & information -->
+    <section class="section-tabs py-40 bg-slate-100 leading-loose">
+        <div class="container wrapper">
+
+            <!-- Tabs -->
+            <ProductTabs>
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Term Plan</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Child Plan</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Retirement/ Pension Plans</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="endowment-styled-tab" data-tabs-target="#styled-endowment" type="button" role="tab" aria-controls="settings" aria-selected="false">Endowment Plan</button>
+                    </li>
+                </ul>
+            </ProductTabs>
+            <!-- Various Pages -->
+            <div id="default-styled-tab-content">
+
+                <!-- =========== Term Plan =========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- Term Plan -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#benefits">Benefits</a></li>
+                                        <li><a href="#key-features">Key Features</a></li>
+                                        <li><a href="#premium">Premium</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Term Plan</h2>
+                                        <p>The purest and most basic form of Life Insurance is called Term Insurance Plan. Term Plans help you safeguard your family from financial worries that arise due to unfortunate circumstances. Term plans are pure risk cover plans with or without maturity benefits. These pure risk plans cover your life at a nominal cost for a specific period or term.
+                                        <br><br>
+                                        They are all the more important if you are the chief wage earner in your family. No matter how much you have saved or invested over the years, sudden eventualities, such as death or critical illness, always tend to affect your family financially apart from the huge emotional loss. Term plans also let you avail of the benefit to cover your outstanding debts like mortgage, home loan, etc. In case something happens to you, the financial burden is borne by the insurance company and not your loved ones</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Benefits -->
+                                    <div id="benefits" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Benefits</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>High insurance cover at lower costs</li>
+                                            <li>Financial security against loans and mortgages</li>
+                                            <li>Additional rider benefits like critical illness, accidental death/ disability</li>
+                                            <li>Rewards you for healthy lifestyle with lower premium rates for non-tobacco users</li>
+                                            <li>Option to pay premiums single, annually, half-yearly, quarterly or monthly for regular & limited premium paying term policy</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    
+                                    <hr>
+
+                                    <!-- #Key Features -->
+                                    <div id="key-features" class="py-12">
+                                        <h2 class="heading-tertiary">Key Features</h2>
+                                        <p class="mb-4">While buying a term insurance plan, the buyer must evaluate the following features:
+                                            <ul class="list-disc leading-loose ml-12">
+                                                <li><strong>Claim Settlement Ratio</strong> 
+                                                <br>
+                                                The insurer’s claim settlement ratio provides a clear picture of the insurance provider to the prospect policy buyers. The ratio of claim settlement is released by the Insurance Regulatory and Development Authority (IRDA) India every year. A claim settlement ratio that is consistently good indicates that the insurance provider has been quick and robust in its claim settlement process
+                                            </li>
+                                                <li><strong>Solvency Ratio</strong> 
+                                                    <br>
+                                                    The solvency ratio is something that tells whether the insurance provider chosen will be capable financially for settling the claims if the requirement arises. As per IRDA, every life insurance provider should maintain a solvency ratio of 1.5 at least.</li>
+                                                <li><strong>Enhanced Cover</strong> 
+                                                    <br>
+                                                    Some insurance companies offer the option of enhanced cover in the term insurance policy. In this option, the policyholders can enhance the coverage of the policy under particular circumstances or critical situations.</li>
+                                                <li><strong>Riders</strong> 
+                                                    <br>
+                                                    While purchasing a term plan, it is important to check the rider benefits offered by the insurance company such as terminal illness, critical illness etc. An insurance rider is extra to the essential plan that offers advantages far beyond the subject of the policy in case of any eventuality</li>
+                                                <li><strong>Premium</strong> 
+                                                    <br>
+                                                    The premium rate of a term insurance plan plays a vital role while purchasing the plan. Hence it is important to compare term insurance policies online and choose the term plan which offers higher coverage at an affordable premium rate. Additionally, choose a company that provides discounted premiums to non-smokers</li>
+                                            </ul>
+                                    </div>
+                                    <!-- end of Ad-on Cover -->
+                                    
+                                    <hr>
+                                
+                                    <!-- #Premiums -->
+                                    <div class="py-12" id="premium">
+                                        <h2 class="heading-tertiary">Factors Determining Premium</h2>
+                                        <p  class="mb-2">Following are key factors that determine the premium of a car insurance policy</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Car Model and Variant</li>
+                                            <li>Year of Manufacture/ IDV (Insured Declared Value)</li>
+                                            <li>Fuel type (Petrol / Diesel / CNG / LPG)</li>
+                                            <li>CC (Cubic Capacity of Engine)</li>
+                                            <li>Registration Zone (Zone A- Delhi, Kolkata, Mumbai, Chennai, Ahmadabad, Pune, Bangalore, Hyderabad Zone B- Rest of India)</li>
+                                            <li>NCB (No Claim Bonus)</li>
+                                            <li>Additional Covers like Zero Depreciation, Key Loss etc</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- End of Premiums -->
+
+
+                                    <hr>
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Private Cars -->
+                </div>
+
+
+                <!-- =========== Child Plans ========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- Two Wheeler Car Insurance -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section2-about">About</a></li>
+                                        <li><a href="#section2-features">Features and Benefits</a></li>
+                                        <li><a href="#section2-types">Types</a></li>
+                                        <li><a href="#section2-exclusions">Exclusions</a></li>
+                                        <li><a href="#section2-documents">Documents</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section2-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Child Plan</h2>
+                                        <p>Child plans are a combination of investment and insurance that help in financial planning for your child's future needs. As a parent you can secure your child’s future with plans that include children insurance plans and children education plans. A child plan ensures payment of a lump-sum amount to a child on maturity to cover higher education or marriage expenses</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Features and Benefits -->
+                                    <div id="section2-features" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Features and Benefits</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Education Corpus</strong> A child plan helps you to build a corpus for your child and save enough for his/her future. With timely premium payments, the lump sum amount helps the child meet later educational expenses without any stress or financial burden.
+                                                <br>
+                                            A child's education plan is enough to pay for higher education, even in a foreign country. The corpus depends on the terms and conditions of the plan and on the amount invested through premiums.</li>
+                                            <li><strong>Kitty for Medical Treatment of the Child</strong> Child plans also allow the option of withdrawing money during the tenure of the child investment plans. This can be used for the medical treatment of the child if he or she falls ill. Such partial withdrawals can come in handy when the child is hospitalized due to an ailment, a minor accident, or a serious medical condition. The best child plan helps to reduce the financial burden caused by medical expenditure and such payouts act as an add-on for one's health insurance plan</li>
+                                            <li><strong>Waiver of Premium</strong> The consequences of a parent’s death can be severely damaging for the child’s future. The insurance company offers a premium waiver if the parent (i.e., the insured) passes away during the policy term of a child education plan.The premium waiver benefit often comes inbuilt with the best child education plans and if not, then is available as a rider. The child receives a lump sum amount promised at the time of purchasing the best child plan and does not have to pay the balanced premium</li>
+                                            <li><strong>Income Protection</strong> Some child savings plans provide regular income to children, which is equal to 1% of the sum assured if parents are not around to pay the premiums.</li>
+                                            <li><strong>Collateral for Higher Education Loans</strong> A Child plan comes in handy if one intends to secure a loan for higher education as they can be used as collaterals. They can be used as collateral for other child-related borrowings as well.</li>
+                                            <li><strong>Partial Withdrawal</strong> You can access your funds during the term in the form of partial withdrawals, subject to conditions. This takes care of your child’s different educational milestones</li>
+                                            <li><strong>Tax Benefits</strong> A children education plan helps you save tax. You are not only eligible for annual deduction from your total income of upto Rs 1.5 lakhs under Section 80C of the Income-tax Act, 1961, for premiums paid for child plans but you also benefit from tax free maturity proceeds under Section 10(10D) of the Income-tax Act, 1961, subject to fulfilment of the terms and conditions stated therein</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Features and Benefits -->
+                                    
+                                    
+                                    <hr>
+
+                                    <!-- #types -->
+                                    <div id="section2-types" class="py-12">
+                                        <h2 class="heading-tertiary">Types</h2>
+                                        <p class="mb-4">There are following types of child plans available:</p>
+                                        
+                                        <ol class="list-disc leading-loose ml-12">
+                                            <li>ULIP plan: This plan offers market-linked returns on investment. A part of the investment goes towards securing the child’s future and the other part is invested in a mix of equity and debt. Along with saving for your child’s future, you have the potential of benefitting from market-linked returns.</li>
+                                            <li>Savings plan: If you want to save for your child’s future without any market exposure, you can opt for a savings plan. It combines life cover, maturity benefits, along with providing you tax benefits.</li>
+                                            <li>Single-premium plan: Instead of annual premium payment or multiple payments a year, parents could opt for a single premium plan, which gives them the same benefits. One no longer has to worry about setting aside money or remembering to pay the premium every time</li>
+                                        </ol>
+                                    </div>
+                                    <!-- end of Types -->
+                                    
+                                    <hr>
+                                
+                                    <!-- #Premiums -->
+                                    <div class="py-12" id="section2-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions</h2>
+                                        <p  class="mb-2">Child insurance plans do not cover the following eventualities:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Bike Model and Variant</li>
+                                            <li>Year of Manufacture/ IDV (Insured Declared Value)</li>
+                                            <li>Fuel type (Petrol / Diesel / CNG / LPG)</li>
+                                            <li>CC (Cubic Capacity of Engine)</li>
+                                            <li>Registration Zone</li>
+                                            <li>NCB (No Claim Bonus)</li>
+                                            <li>Additional Covers like Zero Depreciation, Key Loss etc</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Premiums -->
+
+
+                                    <hr>
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="exclusions">
+                                        <h2 class="heading-tertiary">Exclusions: What is Not Covered
+                                        </h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Drug or Alcohol Abuse</strong> In case the policyholder dies due to drug overdose or alcohol abuse, the nominee does not receive any benefit.</li>
+                                            <li><strong>Self Harm or Suicide</strong> The nominated beneficiary does not receive any claim amount in case of the death due to suicide within one year of buying the child policy.</li>
+                                            <li><strong>Adventure Sports</strong> In case the insured happens to take part in any adventurous or risky sports like skydiving, rock-climbing, racing, etc. that leads to death, the insurance provider does not entertain claims.</li>
+                                            <li><strong>Criminal Activities</strong> Any criminal or illegal act or act of war leading to the demise is also not covered under a child plan.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+
+                                    <hr>
+
+                                    <!-- Documents -->
+                                    <div class="py-12" id="section2-documents">
+                                        <h2 class="heading-tertiary">Documents</h2>
+                                        <p class="mb-2">The standard set of documents required for starting an insurance plan for your children are:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Proof of address:</strong> Any document from a passport, driving license, Aadhar card will work.</li>
+                                            <li><strong>Policy form:</strong> This form will contain all details of the plan and the terms you opt for.</li>
+                                            <li><strong>Income proof:</strong> Parents who plan to buy an insurance policy for their children need to show the source of income for paying the premiums like salary certificate.</li>
+                                            <li><strong>Identity proof:</strong> The commonly used identity proofs in India include PAN card, aadhar card, driving license, voter ID, etc.</li>
+                                            <li><strong>Proof of age: </strong> You could submit your passport copy, birth certificate or your education marksheets.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Documents -->
+
+                                    <hr>
+
+                                
+                                    
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Two Wheelter Insurance -->
+                </div>
+
+
+                
+                <!-- =========== Retirement / Persion Plans ======== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section3-about">About</a></li>
+                                        <li><a href="#section3-benefits">Benefits</a></li>
+                                        <li><a href="#section3-types">Types </a></li>
+                                        <li><a href="#section3-eligibility">Eligibility Criteria</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section3-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Retirement/ Pension Plans</h2>
+                                        <p>Retirement Plans also called pension/annuity plans are a category of life insurance plans that are specially designed to meet your post-retirement needs such as medical and living expenses. To ensure that you can enjoy your golden years with financial independence, these policies help you plan for your expenses and secure your future.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Benefits -->
+                                    <div id="section3-benefits" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Benefits</h2>
+                                        <p class="blue-text font-medium">Some of the key benefits of these plans are as follows:</p>
+                                        
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>No Investment Cap</strong> When there are investment caps upon POMIS and Senior Citizens Savings Scheme there is no such investment cap when it comes to an annuity.</li>
+                                            <li><strong>No Risk of Reinvestment</strong> Probably the greatest favourable position that annuities offer is that they dispose of reinvestment chances. Since in India we are moving towards lower financing costs, the hazard is that when you go to reinvest the head, you may get a lower pace of premium. Momentary instruments like the Post Office Monthly Income Scheme  (POMIS) convey reinvestment chances. In any case, when you put resources into an annuity, you are ensured a similar pace of payout forever.</li>
+                                            <li><strong>Safety</strong>  An annuity gives you the affirmation that you will keep on accepting cash every month for a mind-blowing remainder. The insurance agency assumes the danger of making sense of how to bring in the cash keep going as long as you live so you don't need to stress over it. Pick your installment recurrence. You may decide to get your fixed payouts at stretches that suit you best - month to month, quarterly, half-yearly or yearly.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Benefits -->
+
+
+                                    <hr>
+
+                                    <!-- Types -->
+                                    <div class="py-12" id="section3-types">
+                                        <h2 class="heading-tertiary">Types</h2>
+                                        <p class="mb-4">There are following types of annuity plans:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Immediate Annuity</strong> An Immediate annuity is a contract that is purchased with a single lump-sum payment and in exchange, pays a guaranteed income that starts almost immediately. An immediate payment annuity is especially suitable for retirees who are concerned about outliving their savings.</li>
+                                            <li><strong>Deferred Annuity</strong> Deferred annuity is a contract which allows you to save a regular amount of money for your retirement. This type of annuity has two main phases, the savings phase (accumulation phase) in which you invest money into the account, and the income phase (payout pase) in which the plan is converted into an regular annuity and payments are received.</li>
+                                            <li><strong>Periodic Annuity</strong>
+                                            <br>  
+                                            Well periodic annuity essentially provides the funds to the annuitant at the regular point in time. This is more similar to the system of a pension plan wherein the intervals could be based on every month. Besides, the payments could also be done in a phased manner from time to time towards the end of 5th, 10th and 15th years  even though payments of the premiums have been earlier done or not.</li>
+                                            <li><strong>Lump Sum Annuity</strong>
+                                            <br>  
+                                            Some annuity plans give the alternative of giving a single amount payout. Such a singular amount payout is normally discretionary and accessible after a specific period. In any case, by and large, the whole retirement advantage can't be gotten as a single amount.</li>
+                                            <li><strong>Variable Annuity</strong>
+                                            <br>  
+                                            The variable annuity plan includes varieties in the annuity payments between one payout and the following. This variety is in significant part connected to the market execution of the speculations made by the benefits store or annuity plan that the individual has put resources into.</li>
+                                            <li><strong>Variable Annuity</strong>
+                                            <br>  
+                                            The variable annuity plan includes varieties in the annuity payments between one payout and the following. This variety is in significant part connected to the market execution of the speculations made by the benefits store or annuity plan that the individual has put resources into.</li>
+                                            <li><strong>Fixed Annuity</strong>
+                                            <br>  
+                                            In a fixed annuity plan, the payments will stay consistent over the whole time frame during which the payments happen. A fixed annuity is ideal for a risk averse person because this framework ensures regular payment to the person during retirement.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Types -->
+                                    
+                                    <hr>
+
+                                    <!-- Eligibility Criteria -->
+                                    <div class="py-12" id="section3-eligibility">
+                                        <h2 class="heading-tertiary">Eligibility Criteria</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Minimum and Maximum Entry Age</strong>
+                                            <br>  
+                                            For most pension plans, the minimum age of entry is generally 30 while the maximum entry age is 75.</li>
+                                            <li><strong>Minimum and Maximum Vesting Age</strong>
+                                            <br>  
+                                            In most cases, the minimum vesting age is 45 years while the maximum age is 80 years.</li>
+                                            <li><strong>Policy Term</strong>
+                                            <br>  
+                                            Depending on the chosen pension plans the policy term generally ranges from 10 years to 30 years.</li>
+                                            <li><strong>Annual Premium Amount:</strong>
+                                            <br>  
+                                            There is no maximum limit, and the minimum annual premium amount is close to ₹ 50,000/- in most cases.</li>
+                                            <li><strong>Premium Payment Term:</strong>
+                                            <br>  
+                                            Generally, the premium has to be paid for the same period as that of the chosen policy term</li>
+                                        </ul>
+                                    </div>
+
+                                    <hr>
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- =========== Endowment Plans ======== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-endowment" role="tabpanel" aria-labelledby="endowment-tab">
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section4-about">About</a></li>
+                                        <li><a href="#section4-benefits">Benefits</a></li>
+                                        <li><a href="#section4-types">Types </a></li>
+                                        <li><a href="#section4-add-ons">Add-On Covers</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section4-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Endowment Plans</h2>
+                                        <p>Endowment plans are traditional long- term, regular savings plans with a fixed term. They are an ideal choice for customers who want to avoid risk. At the end of the term you receive the sum assured plus accrued /guaranteed bonuses that have been declared over the years, as a lump sum. In case of unfortunate death the sum assured with or without bonus as per the policy condition is paid to the nominee.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Benefits -->
+                                    <div id="section4-benefits" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Benefits</h2>
+                                        <p class="blue-text font-medium">Some of the key benefits of these plans are as follows:</p>
+                                        
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Death as well as Survival benefits</strong> In case of demise of the insured, the beneficiary/nominee of the policy gets the sum assured along with bonuses. Also, the insured is allowed to get the sum assured if he/she outlives the policy.</li>
+                                            <li><strong>Higher returns:</strong> An endowment policy is helpful in building a corpus for future and providing financial protection to your family. The payout for survival benefit and death benefit of an endowment plan is higher than that of a pure LIFE INSURANCE POLICY i.e. Term Plans.</li>
+                                            <li><strong>Premium payment frequency:</strong>  The policyholder can make payment of the premium based on the policy chosen by him/her. Payment can be done on monthly, quarterly, half-yearly, and on yearly basis.</li>
+                                            <li><strong>Tax Benefits:</strong>  The policyholder is entitled to get tax exemption on both premium payments, maturity and final payouts under the Section 80C and Section 10(10D) of the Income Tax Act, 1961.</li>
+                                            <li><strong>Low Risk:</strong>  Traditional Endowment policies are considered safer as compared to the other investment option such as the Mutual Fund or the ULIP’s because the amount here is not directly invested in equity funds or the stock market</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Benefits -->
+
+
+                                    <hr>
+
+                                    <!-- Types -->
+                                    <div class="py-12" id="section4-types">
+                                        <h2 class="heading-tertiary">Types</h2>
+                                        <p class="mb-4">There are following types of Endowment plans:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Unit Linked Endowment Plan:</strong> Under Unit Linked policies, the insurance premiums are bifurcated into multiple units held under a specific investment fund which can be chosen by the policyholders.</li>
+                                            <li><strong>Full /With Profit Endowment</strong> Under this plan, the basic amount i.e. sum assured will be provided to the policy holder. This amount is guaranteed right from the start of the policy. However, the final payout provided is comparatively higher depending on the bonuses announced from time to time by the company. The bonuses once declared form a part of the policy are paid out in the event of death of the policyholder or maturity of the policy.</li>
+                                            <li><strong>Low-Cost Endowment</strong>
+                                            <br>  
+                                            This type of endowment plan was designed with an intention of allowing the policyholder to accumulate the funds which have to be paid after a specified time period, usually mortgage.</li>
+                                            <li><strong>Non-profit Endowment</strong>
+                                            <br>  
+                                            These are endowment plans which do not participate in the profits generated by the company (bonuses). However, in order to make them competitive against other products, companies offer guaranteed additions in these plans which help in generating returns for the policy holder.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Types -->
+                                    
+                                    <hr>
+
+                                    <!-- Add-On Covers -->
+                                    <div class="py-12" id="section4-add-ons">
+                                        <h2 class="heading-tertiary">Add-On Covers</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li><strong>Minimum and Maximum Entry Age</strong>
+                                            <br>  
+                                            For most pension plans, the minimum age of entry is generally 30 while the maximum entry age is 75.</li>
+                                            <li><strong>Minimum and Maximum Vesting Age</strong>
+                                            <br>  
+                                            In most cases, the minimum vesting age is 45 years while the maximum age is 80 years.</li>
+                                            <li><strong>Policy Term</strong>
+                                            <br>  
+                                            Depending on the chosen pension plans the policy term generally ranges from 10 years to 30 years.</li>
+                                            <li><strong>Annual Premium Amount:</strong>
+                                            <br>  
+                                            There is no maximum limit, and the minimum annual premium amount is close to ₹ 50,000/- in most cases.</li>
+                                            <li><strong>Premium Payment Term:</strong>
+                                            <br>  
+                                            Generally, the premium has to be paid for the same period as that of the chosen policy term</li>
+                                        </ul>
+                                    </div>
+
+                                    <hr>
+
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+    </section>
+
 </MainLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+    :target::before { 
+        content: ''; 
+        display: block; 
+        height: 10rem; 
+        margin: -50px 0 0 0; 
+    }
+    
+    
+    
+    // ================ Product Tabs =================
+    .product-tabs {
+        position: sticky;
+        top: 5.6rem;
+        z-index: 10;
+        border-radius: 3px 3px 0 0;
+    }
+    
+    
+    
+    
+    
+    
+    /* Sticky Side Navigation */ 
+    #sidenav {
+        width: 100%;
+        
+    
+        ul {
+            border: 1px solid lightgray;
+            position: sticky;
+            position: -webkit-sticky; /* Safari */
+            top: 13rem;
+        }
+    
+        li {
+            width: 100%;
+            display: inline-block;
+    
+            &:not(:last-child) {
+                border-bottom: 1px solid lightgray;
+            }
+    
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                padding: .5rem 0;
+                padding-left: 1rem;
+                transition: .3s;
+    
+                &:hover,
+                &:focus {
+                    background-color: rgb(199, 199, 199);
+    
+                }
+            }
+        }
+    }
+    
+    
+    </style>

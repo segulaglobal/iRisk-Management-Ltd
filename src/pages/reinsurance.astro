@@ -1,10 +1,318 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
+
+import { Image } from "astro:assets";
+import Dummy from "../assets/dummy.png";
+import Sheila from "../assets/sheila.png";
+import NanaYaa from "../assets/nana-yaa.png";
+import Francis from "../assets/francis.png";
+import Joe from "../assets/joe.png";
+import Eben from "../assets/eben.png";
 ---
 
 
 
 
 <MainLayout title="iRisk Reinsurance Brokers Ltd">
-<h1>iRisk Re</h1>
+
+    <!-- hero section for the Section hero of the Re-insurance page -->
+    <section class="section-Re__hero special">
+        <div class="container wrapper">
+            <div class="hero-text flex flex-col items-center justify-center w-full h-full max-w-3xl m-auto text-center">
+                <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">We invest in the world’s potential</h1>
+                <p class="my-3 text-white text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde repudiandae exercitationem officiis.</p>
+                <a href="3" class="btn btn-white">contact us</a>
+            </div>
+        </div>
+    </section>
+    <!-- End of section hero of the re-insurance page -->
+
+
+    <!-- ================= Section About ====================== -->
+    <section class="section-Re__about py-20">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div>
+                    <h2 class="heading-secondary">About Us</h2>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet deserunt quos nemo tempore, est illo quia qui voluptatibus quisquam impedit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda cum illo quaerat consectetur ullam culpa, distinctio nulla expedita porro est natus sunt reiciendis doloribus a incidunt laboriosam nam quia ipsam nisi minima dolore maxime? Velit quaerat provident, minus mollitia sunt, ea, sint corrupti repudiandae dolorum fuga reiciendis illo alias!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda cum illo quaerat consectetur ullam culpa, distinctio nulla expedita porro est natus sunt reiciendis doloribus a incidunt laboriosam nam quia ipsam nisi minima dolore maxime? Velit quaerat provident, minus mollitia sunt, ea, sint corrupti repudiandae dolorum fuga reiciendis illo alias!</p>
+                </div>
+                <div>
+                    <Image src={Dummy} alt="Reinsurance thing" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of for Section about on the Re-insurance page -->
+
+
+    <!-- =============== Our Team ================= -->
+        <!-- Our Team -->
+        <section class="section-team py-40 text-center">
+            <div class="container wrapper">
+                <h2 class="heading-secondary py-8">Our Team</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ut, nihil voluptatum voluptatem harum aliquid ullam accusantium tempore velit debitis.</p>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <!-- Sheila Wristberg -->
+                    <div class="team-card grid grid-cols-3 scale-in">
+                        <div>
+                            <Image src={Sheila} alt="Sheila Wristberg" />
+                        </div>
+                        <div class="col-span-2 pl-8">
+                            <h2 class="name">Sheila Wristberg</h2>
+                            <h3>CEO</h3>
+                            <div class="line"></div>
+                            <ul class="team-list">
+                                <li class="team-item">
+                                    <a href="https://www.linkedin.com/in/sheila-wristberg-b10a3515/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="team-item">
+                                    <a href="https://www.instagram.com/sheilawristberg/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-item">
+                                    <a href="https://sheilawristberg.com/" class="team-link" target="_blank">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Nana Yaa Mintah-->
+                    <div class="team-card grid grid-cols-3 scale-in">
+                        <div>
+                            <Image src={NanaYaa} alt="Kamal" />
+                        </div>
+                        <div class="col-span-2 pl-8">
+                            <h2 class="name">Nana Yaa Mintah</h2>
+                            <h3>Managing Director</h3>
+                            <div class="line"></div>
+                            <ul class="team-list">
+                                <li class="team-item">
+                                    <a href="https://www.linkedin.com/in/nana-yaa-mintah-23436254/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="team-item">
+                                    <a href="https://www.instagram.com/kdalhassan/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li> -->
+                                <!-- <li class="team-item">
+                                    <a href="https://www.facebook.com/blinxxy" class="team-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Francis Kwasi Kumah -->
+                    <div class="team-card grid grid-cols-3 scale-in">
+                        <div>
+                            <Image src={Francis} alt="Francis" />
+                        </div>
+                        <div class="col-span-2 pl-8">
+                            <h2 class="name">Francis Kwasi Kumah</h2>
+                            <h3>Reinsurance Manager</h3>
+                            <div class="line"></div>
+                            <ul class="team-list">
+                                <li class="team-item">
+                                    <a href="https://www.linkedin.com/in/francis-kwasi-kumah-771495151/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="team-item">
+                                    <a href="https://www.instagram.com/ama_yannfitjerseys/?img_index=1" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-item">
+                                    <a href="https://www.facebook.com/amaafedziwa.koomson" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Joseph Kwegyir-Aggrey -->
+                    <div class="team-card grid grid-cols-3 scale-in">
+                        <div>
+                            <Image src={Joe} alt="Francis" />
+                        </div>
+                        <div class="col-span-2 pl-8">
+                            <h2 class="name">Joseph Kwegyir-Aggrey</h2>
+                            <h3>Reinsurance Manager</h3>
+                            <div class="line"></div>
+                            <ul class="team-list">
+                                <li class="team-item">
+                                    <a href="https://www.linkedin.com/in/joseph-kwegyir-aggrey-299751193/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="team-item">
+                                    <a href="https://www.instagram.com/ama_yannfitjerseys/?img_index=1" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-item">
+                                    <a href="https://www.facebook.com/amaafedziwa.koomson" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Ebenezer Adu-Acquah -->
+                    <div class="team-card grid grid-cols-3 scale-in">
+                        <div>
+                            <Image src={Eben} alt="Francis" />
+                        </div>
+                        <div class="col-span-2 pl-8">
+                            <h2 class="name">Ebenezer Adu-Acquah</h2>
+                            <h3>Reinsurance Manager</h3>
+                            <div class="line"></div>
+                            <ul class="team-list">
+                                <li class="team-item">
+                                    <a href="https://www.linkedin.com/in/ebenezer-adu-acquah-fmva%C2%AE-bida%E2%84%A2-24a3a2199/" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="team-item">
+                                    <a href="https://www.instagram.com/ama_yannfitjerseys/?img_index=1" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="team-item">
+                                    <a href="https://www.facebook.com/amaafedziwa.koomson" class="team-link" target="_blank">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    <!-- End of section Team -->
+
 </MainLayout>
+
+
+
+
+
+
+<style lang="scss">
+
+
+    // ================ Section hero ===============
+    .section-Re__hero {
+        height: 90vh;
+        width: 100%;
+        background-image: url(/assets/re-hero.png);
+        background-size: cover;
+        background-position: center;
+
+        .hero-text {
+            color: #fff;
+        }
+    }
+    // End of section hero
+
+
+
+
+// ============================= Section Team ============================
+.section-team {
+
+.team-card {
+    padding: 2rem 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+    text-align: left;
+    transition: .4s;
+    border: 2px solid transparent;
+
+    &:hover {
+        transform: translateY(-4px);
+        border: 2px solid var(--clr-blue-light);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: .3rem;
+    }
+    h3 {
+        color: var(--clr-blue-light);
+    }
+
+
+    .line {
+        height: 1px;
+        background-color: var(--clr-blue-light);
+        width: 5rem;
+        border-radius: 2px;
+        margin: 2rem 0;
+    }
+}
+
+.team-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    .team-item {
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+    .team-link {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid var(--clr-gray-light);
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transition: .3s;
+        overflow: hidden;
+
+        &:hover {
+            color: var(--clr-white);
+        }
+
+        &:hover::after {
+            transform: scale(1);
+            transform-origin: center;
+            opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--clr-gray-dark);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: scale(0);
+            transform-origin: center;
+            transition: .3s ease-in-out;
+            opacity: 0;
+        }
+    }
+}
+}
+// End of section team</style>

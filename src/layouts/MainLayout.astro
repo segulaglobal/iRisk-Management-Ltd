@@ -1,5 +1,5 @@
 ---
-import Footer from "../components/Footer.astro"
+import Footer2 from "../components/Footer2.astro"
 import Nav from "../components/Nav.astro"
 import "../css/style.css"
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants.ts';
@@ -59,7 +59,7 @@ image="/images/band.jpg" } = Astro.props;
 		<!-- End of Netlify Widget -->
 
 	</head>
-	<body class="min-h-screen">
+	<body class="">
 		
 		<!-- Side navigation -->
 		<Nav />
@@ -69,7 +69,7 @@ image="/images/band.jpg" } = Astro.props;
 		<slot class=""/>
 	
 		<!-- Footer -->
-		<Footer />
+		<Footer2 />
 
 		<script src="./../js/main.js"></script>
 		<!-- <script src="../../node_modules/flowbite/dist/flowbite.js"></script> -->

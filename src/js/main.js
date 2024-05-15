@@ -21,6 +21,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.add("show");
         });
+        document.body.classList.add("remove-scrolling"); 
         // document.body.classList.add("no-scroll");
         showMenu = true;
     }else {
@@ -31,6 +32,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.remove("show");
         });
+        document.body.classList.remove("remove-scrolling"); 
         // document.body.classList.remove("no-scroll");
         showMenu = false;
     }
@@ -56,6 +58,109 @@ document.addEventListener("click", e => {
         dropdown.classList.remove("active")
     })
 })
+
+
+
+
+
+
+// Hide Header on scroll down
+
+// const header = document.querySelector("nav");
+// // Set the initial scroll position
+// let lastScrollPosition = 0;
+// // // Add an event listener for the scroll event
+// window.addEventListener("scroll", () => {
+//   // Get the current scroll position
+//   let currentScrollPosition = window.scrollY;
+  
+//   if (currentScrollPosition - lastScrollPosition > 0) {
+//     // If the scroll direction is down and the user has scrolled past the navbar, hide the navbar
+//     header.classList.add("hide");
+//   } else {
+//      // If the scroll direction is up or the user is at the top of the page, show the navbar
+//     header.classList.remove("hide");
+//   }
+//   // Set the last scroll position to the current scroll position
+//   lastScrollPosition = currentScrollPosition;
+// })
+
+
+
+// ================== INTERSECTION OBSERVER =====================
+// for large screens
+const NavLarge = window.matchMedia( '(min-width: 1020px)' )
+
+const sectionHero = document.querySelector(".special");
+const navBar = document.querySelector('.nav');
+const navLink = document.querySelectorAll('.nav-link')
+const options = {
+    rootMargin: "-450px"
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && NavLarge.matches) {
+        //    alert("is not intersecting")
+           navBar.style.backgroundColor = "var(--clr-white)";
+           navLink.forEach(link => {
+            link.style.color = "#042D44"
+        });
+        }else if(NavLarge.matches && entry.isIntersecting){
+            // alert("is intersecting")
+            navBar.style.backgroundColor = "transparent";
+            navLink.forEach(link => {
+                link.style.color = "#fff"
+            });
+            console.log("background should be transparent")
+        }
+    })
+}, options)
+
+observer.observe(sectionHero);
+
+
+
+
+
+
+
+
+
+// Toggle Modal on Claims page
+// Get modal
+const claimsModal = document.querySelector("#claims-modal");
+
+// Get modal toggler
+const modalToggler = document.querySelector("#claims-modal-toggler");
+
+// Get Button that closes modal
+const closeModal = document.querySelectorAll(".modal-close");
+
+// Get Modal Overlay that closes modal on click
+const modalOverlay = document.querySelector("#modal-overlay");
+
+
+// When the user clicks on the button, open the modal
+modalToggler.onclick = function() {
+    claimsModal.style.display = "block";
+    document.body.classList.add("remove-scrolling"); 
+}
+
+// When the user clicks on <span> (x), close the modal
+closeModal.forEach(item => {
+    item.onclick = function() {
+        claimsModal.style.display = "none";
+        document.body.classList.remove("remove-scrolling"); 
+    }  
+})
+
+// When the user clicks on the overlay and not the modal (close the modal)
+modalOverlay.onclick = function() {
+    claimsModal.style.display = "none";
+    document.body.classList.remove("remove-scrolling"); 
+}  
+
 
 
 

@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProductHero from "../components/ProductHero.astro";
+import ProductTabs from "../components/ProductTabs.astro";
 
 
 // images
@@ -16,9 +17,8 @@ import Liability from '../assets/liability-insurance.png'
     <ProductHero>
         <h2 class="heading-secondary">Liability Insurance</h2>
     
-           
-             <!-- Bread crumbs -->
-            <nav class="flex w-full justify-center mt-16" aria-label="Breadcrumb">
+            <!-- Bread crumbs -->
+            <nav class="flex w-full justify-center mt-12" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li class="inline-flex items-center">
                         <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
@@ -61,7 +61,7 @@ import Liability from '../assets/liability-insurance.png'
                     <p>Liability insurance is a policy that offers protection to businesses and individuals from risk that they may be held legally or sued for negligence, malpractice or injury. This insurance policy protects the insured from legal payouts and costs for which the policyholder is deemed to be responsible.</p>
                 </div>
                 <div>
-                    <Image src={Liability} alt="Motor Insurance" />
+                    <Image src={Liability} alt="Motor Insurance" class="breathing-image"/>
                 </div>
             </div>
         </div>
@@ -69,4 +69,524 @@ import Liability from '../assets/liability-insurance.png'
 
 
 
+        
+    <!-- Section Tabs & information -->
+    <section class="section-tabs py-20 bg-slate-100">
+        <div class="container wrapper">
+
+            <!-- Tabs -->
+            <ProductTabs>
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-styled-tab" data-tabs-target="#styled-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Public Liability Insurance</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-styled-tab" data-tabs-target="#styled-dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Product Liability</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Professional Indemnity</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-styled-tab" data-tabs-target="#styled-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Directors & Officers Liability</button>
+                    </li>
+                </ul>
+            </ProductTabs>
+
+
+
+
+
+
+            <!-- Various Pages -->
+            <div id="default-styled-tab-content">
+
+                <!-- =========== Section-1 LIABILITY =========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- Private Car Section -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section1-about">About</a></li>
+                                        <li><a href="#section1-benefits">Benefits</a></li>
+                                        <li><a href="#section1-coverage">Coverage</a></li>
+                                        <li><a href="#section1-covers">Add On Covers</a></li>
+                                        <li><a href="#section1-exclusions">Exclusions</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section1-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Public Liability Insurance</h2>
+                                        <p>Public Liability Insurance offers the optimum protection to the business in case any third-party liability arising out of injury or property damage. Public exposure or liability affected by law can destroy the promising future of any business. With this insurance policy, you can mitigate the financial burden that may arise due to third-party liabilities, for this reason, it can also be called third-party liability insurance. It is commonly known as Commercial General Liability Insurance as well, which works as a combination of both Product Liability and Public Liability insurance policies</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Features and Benefits -->
+                                    <div id="section1-benefits" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Features & Benefits</h2>
+                                        <p class="mb-4">Public liability insurance in India is specially designed for the companies or individuals who may be held liable or legally responsible to pay for the injury or other related damages caused to a third party. It is recommended for professional organizations like hospitals, BPOs, doctors, and even business owners.
+
+                                            You can protect your business from unforeseen events by purchasing a public liability insurance policy that comes with the following benefits:</p>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Bodily Injury</li>
+                                            <li>Property Damage</li>
+                                            <li>Personal Injury</li>
+                                            <li>Liability Arising out of Advertising Rights</li>
+                                            <li>Contractual and Tenant’s Liability</li>
+                                            <li>Lawsuits, Investigations and Settlements </li>
+                                        </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    
+                                    <hr>
+
+                                    <!-- Coverage -->
+                                    <div id="section1-coverage" class="py-12">
+                                        <h2 class="heading-tertiary">Coverage</h2>
+                                        <p class="mb-4">The policy covers the following eventualities:</p>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Lawsuits, Investigations, and Settlements: If your business is being sued for any damage caused to a third party, the insurer covers the expenses of investigating officer or lawyer.</li>
+                                            <li>Medical Expenses: In case of an injury to a third party attending your office, the medical expenses will be covered</li>
+                                            <li>Damage or injury due to an accident in your premises or from your products, operations, or promotional advertisements leading to a third-party liability claim will be covered.</li>
+                                            <li>Liability arising due to damage to a third party’s property while visiting your office will be covered</li>
+                
+                                        </ul>
+                                    </div>
+                                    <!-- end of coverage -->
+                                    
+                                    <hr>
+
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="section1-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions</h2>
+                                        <p class="mb-2">The policy does not cover liability arising out of:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Earthquake, earth-tremor, volcanic eruption, flood, storm, tempest, typhoon, hurricanes, tornado, cyclone or other Similar convulsions of nature and atmospheric disturbance.</li>
+                                            <li>Deliberate, willful or intentional non-compliance of any Statutory provision or disregard of the insured’s technical or administrative management.</li>
+                                            <li>Loss of purely financial nature such as loss of goodwill, loss of market etc.</li>
+                                            <li>All personal injuries such as libel slander, false arrest, wrongful eviction/ detention, defamation etc., and resultant mental injury, anguish or shock.</li>
+                                            <li>Infringement of plans, copyright, patent, trade name, trademark, or registered design.</li>
+                                            <li>Fines, penalties, punitive or exemplary damages or any other damages.</li>
+                                            <li>War group nuclear group and Act of God of perils.</li>
+                                            <li>Transportation of materials and dangerous substances unless specifically covered.</li>
+                                            <li>Ownership, possession or use by or on behalf of the insured of any aircraft, watercraft or hovercraft.</li>
+                                            <li>Injury to any person under a contract of employment/apprenticeship, with the insured, when such injury arises out of the execution of contract.</li>
+                                            <li>Arising under the Public Liability Insurance Act or any other statute that may come into force after the issue of this policy.</li>
+                                            <li>Assumed by the insured by any agreement and which would not have attached in the absence of such agreement.</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+
+                                    <hr>
+
+                                    
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Private Cars -->
+                </div>
+
+
+                <!-- =========== Product Liability ========== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- Product Liability -->
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section2-about">About</a></li>
+                                        <li><a href="#section2-scope">Scope</a></li>
+                                        <li><a href="#section2-coverage">Coverage</a></li>
+                                        <li><a href="#section2-add-on">Add-On Covers</a></li>
+                                        <li><a href="#section2-exclusions">Exclusions</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section2-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Product Liability    
+                                        </h2>
+                                        <p>The product liability insurance is crucial for companies whose products are widely used such as chemicals, tobacco, medical products, food, recreational products and others. It covers claims, which the insured becomes legally liable to pay to third parties as a result of bodily injury or property damage arising out of the use or consumption of products manufactured, sold and /or distributed by the insured.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- scope -->
+                                    <div class="pb-12" id="section2-scope">
+                                        <h2 class="heading-tertiary mb-1">Features and Benefits</h2>
+                                        <p class="mb-4">The policy aids a product manufacturer, to deal with any legal obligations and third-party liabilities that might arise due to an accident — ensuring that the damage or bodily injuries caused to the third party are duly compensated. Its key features are:</p>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Vendor’s Liability Extension</li>
+                                            <li> Cover for exports when domestic turnover is also covered</li>
+                                            <li> Technical Collaborators Liability Extension</li>
+                                            <li> Coverage for defense cost incurred with prior consent</li>
+                                            <li> Benefit of Retroactive Date</li>
+                                        </ul>
+
+                                       
+
+                                    </div>                                    
+                                    
+                                    <hr>
+
+                                    <!-- #Coverage -->
+                                    <div id="section2-coverage" class="py-12">
+                                        <h2 class="heading-tertiary">Coverage</h2>
+                                    
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li> <ul> The policy covers all sums (including defence costs) which the insured becomes legally liable to pay as damages as a consequence of:</li>
+                                                <li>Accidental death/bodily injury or disease to any third party</li>    
+                                                <li>Accidental damage to property belonging to a third party</li>
+                                                </ul>
+                                            <li>The defect in the product may be a manufacturing defect or may even be due to faulty packaging, delivery specifications or instructions as to use of the product.</li>
+                                            <li>Inappropriate usage of the product by the consumer due to absence of/ or wrong labels indicating usage precautions/warnings and warranties or representations made at any time with respect to the fitness, quality, durability or performance or use of “your product.”</li>
+                                            <li>The policy covers the sales turnover of the company- both domestic and/or exports</li>
+                                            
+                                        </ul>
+                                        <p class="mb-2"> However, the policy offers the benefit of retroactive date, i.e. a date stipulated in a claims-made Liability policy declarations section as the first date of incidents covered by the policy. The retroactive date is designed to provide coverage for claims resulting from incidents that take place before the current policy term.</p>
+                                    </div>
+                                    <!-- Coverage -->
+                                    
+                                    <hr>
+
+
+                                    <!-- #Exlusions -->
+                                    <div class="py-12" id="section2-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions</h2>
+                                        <p class="mb-4">The following eventualities are not covered:</p>
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Costs arising out of recall of any product</li>
+                                            <li>Deliberate, willful or intentional non-compliance of any statutory provision.</li>
+                                            <li>Insured’s Contribution – Deductible</li>
+                                            <li>Arising out of pure financial loss</li>
+                                            <li>Arising out of fines, penalties, punitive and/or exemplary damages</li>
+            
+                                        </ul>
+                                    </div>
+                                    <!-- End of exclusions -->
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Product Liability  -->
+                </div>
+
+
+                
+                <!-- =========== Professional Indemnity ======== -->
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section3-about">About</a></li>
+                                        <li><a href="#section3-scope">Scope</a></li>
+                                        <li><a href="#section3-benefits">Benefits</a></li>
+                                        <li><a href="#section3-coverage">Coverage</a></li>
+                                        <li><a href="#section3-exclusions">Exclusions</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section3-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Professional Indemnity</h2>
+                                        <p>Professional service providers may become legally liable to pay for damages due to negligent act or errors & omissions during the discharge of their professional duties. While they may have to pay for awards of civil liability, there are additional costs of legal fees and legal expenses are also incurred to defend the claim. Notably, judicial activism is increasing than before thus making the professional service providers subject to greater litigation risks & actions on slightest of negligence or errors.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Coverage -->
+                                    <div id="section3-scope" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Scope</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                           <p>The policy is highly suitable for:</p> 
+                                            <li>Lawyer and Law Firms</li>
+                                            <li>Architectures, Interior Designers and Companies</li>
+                                            <li>Pavers for asphalt or concrete finishing.</li>
+                                            <li>Chartered Accountants and Accounting Firms</li>
+                                            <li>IT Consultants and Companies</li>
+                                            <li>Consultants, Management Consultants, & Financial Advisors</li>
+                                            <li>Medical Practitioners</li>
+                                            <li>Surveyors and Valuers</li>
+                                            <li>Professionals and Professional bodies</li>
+                                            
+                                        </ul>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <!-- Benefits -->
+                                    <div class="py-12" id="section3-benefits">
+                                        <h2 class="heading-tertiary">Benefits</h2>
+                                        <p class="mb-4">It protects your business against claims for loss suffered by a client or a third-party due to errors made by you and are found to be negligent. The benefits are as follows:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Financial Protection from Lawsuits</li>
+                                            <li>Peace of Mind</li>
+                                            <li>Increases Credibility of the organisation</li>
+                                            <li>Smooth running of your business</li>
+                                            <li>Increased chances of winning tenders</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Benefits -->
+
+                                    <hr>
+
+                                    <!-- Coverage -->
+                                    <div class="py-12" id="section3-coverage">
+                                        <h2 class="heading-tertiary">Coverage</h2>
+                                        <p class="mb-4">The scope and nature of cover varies with the profession: </p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Medical professionals such as physicians, cardiologists, surgeons, and pathologists are given protection against legal liability claims made by the patients due to death or bodily injury. Defence cost is also included where the insured can add other consulting partners or doctors as well as assistants working under them. Lower grade employees like peons, housekeeping staff are also included, if the policy mentions, for errors, mistakes or omissions, negligence while performing a duty. </li>
+                                            <li> On the other hand, engineers and architects are protected against any legal liability that arises out of any mistake with regards to delivering designs, for providing defective constructional designs, or causing death to the third party.</li>
+                                            <li>For lawyers and accountants, the coverage is given for any legal liability claim due to the monetary losses to clients arising out of omission or mistake made from the insured’s end or by his paid employees. For instance, if someone’s legal representative fails to present a paper regarding the case he is taking up behalf of the client, resulting in the loss of complete case, the attorney could be sued by his client under an omission claim. </li>
+                                           
+                                        </ul>
+                                    </div>
+                                    <!-- End of Coverage -->
+
+                                    <hr>
+
+                                    <!-- Exclusions -->
+                                    <div class="py-12" id="section3-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions</h2>
+                                        <p class="mb-4">This policy does not cover damage due to:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Intentional Damage</li>
+                                            <li>Illegal Acts</li>
+                                            <li>General Liabilities</li>
+                                            <li>Terrorism</li>
+                                            <li>Contractual Liability</li>
+                                            <li>Employment Dispute</li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Exclusions -->
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of the third section -->
+
+                 <!-- =========== D & O LIABILITY======== -->
+                 <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <div class="relative" data-spy="scroll" data-target="#sidebar">
+                        <div class="container">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                                <!-- The Sticky Side Navbar -->
+                                <div id="sidenav" class="hidden lg:block">
+                                    <ul class="sticky-nav bg-slate-200  w-full">
+                                        <li><a href="#section4-about">About</a></li>
+                                        <li><a href="#section4-scope">Scope</a></li>
+                                        <li><a href="#section4-benefits">Benefits</a></li>
+                                        <li><a href="#section4-coverage">Coverage</a></li>
+                                        <li><a href="#section4-exclusions">Exclusions</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- The sections -->
+                                <div class="col-span-4">
+
+                                    <!-- #About -->
+                                    <div id="section3-about" class="pb-12">
+                                        <h2 class="heading-tertiary mb-1">Directors and Officers Liability</h2>
+                                        <p>The D&O policy provides cover for the personal liability of directors and officers arising due to wrongful acts in their managerial capacity. Defence costs are also covered and are payable in advance of final judgment. This policy provides protection for claims brought against directors, officers and employees for actual or alleged breach of duty, neglect, misstatements or errors in their managerial capacity.</p>
+                                    </div>
+
+                                    <hr>
+
+                                    <!-- Scope -->
+                                    <div id="section4-scope" class="py-12">
+                                        <h2 class="heading-tertiary mb-1">Scope</h2>
+                                        <ul class="list-disc leading-loose ml-12">
+                                        
+                                            <li>In case an organization incurs any losses due to erroneous actions or decisions taken by the directors and officers in fulfilling their duties according to the memorandum and articles of association.</li>
+                                            <li>In case of losses resulting from claims filed against them by any wrongful act in their capacity.</li>
+                                            <li>With the written consent of the insurance provider, any legal expenses resulting from the prosecution of any director or officer for any examination, inquiry, investigation, or proceedings by the concerned authority.</li>
+                                            <li>Any expenses incurred by the shareholder of a corporation for pursuing a claim accusing any director or officer, and organization is lawfully obliged to pay as per the ruling of a court.</li>
+                                            <li>It provides indemnity to the legal heirs/legal representatives of the director or officer in case the director or officer becomes insolvent.</li>
+                                           
+                                        </ul>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <!-- Coverage -->
+                                    <div class="py-12" id="section4-benefits">
+                                        <h2 class="heading-tertiary">Coverage</h2>
+                                        <p class="mb-4">This policy covers former, present and future members of the board of directors, the management and any employee performing a managerial or supervisory role. It includes: </p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Advancement of Defence costs</li>
+                                            <li>Claims made principle: claims must be made during policy period</li>
+                                            <li>Right to defend cover</li>
+                                            <li>Cover for Subsidiaries</li>
+                                            <li>Outside Directorship coverage</li>
+                                            <li>Cover for Retired Directors</li>
+                                            <li>Employment Practice Liability (EPL) cover for directors and officers</li>
+                                            <li>Cover for failure / negligence to supervise against any Professional Indemnity related claims</li>
+                                            <li>Cover for Regulatory Crisis Response</li>
+                                            <li>Cover for Assets and Liberty Costs including prosecution, bail bond and civil bond expenses</li>
+                                            <li>Cover for damage to reputation</li>
+                                            <li>Bilateral Discovery Period</li>
+                                            <li>Cover for Heirs, Estates and Legal Representatives</li>
+                                            <li>Emergency Costs cover</li>
+                                            <li>Kidnap response cover</li>
+                                            <li>Special excess protection for non executive directors</li>
+                                            <li>Cover for pollution related claims for defence costs and shareholder claims</li>
+                                            <li>Insured vs Insured (defence cost cover)</li>
+                                            <li>Severability: non-guilty insured is covered</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- End of Benefits -->
+
+                                    
+
+                                    <hr>
+
+                                    <!-- Exclusions -->
+                                    <div class="py-12" id="section4-exclusions">
+                                        <h2 class="heading-tertiary">Exclusions</h2>
+                                        <p class="mb-4">This policy does not cover damage due to:</p>
+
+                                        <ul class="list-disc leading-loose ml-12">
+                                            <li>Fines and penalties and claims for seepage or pollution.</li>
+                                            <li>Claims for bodily injury, property damage</li>
+                                            <li>Excluded territories/jurisdiction</li>
+                                            <li>Known acts prior to inception</li>
+                                            <li>War & nuclear risks</li>
+                                            <li>Waiver of subrogation.</li>
+                                            <li>Criminal acts, libel, slander or other defamations and professional liabilities e.g. architects, managers, etc.</li>
+                                            <li>Major Shareholders Exclusion: Any claim brought by major shareholders having more than stipulated % of voting stock or by any security holder unless the security holders without instigation and totally independent of major shareholders bring about the claim.</li>
+                                            <li>Pending and Prior litigation exclusion.</li>
+                                            <li>Entity EPLI and Entity Security claims (except if covered as an extension).</li>
+                                            <li>Auto acquisition of subsidiaries with an asset size of more than stipulated %</li>
+                                            <li>Environmental liability & ADR claims originating from US/Canada.</li>
+                                    
+                                        </ul>
+                                    </div>
+                                    <!-- End of Exclusions -->
+                                
+                                </div>  
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of the fourth section -->
+            </div>
+
+        </div>
+    </section>
+
 </MainLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+
+    :target::before { 
+        content: ''; 
+        display: block; 
+        height: 10rem; 
+        margin: -50px 0 0 0; 
+    }
+    
+    
+    
+    /* Sticky Side Navigation */ 
+    #sidenav {
+        width: 100%;
+        
+    
+        ul {
+            border: 1px solid lightgray;
+            position: sticky;
+            position: -webkit-sticky; /* Safari */
+            top: 13rem;
+        }
+    
+        li {
+            width: 100%;
+            display: inline-block;
+    
+            &:not(:last-child) {
+                border-bottom: 1px solid lightgray;
+            }
+    
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                padding: .5rem 0;
+                padding-left: 1rem;
+                transition: .3s;
+    
+                &:hover,
+                &:focus {
+                    background-color: rgb(199, 199, 199);
+    
+                }
+            }
+        }
+    }
+    
+    
+    </style>
