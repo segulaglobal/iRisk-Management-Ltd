@@ -244,9 +244,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- ================================ Section Home Banner ===================== -->
 <section class="section-banner fade-in">
         <div class="container wrapper">
-                <div class="banner-img">
-                
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-16">
+                        <div class="banner-img">
+                                <Image src={HomeBanner} alt="Home banner" />
+                        </div>
                         <div class="banner-text col-span self-center text-white fade-in">
                                 <p class="mb-4">Don't face a loss alone. We at iRisk handle the complexities of claims so you can recover. As your insurance broker, we're in your corner.</p>
                                 <p class="mb-8">We'll navigate the paperwork, advocate for a swift settlement, and ensure you receive everything you're entitled to under your policy. Focus on healing, we'll focus on results. Relax, we've got this.</p>
@@ -254,7 +255,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                                 <p class="text-sm text-slate-400 mb-8">General Manager</p>
                                 <a href="/claim" class="btn btn-red mb-8">Make a claim</a>
                         </div>
-        </div>
+                </div>
         </div>
 </section> 
 <!-- End of section home banner -->
