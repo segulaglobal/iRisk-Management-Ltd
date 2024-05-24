@@ -1,7 +1,7 @@
 ---
 title: "Daniel Sarkodie Duah Shares Insights on Insurtech: The Future of
   Insurance in Ghana"
-pubDate: 2024-05-24T17:06:00.000Z
+pubDate: 2024-04-15T17:06:00.000Z
 author: iRiskManagement.net
 image: /src/content/posts/images/1712938495012.jpeg
 tags:
