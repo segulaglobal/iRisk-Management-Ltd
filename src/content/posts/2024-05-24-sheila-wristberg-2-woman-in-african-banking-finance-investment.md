@@ -1,6 +1,6 @@
 ---
 title: "Sheila Wristberg: #2 Woman in African Banking, Finance & Investment"
-pubDate: 2024-05-24T17:13:00.000Z
+pubDate: 2023-04-25T17:13:00.000Z
 author: iRiskManagement.net
 image: /src/content/posts/images/angaza.jpg
 tags:
