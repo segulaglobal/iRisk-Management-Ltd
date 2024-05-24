@@ -87,39 +87,48 @@ document.addEventListener("click", e => {
 
 
 
+
+
+
+
+
+
+
+
+
 // ================== INTERSECTION OBSERVER =====================
 // for large screens
 // const NavLarge = window.matchMedia( '(min-width: 1020px)' )
 
-// const sectionHero = document.querySelector(".special");
-// const navBar = document.querySelector('.nav');
-// const navLink = document.querySelectorAll('.nav-link')
-// const options = {
-//     rootMargin: "-450px"
-// };
+const sectionHero = document.querySelector(".special");
+const navBar = document.querySelector('.nav');
+const navLink = document.querySelectorAll('.nav-link');
 
-// const observer = new IntersectionObserver(function(entries, observer) {
-//     entries.forEach(entry => {
-//         if(!entry.isIntersecting && NavLarge.matches) {
-//            navBar.style.backgroundColor = "var(--clr-white)";
-//            navLink.forEach(link => {
-//             link.style.color = "#042D44"
+// Ensuring NavLarge is defined as a media query
+const NavLarge = window.matchMedia("(min-width: 1024px)");
 
-//             return
-//         });
-//         }else if(NavLarge.matches && entry.isIntersecting){
-//             navBar.style.backgroundColor = "transparent";
-//             navLink.forEach(link => {
-//                 link.style.color = "#fff"
-//             });
-//         }
-//     })
-// }, options)
+const options = {
+    rootMargin: "-450px"
+};
 
-// observer.observe(sectionHero);
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting && NavLarge.matches) {
+            navBar.style.backgroundColor = "var(--clr-white)";
+            navLink.forEach(link => {
+                link.style.color = "#042D44";
+            });
+            console.log("this is not intersecting");
+        } else if (NavLarge.matches && entry.isIntersecting) {
+            navBar.style.backgroundColor = "transparent";
+            navLink.forEach(link => {
+                link.style.color = "#fff";
+            });
+        }
+    });
+}, options);
 
-
-
+observer.observe(sectionHero);
 
 
 
@@ -159,7 +168,5 @@ modalOverlay.onclick = function() {
     claimsModal.style.display = "none";
     document.body.classList.remove("remove-scrolling"); 
 }  
-
-
 
 
