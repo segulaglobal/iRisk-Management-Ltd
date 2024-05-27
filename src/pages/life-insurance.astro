@@ -6,12 +6,19 @@ import ProductTabs from "../components/ProductTabs.astro";
 // images
 import { Image } from 'astro:assets';
 import LifeInsuranceImage from "../assets/life-insurance.jpg";
+
+import Preloader from "../components/Preloader.astro"
 ---
 
 
 
 
 <MainLayout title="iRisk | Life Insurance">
+
+<Preloader></Preloader>
+
+
+
     <!-- Life Insurance Hero -->
     <ProductHero>
         <h2 class="heading-secondary">Life Insurance</h2>

@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import BlogCard from "../../components/BlogCard.astro";
+import Preloader from "../../components/Preloader.astro";
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from "astro:content";
 
@@ -9,6 +10,10 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a
 ---
 
 <MainLayout title="iRisk | Newsletter">
+
+<Preloader></Preloader>
+
+
     <section class="py-48">
         <div class="container wrapper">
             <h1 class="text-2xl py-3">All Articles</h1>
