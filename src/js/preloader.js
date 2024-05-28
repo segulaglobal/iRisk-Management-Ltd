@@ -11,5 +11,6 @@ const preloader = document.querySelector('#preloader');
 // }
 
 window.addEventListener("load", () => {
-  preloader.remove()
+  preloader.remove();
+  console.log("Pre-loader done");
 })
