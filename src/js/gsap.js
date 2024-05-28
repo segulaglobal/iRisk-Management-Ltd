@@ -10,7 +10,7 @@ let tl = gsap.timeline({
         ease: 'none',
     },
     onComplete: () => {
-        console.log("finished")
+        // console.log("finished")
     },
 }
 )
