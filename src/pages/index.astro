@@ -495,16 +495,17 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 ////////////////////         Coming soon page          /////////////////////
   .section-hero {
     width: 100%;
-    height: 90vh;
+//     height: 90vh;
     min-height: 90vh;
-    //background-image: url(/assets/index-hero.jpg);
+    padding-bottom: 2rem;
+//     background-image: url(/assets/index-hero.jpg);
     background-color: var(--clr-blue-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 50px;
-    overflow: hidden;
+//     overflow: hidden;
     //clip-path: ellipse(100% 85% at 50% 100%);
 //     border-radius: 0 0 5rem 20rem;
 
@@ -526,6 +527,11 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         opacity: 0;
     }
 
+
+    .animated-image {
+        width: 100%;
+        height: auto;
+    }
 
   }
 // end of comingsoon section
