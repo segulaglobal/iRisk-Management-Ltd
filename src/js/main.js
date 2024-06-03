@@ -122,7 +122,7 @@ const observer = new IntersectionObserver(function(entries) {
         } else if (NavLarge.matches && entry.isIntersecting) {
             navBar.style.backgroundColor = "transparent";
             navLink.forEach(link => {
-                link.style.color = "#fff";
+                link.style.color = "#034447";
             });
         }
     });
