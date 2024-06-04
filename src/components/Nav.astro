@@ -25,9 +25,12 @@ import Logo from "../assets/logo.png";
           title="back to home page"
           id="navImage"
           class="logo"
-        />
+          />
+      </a>
 
 
+      <div class=" flex">
+            <!-- navigation Menu -->
             <ul class="nav-list">
                 <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
                 <!-- About Us -->
@@ -35,7 +38,7 @@ import Logo from "../assets/logo.png";
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
                             About Us
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
@@ -58,7 +61,7 @@ import Logo from "../assets/logo.png";
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
                             Products
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
@@ -84,13 +87,13 @@ import Logo from "../assets/logo.png";
                     </div>
                 </li>
                 <!-- End of Products -->
-
+        
                 <!-- Services -->
                 <li class="nav-item" data-dropdown>
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
                             Our  Services
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
@@ -107,24 +110,27 @@ import Logo from "../assets/logo.png";
                         </div>
                     </div>
                 </li>
-
+        
                 <!-- iRisk Re-insurance -->
                 <li class="nav-item"><a href="/reinsurance" class="nav-link">iRisk Reinsurance</a></li> 
                 
                 <!-- Contact -->
                 <li class="nav-item"><a href="/contact" class="nav-link">CONTACT US</a></li>
             </ul>
-
-        <!-- {# Navigation Button & make a claim button#} -->
-        <div class="flex items-center">
-          <a href="/claim" class="btn-sm btn-red">Make a claim</a>
-          <div class="nav-btn hover:bg-slate-100">
-            <div class="lines"></div>
-            <div class="lines"></div>
-            <div class="lines"></div>
-          </div>
+        
+            <!-- {# Navigation Button & make a claim button#} -->
+            <div class="flex items-center">
+                <a href="/claim" class="btn-sm btn-red">Make a claim</a>
+                <!-- nav button -->
+                <div class="nav-btn hover:bg-slate-100">
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+            <!-- end of nav button and make a claim button -->
         </div>
-      </a>
+
     </div>
   </div>
 </nav>
@@ -427,7 +433,7 @@ import Logo from "../assets/logo.png";
     @media screen and (min-width: 1020px) {
         .nav-bar {
             padding-block: 1rem;
-            padding-inline: 2rem;
+            //padding-inline: 2rem;
             position: relative;
 
             .nav-btn {
@@ -515,7 +521,7 @@ import Logo from "../assets/logo.png";
                     display: flex;
                     padding: 0.9rem 0.7rem;
                     text-transform: uppercase;
-                    font-size: 0.8rem;
+                    font-size: 0.75rem;
                     outline: none;
                     background-color: transparent;
                     border: none;
@@ -604,6 +610,17 @@ import Logo from "../assets/logo.png";
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
 
     // Remove shadows when dropdown
     .no-shadow {

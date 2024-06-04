@@ -222,11 +222,18 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 
-  
-
-
-  
- 
+  <!-- ======================== Section Welcome Video ========================= -->
+  <section class="section-welcome">
+        <div class="container wrapper">
+                <div class="welcome-container">
+                        <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
+                </div>
+                
+        </div>
+        <div class="overlay"></div>
+  </section>  
+  <!-- End of Section Welcome Video -->
 
 
 <!-- ================================ Section Home Banner ===================== -->
@@ -674,15 +681,15 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 // ==================== Section-Welcome Video =========================
 .section-welcome {
         position: relative;
-      
+        padding: 5rem 0;
 
         .welcome-video {
-                width: 100%;
+                width: 70%;
+                margin: 0 auto;
                 aspect-ratio: 16 / 9;
                 //border-radius: 1rem;
                 box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
                 background: red;
-                height: 250px;
                 
         }
         .overlay {
