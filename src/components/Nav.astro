@@ -25,17 +25,20 @@ import Logo from "../assets/logo.png";
           title="back to home page"
           id="navImage"
           class="logo"
-        />
+          />
+      </a>
 
 
+      <div class=" flex">
+            <!-- navigation Menu -->
             <ul class="nav-list">
-                <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
+                <!-- <li class="nav-item"><a href="/" class="nav-link">HOME</a></li-->
                 <!-- About Us -->
                 <li class="nav-item" data-dropdown>
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
-                            About Us
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            About
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
@@ -58,10 +61,13 @@ import Logo from "../assets/logo.png";
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
                             Products
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
+                                <li>
+                                    <a href="/glossary">Insurance Dictionary</a>
+                                </li>
                                 <li>
                                     <a href="/life-insurance">Life Insurance</a>
                                 </li>
@@ -84,13 +90,13 @@ import Logo from "../assets/logo.png";
                     </div>
                 </li>
                 <!-- End of Products -->
-
+        
                 <!-- Services -->
                 <li class="nav-item" data-dropdown>
                     <div class="dropdown" data-dropdown>
                         <button class="nav-link yellow-text" data-dropdown-button >
                             Our  Services
-                            <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i>
+                            <!-- <i class="fa-solid fa-chevron-down pl-1.5 leading-loose text-xs"></i> -->
                         </button>
                         <div class="dropdown-menu">
                             <ul>
@@ -107,28 +113,46 @@ import Logo from "../assets/logo.png";
                         </div>
                     </div>
                 </li>
-
+        
                 <!-- iRisk Re-insurance -->
                 <li class="nav-item"><a href="/reinsurance" class="nav-link">iRisk Reinsurance</a></li> 
                 
                 <!-- Contact -->
                 <li class="nav-item"><a href="/contact" class="nav-link">CONTACT US</a></li>
             </ul>
-
-        <!-- {# Navigation Button & make a claim button#} -->
-        <div class="flex items-center">
-          <a href="/claim" class="btn-sm btn-red">Make a claim</a>
-          <div class="nav-btn hover:bg-slate-100">
-            <div class="lines"></div>
-            <div class="lines"></div>
-            <div class="lines"></div>
-          </div>
+        
+            <!-- {# Navigation Button & make a claim button#} -->
+            <div class="flex items-center">
+                <a href="/claim" class="btn-sm btn-red">Make a claim</a>
+                <!-- nav button -->
+                <div class="nav-btn hover:bg-slate-100">
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+            <!-- end of nav button and make a claim button -->
         </div>
-      </a>
+
     </div>
   </div>
+</nav>
 
-  <!-- ====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====================================================================
                             Styling
 =========================================================================-->
   <style lang="scss">
@@ -136,6 +160,7 @@ import Logo from "../assets/logo.png";
     .logo {
       width: 80px;
       transition: 0.5s ease-in-out;
+      margin-right: 4px;
     } //End of Logo
 
     .logo:hover {
@@ -162,6 +187,7 @@ import Logo from "../assets/logo.png";
         height: 0.2rem;
         background-color: var(--clr-gray);
         border-radius: 2px;
+
 
         &:not(:last-child) {
           margin-bottom: 0.3rem;
@@ -211,9 +237,10 @@ import Logo from "../assets/logo.png";
       width: 100%;
       height: auto;
       background-color: var(--clr-white);
+     
       //box-shadow: 0px 2px 2px rgba(0, 8, 41, 0.1);
       transition: .4s;
-      //animation: changeColor 20s ease-in-out infinite alternate-reverse both; /* Change color every 20 seconds */
+    
       font-family: 'Roboto', sans-serif;
 
       &.hide {
@@ -228,6 +255,7 @@ import Logo from "../assets/logo.png";
       margin-right: auto;
     //   background-color: red;
       width: 100%;
+     
     }
 
 
@@ -243,6 +271,10 @@ import Logo from "../assets/logo.png";
         justify-content: space-between;
         // padding-inline: 2rem;
         width: 100%;
+        
+
+
+        
     }
 
 
@@ -287,6 +319,7 @@ import Logo from "../assets/logo.png";
             list-style: none;
             &:not(:last-child) {
                 margin-bottom: .5rem;
+                
             }
         }
         .nav-link {
@@ -403,7 +436,7 @@ import Logo from "../assets/logo.png";
     @media screen and (min-width: 1020px) {
         .nav-bar {
             padding-block: 1rem;
-            padding-inline: 2rem;
+            //padding-inline: 2rem;
             position: relative;
 
             .nav-btn {
@@ -491,7 +524,7 @@ import Logo from "../assets/logo.png";
                     display: flex;
                     padding: 0.9rem 0.7rem;
                     text-transform: uppercase;
-                    font-size: 0.8rem;
+                    font-size: 0.75rem;
                     outline: none;
                     background-color: transparent;
                     border: none;
@@ -581,6 +614,17 @@ import Logo from "../assets/logo.png";
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
     // Remove shadows when dropdown
     .no-shadow {
       box-shadow: none;
@@ -605,4 +649,3 @@ import Logo from "../assets/logo.png";
     }
   }
   </style>
-</nav>

@@ -100,35 +100,34 @@ document.addEventListener("click", e => {
 // for large screens
 // const NavLarge = window.matchMedia( '(min-width: 1020px)' )
 
-const sectionHero = document.querySelector(".special");
-const navBar = document.querySelector('.nav');
-const navLink = document.querySelectorAll('.nav-link');
+// const sectionHero = document.querySelector(".special");
+// const navBar = document.querySelector('.nav');
+// const navLink = document.querySelectorAll('.nav-link');
 
 // Ensuring NavLarge is defined as a media query
-const NavLarge = window.matchMedia("(min-width: 1024px)");
+// const NavLarge = window.matchMedia("(min-width: 1024px)");
 
-const options = {
-    rootMargin: "-450px"
-};
+// const options = {
+//     rootMargin: "-450px"
+// };
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting && NavLarge.matches) {
-            navBar.style.backgroundColor = "var(--clr-white)";
-            navLink.forEach(link => {
-                link.style.color = "#042D44";
-            });
-            console.log("this is not intersecting");
-        } else if (NavLarge.matches && entry.isIntersecting) {
-            navBar.style.backgroundColor = "transparent";
-            navLink.forEach(link => {
-                link.style.color = "#fff";
-            });
-        }
-    });
-}, options);
+// const observer = new IntersectionObserver(function(entries) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting && NavLarge.matches) {
+//             navBar.style.backgroundColor = "var(--clr-white)";
+//             navLink.forEach(link => {
+//                 link.style.color = "#042D44";
+//             });
+//         } else if (NavLarge.matches && entry.isIntersecting) {
+//             // navBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+//             navLink.forEach(link => {
+//                 link.style.color = "#fff";
+//             });
+//         }
+//     });
+// }, options);
 
-observer.observe(sectionHero);
+// observer.observe(sectionHero);
 
 
 

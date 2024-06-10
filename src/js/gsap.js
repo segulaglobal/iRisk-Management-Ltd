@@ -35,3 +35,10 @@ tl.fromTo(".hero-p", {x: 100, opacity: 0}, {
 tl.to(".hero-btn", {
     opacity: 1,
 })
+
+// immage
+tl.fromTo(".animated-image", {y: -100, opacity: 0, scale: .5}, {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+})
