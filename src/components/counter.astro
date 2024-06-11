@@ -1,0 +1,99 @@
+<style>
+
+    .counter-widget {
+        display: flex;
+        gap: 50px;
+        width: 100%;
+        justify-content: center; 
+    
+    }
+
+    .counter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 40px;
+        border-radius: 10px;
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    .number {
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+        animation: scaleUp 2s ease-out forwards;
+        transform: scale(0);
+    }
+
+    .label {
+        font-size: 16px;
+        color: #777;
+        margin-top: 10px;
+        animation: fadeIn 2s ease-out forwards;
+        opacity: 0;
+    }
+
+    .counter i {
+            font-size: 50px; 
+            margin-bottom: 10px;
+            color: #333;}
+
+
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scaleUp {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+
+<div class="counter-widget">
+    <div class="counter" id="clients">
+        <i class="fa-solid fa-people-roof"></i>
+        <span class="number" id="client-number">0</span>
+        <span class="label">Customers we have served</span>
+        
+    </div>
+    <div class="counter" id="satisfaction">
+        <i class="fa-solid fa-thumbs-up"></i>
+        <span class="number" id="satisfaction-number">0%</span>
+        <span class="label">Of our clients recommend us</span>
+        
+    </div>
+    <div class="counter" id="claimscounter">
+        <i class="fa-solid fa-sack-dollar"></i>
+        <span class="number" id="claims-number">0%</span>
+        <span class="label">Facilitated Claims Over the Years</span>
+        
+    </div>
+</div>
+
+
+
+
