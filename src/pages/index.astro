@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import BlogCard from "../components/BlogCard.astro";
 import Preloader from "../components/Preloader.astro"
+import Counter from "../components/counter.astro"
 
 // images for the homepage
 import { Image } from "astro:assets";
@@ -80,56 +81,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 </section>
 
 
-<!-- ================ Section Hero Index =============== -->
-<!-- <section class="index-hero bg-white dark:bg-gray-900  text-white" id="hero">
-        <div class="hero-slick w-full h-full"> -->
 
-                <!-- Welcome page -->
-                 <!-- <div class="hero-item welcome">
-                        <div class="container wrapper grid px-8 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
-                                <div class=" mr-auto place-self-center lg:col-span-7">
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">  </p>
-                                        <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular hero-text">Welcome to iRisk Management</h1>
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 hero-text">Protecting Your Future Starts Here.</p>
-                                        <a href="/contact" class="btn btn-neutral md:mr-4 hero-text">Get a Quote</a> 
-                                        <a href="#" class="btn btn-blue hero-text">Get started</a>
-                                </div>
-                        </div>
-                </div>  -->
-
-                 <!-- GH Compare --
-                 <div class="hero-item ghcompare">
-                        <div class="container wrapper grid ">
-                                <div class="mr-auto place-self-center lg:col-span-7 gh-compare"> 
-                                        
-                                        <Image src={Ghcompare} alt="ghcompare" class=""/ style="width: 100%; padding-top:2rem; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-                                        <div class="flex items-center"> 
-                                                Google Play button --
-                                                <a href="https://play.google.com/"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200" height="70" alt="Get it on Google Play" ></a>  --
-                                                <a href="/contact" class="btn btn-neutral">Buy Insurance</a> 
-                                        </div>
-                                </div>
-                        </div>
-
-                </div> -->
-
-                <!--Home/Office 360 --
-                <div class="hero-item home-360">
-                        <div class="container wrapper grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 pt-40">
-                                <div class="mr-auto place-self-center lg:col-span-7"> 
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Home insurance made easy online</p> 
-                                        <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white candal-regular">Home/Office 360</h1>
-                                        <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">One Ghana Cedi a day</p> 
-                                        <a href="/contact" class="btn btn-neutral md:mr-4">Buy Insurance</a>  
-                                        <a href="#" class="btn btn-blue">Get started</a> 
-                                </div>
-                        </div>
-                        <video class="bg-video" src="/assets/home-360.mp4" autoplay loop poster="/assets/home-360.jpg"></video>
-                        <div class="overlay"></div>
-                </div>-->
-<!-- 
-        </div>
-</section>  -->
 
 
 
@@ -244,8 +196,27 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 </section> 
 <!-- End of section home banner -->
 
+ 
+<!----------- SECTION Counter ------------>
+	<Counter/>
+
+<!-- this is  -->
+<script src="./../js/counter.js"></script>
 
 
+
+<!-- ======================== Section Welcome Video ========================= -->
+<section class="section-welcome">
+        <div class="container wrapper">
+                <div class="welcome-container">
+                        <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        
+                </div>
+                
+        </div>
+        <div class="overlay"></div>
+  </section>  
+  <!-- End of Section Welcome Video -->
 
 
 <!-- ========================= Section Partners ==================== -->
@@ -307,19 +278,6 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 <!-- End of section Partners -->
 
 
-<!-- ======================== Section Welcome Video ========================= -->
-<section class="section-welcome">
-        <div class="container wrapper">
-                <div class="welcome-container">
-                        <iframe class="welcome-video" src="https://www.youtube.com/embed/uMlh1T4DQLo?si=xKfCrN6TPrxq0L9Y&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        
-                </div>
-                
-        </div>
-        <div class="overlay"></div>
-  </section>  
-  <!-- End of Section Welcome Video -->
-
 
 <!-- ==================== Section News and Blog ============================= -->
 
@@ -339,6 +297,10 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
         </div>
 </section>
 <!-- end of news and blog -->
+
+
+
+
 
 
 </MainLayout>
@@ -644,8 +606,6 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
   padding: 50px 0;
 
         
-
-
         .service {
                 width: 100%;
                 padding: 3rem;
