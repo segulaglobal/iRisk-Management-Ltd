@@ -1,3 +1,39 @@
+---
+
+---
+
+
+
+
+
+
+<div class="counter-widget">
+    <div class="counter" id="clients">
+        <i class="fa-solid fa-people-roof"></i>
+        <span class="number" id="client-number">0</span>
+        <span class="label">Customers we have served</span>
+        
+    </div>
+    <div class="counter" id="satisfaction">
+        <i class="fa-solid fa-thumbs-up"></i>
+        <span class="number" id="satisfaction-number">0%</span>
+        <span class="label">Of our clients recommend us</span>
+        
+    </div>
+    <div class="counter" id="claimscounter">
+        <i class="fa-solid fa-sack-dollar"></i>
+        <span class="number" id="claims-number">0%</span>
+        <span class="label">Facilitated Claims Over the Years</span>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
 <style>
 
     .counter-widget {
@@ -52,6 +88,25 @@
 
 
 
+
+    /* Responsive code */
+
+    @media screen and (max-width: 768px) {
+        .counter-widget {
+            flex-direction: column;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -81,29 +136,5 @@
         }
     }
 </style>
-</head>
-
-<div class="counter-widget">
-    <div class="counter" id="clients">
-        <i class="fa-solid fa-people-roof"></i>
-        <span class="number" id="client-number">0</span>
-        <span class="label">Customers we have served</span>
-        
-    </div>
-    <div class="counter" id="satisfaction">
-        <i class="fa-solid fa-thumbs-up"></i>
-        <span class="number" id="satisfaction-number">0%</span>
-        <span class="label">Of our clients recommend us</span>
-        
-    </div>
-    <div class="counter" id="claimscounter">
-        <i class="fa-solid fa-sack-dollar"></i>
-        <span class="number" id="claims-number">0%</span>
-        <span class="label">Facilitated Claims Over the Years</span>
-        
-    </div>
-</div>
-
-
 
 
