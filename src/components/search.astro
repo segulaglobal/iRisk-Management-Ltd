@@ -1,0 +1,59 @@
+
+<style>
+      
+
+    .search-box {
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box h1 {
+        margin: 0 0 10px 0;
+        font-size: 1.2em;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .search-results {
+        margin-top: 50px; /* Adjust as needed */
+    }
+
+    .search-results ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .search-results li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+</style>
+
+
+<div class="container">
+    <div class="search-box" id="searchBox">
+        <h1>Search the Website</h1>
+        <input type="text" id="searchInput" placeholder="Search for articles..." onkeyup="search()">
+    </div>
+
+    <div class="search-results" id="results">
+        <ul id="resultsList"></ul>
+    </div>
+</div>
+
+    
+
+
+
+
