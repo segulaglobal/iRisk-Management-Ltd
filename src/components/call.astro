@@ -1,0 +1,59 @@
+<style>
+    .call-us-widget {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .call-us-button {
+        display: inline-block;
+        background-color: #090d0b;
+        color: white;
+        padding: 12px 20px;
+        font-size: 25px;
+        border-radius: 50%;
+        border: solid;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .call-us-button:hover {
+        background-color: #fff;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        border: solid rgb(31, 109, 31);
+        color: rgb(35, 87, 21);
+        
+    }
+
+    @keyframes wiggle {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(5deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+        75% {
+            transform: rotate(5deg);
+        }
+    }
+
+    .wiggle {
+        animation: wiggle 0.5s;
+    }
+</style>
+
+<body>
+
+<!-- Your website content -->
+
+<!-- Call Us Widget -->
+<div class="call-us-widget">
+    <a href="tel:+1234567890" class="call-us-button">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
