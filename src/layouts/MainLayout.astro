@@ -4,6 +4,7 @@ import Nav from "../components/Nav.astro"
 
 import "../css/style.css"
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants.ts';
+import Call from "../components/call.astro";
 // import { ViewTransitions } from "astro:transitions";
 interface Props {
 	title?: string;
@@ -72,6 +73,9 @@ image="/images/band.jpg" } = Astro.props;
 
 
 
+		<!----------- SECTION Call ------------>
+		<Call/>
+
 		<!-- Footer -->
 		<Footer2 />
 
@@ -100,6 +104,9 @@ image="/images/band.jpg" } = Astro.props;
 
 		<!-- counter -->
 		<script src="./../js/counter.js"></script>
+
+		<!-- Call us -->
+		<script src="./../js/Call.js"></script>
 		
 	</body>
 </html>
