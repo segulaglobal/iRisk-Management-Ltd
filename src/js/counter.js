@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const clientNumber = document.getElementById('client-number');
-    const satisfactionNumber = document.getElementById('satisfaction-number');
-    const claimsNumber = document.getElementById('claims-number');
+    const clientNumero = document.getElementById('client-number');
+    const satisfactionNumero = document.getElementById('satisfaction-number');
+    const claimsNumero = document.getElementById('claims-number');
 
     function animateValue(element, start, end, duration, suffix = '', formatter = null) {
         let startTimestamp = null;
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const element = entry.target;
-                if (element === clientNumber) {
-                    animateValue(clientNumber, 0, 10000, 2000, '+', numberWithCommas);
-                } else if (element === satisfactionNumber) {
-                    animateValue(satisfactionNumber, 0, 97, 2000, '%');
-                } else if (element === claimsNumber) {
-                    animateValue(claimsNumber, 0, 12000000, 2000, '+', numberWithCommas);
+                if (element === clientNumero) {
+                    animateValue(clientNumero, 0, 10000, 2000, '+', numberWithCommas);
+                } else if (element === satisfactionNumero) {
+                    animateValue(satisfactionNumero, 0, 97, 2000, '%');
+                } else if (element === claimsNumero) {
+                    animateValue(claimsNumero, 0, 12000000, 2000, '+', numberWithCommas);
                 }
             }
         });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    observer.observe(clientNumber);
-    observer.observe(satisfactionNumber);
-    observer.observe(claimsNumber);
+    observer.observe(clientNumero);
+    observer.observe(satisfactionNumero);
+    observer.observe(claimsNumero);
 });

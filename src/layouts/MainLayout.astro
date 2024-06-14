@@ -4,6 +4,7 @@ import Nav from "../components/Nav.astro"
 
 import "../css/style.css"
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants.ts';
+import Call from "../components/call.astro";
 // import { ViewTransitions } from "astro:transitions";
 interface Props {
 	title?: string;
@@ -72,6 +73,9 @@ image="/images/band.jpg" } = Astro.props;
 
 
 
+		<!----------- SECTION Call ------------>
+		<Call/>
+
 		<!-- Footer -->
 		<Footer2 />
 
@@ -96,6 +100,14 @@ image="/images/band.jpg" } = Astro.props;
 		<!-- WHATS APP  -->
 		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         <div class="elfsight-app-44844b6f-7c5d-4013-921b-4b32296bd4a2" data-elfsight-app-lazy></div>
+
+
+		<!-- counter -->
+		<script src="./../js/counter.js"></script>
+
+		<!-- Call us -->
+		<script src="./../js/Call.js"></script>
+		
 	</body>
 </html>
 
