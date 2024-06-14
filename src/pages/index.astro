@@ -48,6 +48,7 @@ import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content"
+import Call from "../components/call.astro";
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a:CollectionEntry<'posts'>, b:CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -199,6 +200,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
  
 <!----------- SECTION Counter ------------>
 	<Counter/>
+
+
 
 
 
