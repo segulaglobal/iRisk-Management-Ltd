@@ -1,0 +1,62 @@
+<!-- Your website content -->
+
+<!-- WHatsapp Widget -->
+<div class="whatsapp-widget">
+    <a href="https://wa.me/+233204277078?text=Hello%20iRisk%20Management%20Limited" class="whatsapp-link">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
+
+
+
+
+
+
+<style>
+    .whatsapp-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .whatsapp-link {
+        display: inline-block;
+        background-color: green;
+        color: white;
+        padding: 12px 20px;
+        font-size: 25px;
+        border-radius: 50%;
+        border: solid;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-link:hover {
+        background-color: #fff;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        border: solid rgb(31, 109, 31);
+        color: rgb(35, 87, 21);
+        
+    }
+
+    @keyframes wiggle {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(5deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+        75% {
+            transform: rotate(5deg);
+        }
+    }
+
+    .wiggle {
+        animation: wiggle 0.7s;
+    }
+</style>
