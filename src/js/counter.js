@@ -67,35 +67,34 @@
 // ================== INTERSECTION OBSERVER =====================
 
 
-const sectionCounter = document.querySelector(".section-counter");
-const counters = document.querySelectorAll(".counter");
+// const sectionCounter = document.querySelector(".section-counter");
+// const counters = document.querySelectorAll(".counter");
 
 
+// const options = {
+//     rootMargin: "-150px"
+// };
 
-const options = {
-    rootMargin: "-150px"
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
+// const observer = new IntersectionObserver(function(entries) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) {
             
-        } else if (entry.isIntersecting) {
-            counters.forEach((counter) => {
-                counter.innerText = "0";
-                const updateCounter = () => {
-                  const target = +counter.getAttribute("data-target");
-                  const count = +counter.innerText;
-                  const increment = target / 200;
-                  if (count < target) {
-                    counter.innerText = `${Math.ceil(count + increment)}`;
-                    setTimeout(updateCounter, 1);
-                  } else counter.innerText = target;
-                };
-                updateCounter();
-              });
-        }
-    });
-}, options);
+//         } else if (entry.isIntersecting) {
+//             counters.forEach((counter) => {
+//                 counter.innerText = "0";
+//                 const updateCounter = () => {
+//                   const target = +counter.getAttribute("data-target");
+//                   const count = +counter.innerText;
+//                   const increment = target / 200;
+//                   if (count < target) {
+//                     counter.innerText = `${Math.ceil(count + increment)}`;
+//                     setTimeout(updateCounter, 1);
+//                   } else counter.innerText = target;
+//                 };
+//                 updateCounter();
+//               });
+//         }
+//     });
+// }, options);
 
-observer.observe(sectionCounter);
+// observer.observe(sectionCounter);
