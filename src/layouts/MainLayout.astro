@@ -5,6 +5,7 @@ import Nav from "../components/Nav.astro"
 import "../css/style.css"
 import {SITE_TITLE, SITE_DESCRIPTION} from '../constants.ts';
 import Call from "../components/call.astro";
+import Whatsapp from "../components/whatsapp.astro";
 // import { ViewTransitions } from "astro:transitions";
 interface Props {
 	title?: string;
@@ -56,6 +57,9 @@ image="/images/band.jpg" } = Astro.props;
 		<link rel="stylesheet" href="./../css/style.css">
 		<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.0/dist/flowbite.min.css">
 
+		<!-- AOS Stylesheet -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 		<!-- Neltlify Widget -->
 		<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<!-- End of Netlify Widget -->
@@ -75,6 +79,10 @@ image="/images/band.jpg" } = Astro.props;
 
 		<!----------- SECTION Call ------------>
 		<Call/>
+
+
+		<!----------- SECTION Call ------------>
+		<Whatsapp/>
 
 		<!-- Footer -->
 		<Footer2 />
@@ -97,9 +105,7 @@ image="/images/band.jpg" } = Astro.props;
 		<!-- Preloader Javascript -->
 		<script src="./../js/preloader.js"></script>
 
-		<!-- WHATS APP  -->
-		<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-44844b6f-7c5d-4013-921b-4b32296bd4a2" data-elfsight-app-lazy></div>
+		
 
 
 		
@@ -109,6 +115,9 @@ image="/images/band.jpg" } = Astro.props;
 
 		  <!-- AUTOTYPE EFFECTS -->
 		  <script src="./../js/autotype.js"></script>
+
+		  <!-- importing AOS -->
+		<script src="./../js/aos.js"></script n >
 		
 	</body>
 </html>

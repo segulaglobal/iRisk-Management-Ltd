@@ -71,11 +71,17 @@
 // const counters = document.querySelectorAll(".counter");
 
 
-
 // const options = {
 //     rootMargin: "-150px"
 // };
 
+<<<<<<< HEAD
+// const options = {
+//     rootMargin: "-150px"
+// };
+
+=======
+>>>>>>> development
 // const observer = new IntersectionObserver(function(entries) {
 //     entries.forEach(entry => {
 //         if (!entry.isIntersecting) {
