@@ -72,8 +72,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                 <div class="flex flex-col md:flex-row pt-40 gap-16 md:text-left">
                         <div class="hero-text  w-full h-full max-w-3xl m-auto text-center md:text-left">
                                 <h1 class="hero-h1 text-3xl font-extrabold text-gray-900 dark:text-gradient-to-r to-red-300 from-red-500 md:text-5xl lg:text-6xl leading-loose "> <br><span class="herospan dark:text-white"> </span> </h1>
-                                <p class="hero-p my-3 text-white text-lg"> </p>
-                                <a href="/contact" class="hero-btn btn btn-white">Get a Quote</a>
+
+                                <!-- <p class="hero-p my-3 text-white text-lg"> </p> -->
                                 <p class="hero-welcometext" style="color: #d1dce0;" >
                                         <em >Welcome to</em>
                                         <strong style="background: linear-gradient(to bottom, #e4e1e0, #ef8989, #e50d0d); -webkit-background-clip: text; color: transparent;"> 
@@ -83,7 +83,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
                                         <span style="color: #d1dce0;">Insurance</span> || 
                                         <span style="color: #d1dce0;">Reinsurance</span> || 
                                         <span style="color: #d1dce0;">Risk Management</span>
-                                    </p>
+                                </p>
+                                <a href="/contact" class="hero-btn btn btn-white">Get a Quote</a>
                         </div>
                         <Image src={insurance} alt="insurance" class="animated-image inline-block" style={{ width: '450px', height: '400px' }}></Image>
                 </div>
@@ -363,7 +364,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
       
     }
     .hero-btn {      
-        opacity: 0;
+        // opacity: 0;
     }
 
 
