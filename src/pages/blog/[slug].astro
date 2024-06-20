@@ -27,9 +27,14 @@ const {Content} = await post.render();
 ---
 
 
+
+
+
+
+
 <MainLayout title={'iRisk | ' + post.data.title}>
     <section class="py-48">
-        <div class="container wrapper">
+        <div class="blog-container wrapper">
             <h1 class="text-5xl text-teal-900 font-bold mb-8 mt-8">{post.data.title}</h1>
             <Image
                 src={post.data.image}
@@ -43,7 +48,25 @@ const {Content} = await post.render();
                     <Content />
                 </div>
 
-                <a href="/blog" class="btn btn-neutral">Back</a>
+                <a href="/blog" class="btn btn-neutral">&leftarrow; Back</a>
         </div>
     </section> 
 </MainLayout>
+
+
+
+
+
+
+
+<style>
+
+    a {
+        display: inline-block;
+        color: var(--clr-blue);
+    }
+
+
+
+
+</style>

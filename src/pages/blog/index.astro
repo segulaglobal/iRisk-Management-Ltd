@@ -14,9 +14,9 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a
 <!-- <Preloader></Preloader> -->
 
 
-    <section class="py-48">
+    <section class="pt-40 pb-48">
         <div class="container wrapper">
-            <h1 class="text-2xl py-3">All Articles</h1>
+            <h1 class="heading-tertiary text-2xl py-3 mb-20">All Articles</h1>
             <!-- Main Grid -->
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map(article => (
