@@ -41,6 +41,8 @@ function openMenu () {
 
 
 
+
+
 // ============== DropDown functionality =============
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
@@ -58,38 +60,6 @@ document.addEventListener("click", e => {
         dropdown.classList.remove("active")
     })
 })
-
-
-
-
-
-
-// Hide Header on scroll down
-
-// const header = document.querySelector("nav");
-// // Set the initial scroll position
-// let lastScrollPosition = 0;
-// // // Add an event listener for the scroll event
-// window.addEventListener("scroll", () => {
-//   // Get the current scroll position
-//   let currentScrollPosition = window.scrollY;
-  
-//   if (currentScrollPosition - lastScrollPosition > 0) {
-//     // If the scroll direction is down and the user has scrolled past the navbar, hide the navbar
-//     header.classList.add("hide");
-//   } else {
-//      // If the scroll direction is up or the user is at the top of the page, show the navbar
-//     header.classList.remove("hide");
-//   }
-//   // Set the last scroll position to the current scroll position
-//   lastScrollPosition = currentScrollPosition;
-// })
-
-
-
-
-
-
 
 
 
@@ -150,6 +120,7 @@ const modalOverlay = document.querySelector("#modal-overlay");
 
 // When the user clicks on the button, open the modal
 modalToggler.onclick = function() {
+    console.log("you clicked")
     claimsModal.style.display = "block";
     document.body.classList.add("remove-scrolling"); 
 }

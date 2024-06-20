@@ -109,14 +109,12 @@ import Preloader from "../components/Preloader.astro"
                     <!-- Terms and Conditions -->
                     <div class="relative flex items-center mb-8">
                         <input type="checkbox" name="terms_and_conditions" id="terms_and_conditions" class="peer" required />
-                        <label for="terms_and_conditions" class="ml-2 text-sm text-gray-700 dark:text-gray-400">I agree to the <a id="claims-modal-toggler" class="text-blue-500 hover:underline cursor-pointer">Terms and Conditions</a> and appoint iRisk as my insurance broker</label>
+                        <label for="terms_and_conditions" class="ml-2 text-sm text-gray-700 dark:text-gray-400">I agree to the <span id="claims-modal-toggler" class="text-blue-500 hover:underline cursor-pointer">Terms and Conditions</span> and appoint iRisk as my insurance broker</label>
                     </div>
                     
                     <button type="submit" class="btn btn-blue dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                 </form>
 
-                
-  
             </div>  
 
             <!-- This has the contact detials -->
@@ -163,10 +161,8 @@ import Preloader from "../components/Preloader.astro"
 
 
 
-<section>
 
-</section>
-
+<!--====================  Claim Modal  ======================-->
 <div id="claims-modal">
     <!-- This is the half-transparent background of the modal -->
     <div class="modal-overlay" id="modal-overlay"></div>
@@ -244,7 +240,7 @@ import Preloader from "../components/Preloader.astro"
         </div>
     </div>
 </div>
-
+<!-- End of Claim Modal -->
 
 
 </MainLayout>
