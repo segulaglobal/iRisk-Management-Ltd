@@ -18,8 +18,6 @@ The selection criteria for this esteemed ranking were rigorous, with companies a
 
 Founded to provide robust insurance brokerage and risk management services, iRisk has grown into a recognisable brand within Ghana’s insurance sector, known for its customer-centric solutions, innovative products, and commitment to responsible practices.
 
-
-
 The iRisk brand also set up a reinsurance brokerage firm which places risks globally and especially in the EMEA region. iRisk has over the years played a pivotal role in raising industry standards and promoting accessible, inclusive insurance solutions that address the needs of both individuals and businesses.
 
 iRisk’s focus on sustainable growth and community impact has established it as a trusted name in Ghana’s financial services landscape, supporting clients across a range of sectors and contributing to economic stability.
@@ -28,8 +26,10 @@ Reflecting on iRisk’s achievement, Managing Director, Sheila Wristberg express
 
 “Being ranked 45th in the Ghana Club 100 and 3rd among insurance brands is a significant milestone for us. This honor reflects the hard work and commitment of our entire team and the loyalty of our clients,” she said.
 
-
-
 “We are inspired by this achievement and promise to continue elevating our service standards, ensuring that our clients receive not only the best in insurance and risk management but also a partner they can rely on for sustainable and responsible solutions.”
 
 With this recognition, iRisk is poised to continue its mission of expanding insurance accessibility and supporting Ghana’s broader economic goals through inclusive, impactful services.
+
+
+
+Source: [Joy Business](https://www.myjoyonline.com/irisk-celebrates-prestigious-ranking-at-ghana-club-100-awards-affirms-commitment-to-customers/)
