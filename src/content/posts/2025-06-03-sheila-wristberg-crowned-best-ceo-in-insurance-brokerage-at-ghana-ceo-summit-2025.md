@@ -3,7 +3,7 @@ title: "  Sheila Wristberg Crowned Best CEO in Insurance Brokerage at Ghana CEO
   Summit 2025"
 pubDate: 2025-06-03T17:45:00.000Z
 author: iRiskmanagement
-image: /src/content/posts/images/whatsapp-image-2025-06-02-at-18.09.05_1fcd9d7e.jpg
+image: /src/content/posts/images/img-20250603-wa0004-1-.jpg
 tags:
   - post
 rating: 5
